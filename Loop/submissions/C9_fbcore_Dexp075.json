@@ -1,0 +1,34 @@
+{
+ "expr": "-A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b"
+ ],
+ "hypothesis": "T20 (B7) with the f_b/D core scale steeper in the deficit, k1/(D/0.05)^0.75: the core reach scales faster with D than the sqrt(D) knee (D-exponent scan on T17's core: 0.125/0.25/0.5/0.75/1.0 -> 123.8k/125.1k/126.7k/127.3k/124.7k in dry runs).",
+ "predicted_logZ_cross": 127300,
+ "predicted_chi2_mean": 13.4
+}

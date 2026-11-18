@@ -1,0 +1,36 @@
+{
+ "expr": "-A*D*(Omega_b_over_Omega_m*((k*D**0.5*(sigma_8/0.8)/0.68)**2/(1 + (k*D**0.5*(sigma_8/0.8)/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5*(sigma_8/0.8)/k0)**2/(1 + (k*D**0.5*(sigma_8/0.8)/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m",
+  "sigma_8"
+ ],
+ "hypothesis": "T29 with both sqrt(D)-scaled knee components (fixed 0.68 baryon knee and free (1-w) k0 knee) scaled by sigma_8/0.8: in higher-sigma_8 cosmologies halos are more massive at fixed k, so the deficit-driven redistribution reaches larger scales (k_eff ~ k sqrt(D) sigma_8). New cosmological ingredient (sigma_8) on the knee; core unchanged.",
+ "predicted_logZ_cross": 127125,
+ "predicted_chi2_mean": 13.0
+}

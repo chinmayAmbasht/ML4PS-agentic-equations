@@ -1,0 +1,10 @@
+{
+ "expr": "-D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": ["A", "B", "C", "E"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "k1": "scale"},
+ "features": ["D", "f_b", "Omega_b_over_Omega_m"],
+ "hypothesis": "T29 (best) times the soft tail (A + B x0/(1+x0)), x0 = k sqrt(D)/k0, on the whole two-scale knee (T18's product structure, load-bearing per T22) with T23's D^0.75 f_b/D core. TNG/Swift keep the soft-tail residual pattern (+0.6..1 sigma at k 1-4, -0.3..-0.4 at k > 8); A8 (T26) showed the tail is a shared positive feature on the D^0.75 core (+98 on T23).",
+ "predicted_logZ_cross": 128300,
+ "predicted_chi2_mean": 11.5
+}

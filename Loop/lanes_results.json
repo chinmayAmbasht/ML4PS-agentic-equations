@@ -1,0 +1,1367 @@
+[
+ {
+  "lane": "A",
+  "trial": "T01",
+  "status": "SCORED",
+  "budget_used": 1,
+  "logZ_cross": 120230.2,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 17.59,
+  "chi2_std": 16.23,
+  "n_coeff": 3,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T07",
+  "status": "SCORED",
+  "budget_used": 7,
+  "logZ_cross": 123336.4,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 6.616,
+  "chi2_std": 6.24,
+  "n_coeff": 3,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T09",
+  "status": "SCORED",
+  "budget_used": 9,
+  "logZ_cross": 124776.6,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.67,
+  "chi2_std": 8.19,
+  "n_coeff": 4,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T14",
+  "status": "SCORED",
+  "budget_used": 14,
+  "logZ_cross": 122237.5,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 9.08,
+  "chi2_std": 10.37,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T16",
+  "status": "SCORED",
+  "budget_used": 16,
+  "logZ_cross": 121244.5,
+  "marginalized": [
+   "C"
+  ],
+  "chi2_mean": 8.24,
+  "chi2_std": 8.01,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T19",
+  "status": "SCORED",
+  "budget_used": 19,
+  "logZ_cross": 126023.2,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 11.6,
+  "chi2_std": 14.46,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T22",
+  "status": "SCORED",
+  "budget_used": 22,
+  "logZ_cross": 120978.9,
+  "marginalized": [
+   "C"
+  ],
+  "chi2_mean": 9.21,
+  "chi2_std": 7.87,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T26",
+  "status": "SCORED",
+  "budget_used": 26,
+  "logZ_cross": 127407.1,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 12.47,
+  "chi2_std": 15.6,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T28",
+  "status": "SCORED",
+  "budget_used": 29,
+  "logZ_cross": 127097.1,
+  "marginalized": [
+   "k1",
+   "C"
+  ],
+  "chi2_mean": 12.91,
+  "chi2_std": 15.67,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T31",
+  "status": "SCORED",
+  "budget_used": 31,
+  "logZ_cross": 127927.3,
+  "marginalized": [
+   "E",
+   "k0"
+  ],
+  "chi2_mean": 12.47,
+  "chi2_std": 12.91,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T33",
+  "status": "SCORED",
+  "budget_used": 34,
+  "logZ_cross": 127612.9,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 13.09,
+  "chi2_std": 11.42,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T36",
+  "status": "SCORED",
+  "budget_used": 36,
+  "logZ_cross": 131102.6,
+  "marginalized": [
+   "k1",
+   "C",
+   "k0"
+  ],
+  "chi2_mean": 8.85,
+  "chi2_std": 8.12,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T39",
+  "status": "SCORED",
+  "budget_used": 39,
+  "logZ_cross": 129485.4,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 7.248,
+  "chi2_std": 6.044,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T41",
+  "status": "SCORED",
+  "budget_used": 41,
+  "logZ_cross": 128304.2,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 10.73,
+  "chi2_std": 10.33,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T03",
+  "status": "SCORED",
+  "budget_used": 3,
+  "logZ_cross": 123992.6,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.79,
+  "chi2_std": 8.15,
+  "n_coeff": 3,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T05",
+  "status": "SCORED",
+  "budget_used": 5,
+  "logZ_cross": 123832.9,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.632,
+  "chi2_std": 8.14,
+  "n_coeff": 4,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T08",
+  "status": "SCORED",
+  "budget_used": 8,
+  "logZ_cross": 124429.7,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 12.52,
+  "chi2_std": 10.63,
+  "n_coeff": 4,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T11",
+  "status": "SCORED",
+  "budget_used": 11,
+  "logZ_cross": 125019.5,
+  "marginalized": [
+   "k0",
+   "kb"
+  ],
+  "chi2_mean": 7.02,
+  "chi2_std": 5.86,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T13",
+  "status": "SCORED",
+  "budget_used": 13,
+  "logZ_cross": 124829.8,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 9.92,
+  "chi2_std": 11.08,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T17",
+  "status": "SCORED",
+  "budget_used": 17,
+  "logZ_cross": 126149.3,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 15.74,
+  "chi2_std": 19.64,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T20",
+  "status": "SCORED",
+  "budget_used": 20,
+  "logZ_cross": 126660.4,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 8.424,
+  "chi2_std": 9.553,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T24",
+  "status": "SCORED",
+  "budget_used": 24,
+  "logZ_cross": 125236.4,
+  "marginalized": [
+   "k2",
+   "kc"
+  ],
+  "chi2_mean": 6.96,
+  "chi2_std": 7.34,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T27",
+  "status": "SCORED",
+  "budget_used": 27,
+  "logZ_cross": 127301.4,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 9.93,
+  "chi2_std": 12.21,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T30",
+  "status": "SCORED",
+  "budget_used": 30,
+  "logZ_cross": 127175.9,
+  "marginalized": [
+   "k1",
+   "C"
+  ],
+  "chi2_mean": 9.86,
+  "chi2_std": 11.24,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T34",
+  "status": "SCORED",
+  "budget_used": 34,
+  "logZ_cross": 127984.9,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 9.22,
+  "chi2_std": 10.06,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T38",
+  "status": "SCORED",
+  "budget_used": 38,
+  "logZ_cross": 127125.3,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 15.77,
+  "chi2_std": 14.44,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "B",
+  "trial": "T42",
+  "status": "SCORED",
+  "budget_used": 42,
+  "logZ_cross": 129956,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 10.89,
+  "chi2_std": 11.49,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T02",
+  "status": "SCORED",
+  "budget_used": 2,
+  "logZ_cross": 119223.3,
+  "marginalized": [
+   "k0",
+   "kc"
+  ],
+  "chi2_mean": 7.55,
+  "chi2_std": 6.95,
+  "n_coeff": 4,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T04",
+  "status": "SCORED",
+  "budget_used": 4,
+  "logZ_cross": 121705.7,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 7,
+  "chi2_std": 6.1,
+  "n_coeff": 3,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T06",
+  "status": "SCORED",
+  "budget_used": 6,
+  "logZ_cross": 123374.8,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 9.56,
+  "chi2_std": 9.29,
+  "n_coeff": 3,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T10",
+  "status": "SCORED",
+  "budget_used": 10,
+  "logZ_cross": 124995,
+  "marginalized": [
+   "k0",
+   "C"
+  ],
+  "chi2_mean": 7.81,
+  "chi2_std": 7.37,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T12",
+  "status": "SCORED",
+  "budget_used": 12,
+  "logZ_cross": 124627.3,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 7.574,
+  "chi2_std": 7.634,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T15",
+  "status": "SCORED",
+  "budget_used": 16,
+  "logZ_cross": 123805.5,
+  "marginalized": [
+   "k0",
+   "A"
+  ],
+  "chi2_mean": 12.647,
+  "chi2_std": 15.104,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T18",
+  "status": "SCORED",
+  "budget_used": 18,
+  "logZ_cross": 126936.7,
+  "marginalized": [
+   "k2",
+   "B",
+   "A"
+  ],
+  "chi2_mean": 8.12,
+  "chi2_std": 8.45,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T21",
+  "status": "SCORED",
+  "budget_used": 21,
+  "logZ_cross": 125224.3,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 9.05,
+  "chi2_std": 9.71,
+  "n_coeff": 6,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T23",
+  "status": "SCORED",
+  "budget_used": 23,
+  "logZ_cross": 127309.2,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 13.35,
+  "chi2_std": 16.5,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T25",
+  "status": "SCORED",
+  "budget_used": 25,
+  "logZ_cross": 127095.2,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 9.77,
+  "chi2_std": 11.48,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T29",
+  "status": "SCORED",
+  "budget_used": 29,
+  "logZ_cross": 127992.7,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 13.18,
+  "chi2_std": 14.99,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T32",
+  "status": "SCORED",
+  "budget_used": 32,
+  "logZ_cross": 127387.2,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 14.124,
+  "chi2_std": 17.114,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T35",
+  "status": "SCORED",
+  "budget_used": 35,
+  "logZ_cross": 128395.9,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 7.98,
+  "chi2_std": 7.52,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T37",
+  "status": "SCORED",
+  "budget_used": 37,
+  "logZ_cross": 127951.9,
+  "chi2_mean": 12.47,
+  "chi2_std": 14.53,
+  "marginalized": [
+   "k0"
+  ],
+  "n_coeff": 4,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T40",
+  "status": "SCORED",
+  "budget_used": 40,
+  "logZ_cross": 130776.9,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 8.66,
+  "chi2_std": 8.39,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "C",
+  "trial": "T43",
+  "status": "SCORED",
+  "budget_used": 43,
+  "logZ_cross": 131032.5,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 8.42,
+  "chi2_std": 8.36,
+  "n_coeff": 5,
+  "run": "wam0zgkse"
+ },
+ {
+  "lane": "A",
+  "trial": "T01",
+  "status": "SCORED",
+  "budget_used": 1,
+  "logZ_cross": 120230.2,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 17.59,
+  "chi2_std": 16.23,
+  "n_coeff": 3,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T07",
+  "status": "SCORED",
+  "budget_used": 7,
+  "logZ_cross": 123336.4,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 6.616,
+  "chi2_std": 6.24,
+  "n_coeff": 3,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T09",
+  "status": "SCORED",
+  "budget_used": 9,
+  "logZ_cross": 124776.6,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.67,
+  "chi2_std": 8.19,
+  "n_coeff": 4,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T14",
+  "status": "SCORED",
+  "budget_used": 14,
+  "logZ_cross": 122237.5,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 9.08,
+  "chi2_std": 10.37,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T16",
+  "status": "SCORED",
+  "budget_used": 16,
+  "logZ_cross": 121244.5,
+  "marginalized": [
+   "C"
+  ],
+  "chi2_mean": 8.24,
+  "chi2_std": 8.01,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T19",
+  "status": "SCORED",
+  "budget_used": 19,
+  "logZ_cross": 126023.2,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 11.6,
+  "chi2_std": 14.46,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T22",
+  "status": "SCORED",
+  "budget_used": 22,
+  "logZ_cross": 120978.9,
+  "marginalized": [
+   "C"
+  ],
+  "chi2_mean": 9.21,
+  "chi2_std": 7.87,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T26",
+  "status": "SCORED",
+  "budget_used": 26,
+  "logZ_cross": 127407.1,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 12.47,
+  "chi2_std": 15.6,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T28",
+  "status": "SCORED",
+  "budget_used": 29,
+  "logZ_cross": 127097.1,
+  "marginalized": [
+   "k1",
+   "C"
+  ],
+  "chi2_mean": 12.91,
+  "chi2_std": 15.67,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T31",
+  "status": "SCORED",
+  "budget_used": 31,
+  "logZ_cross": 127927.3,
+  "marginalized": [
+   "E",
+   "k0"
+  ],
+  "chi2_mean": 12.47,
+  "chi2_std": 12.91,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T33",
+  "status": "SCORED",
+  "budget_used": 34,
+  "logZ_cross": 127612.9,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 13.09,
+  "chi2_std": 11.42,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T36",
+  "status": "SCORED",
+  "budget_used": 36,
+  "logZ_cross": 131102.6,
+  "marginalized": [
+   "k1",
+   "C",
+   "k0"
+  ],
+  "chi2_mean": 8.85,
+  "chi2_std": 8.12,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T39",
+  "status": "SCORED",
+  "budget_used": 39,
+  "logZ_cross": 129485.4,
+  "marginalized": [
+   "k0",
+   "E"
+  ],
+  "chi2_mean": 7.248,
+  "chi2_std": 6.044,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T41",
+  "status": "SCORED",
+  "budget_used": 41,
+  "logZ_cross": 128304.2,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 10.73,
+  "chi2_std": 10.33,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "NONE",
+  "status": "HARNESS ERROR",
+  "budget_used": 43,
+  "logZ_cross": null,
+  "marginalized": null,
+  "chi2_mean": null,
+  "chi2_std": null,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T44",
+  "status": "SCORED",
+  "budget_used": 44,
+  "logZ_cross": 130712.5,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 8.44,
+  "chi2_std": 8.99,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T47",
+  "status": "SCORED",
+  "budget_used": 47,
+  "logZ_cross": 131695.9,
+  "marginalized": [
+   "k0",
+   "k1",
+   "B"
+  ],
+  "chi2_mean": 8.99,
+  "chi2_std": 9.34,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "T49",
+  "status": "SCORED",
+  "budget_used": 49,
+  "logZ_cross": 129977.7,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 12.99,
+  "chi2_std": 12.19,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "A",
+  "trial": "NONE",
+  "status": "BUDGET EXHAUSTED",
+  "budget_used": 50,
+  "logZ_cross": null,
+  "marginalized": null,
+  "chi2_mean": null,
+  "chi2_std": null,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T03",
+  "status": "SCORED",
+  "budget_used": 3,
+  "logZ_cross": 123992.6,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.79,
+  "chi2_std": 8.15,
+  "n_coeff": 3,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T05",
+  "status": "SCORED",
+  "budget_used": 5,
+  "logZ_cross": 123832.9,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 7.632,
+  "chi2_std": 8.14,
+  "n_coeff": 4,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T08",
+  "status": "SCORED",
+  "budget_used": 8,
+  "logZ_cross": 124429.7,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 12.52,
+  "chi2_std": 10.63,
+  "n_coeff": 4,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T11",
+  "status": "SCORED",
+  "budget_used": 11,
+  "logZ_cross": 125019.5,
+  "marginalized": [
+   "k0",
+   "kb"
+  ],
+  "chi2_mean": 7.02,
+  "chi2_std": 5.86,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T13",
+  "status": "SCORED",
+  "budget_used": 13,
+  "logZ_cross": 124829.8,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 9.92,
+  "chi2_std": 11.08,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T17",
+  "status": "SCORED",
+  "budget_used": 17,
+  "logZ_cross": 126149.3,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 15.74,
+  "chi2_std": 19.64,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T20",
+  "status": "SCORED",
+  "budget_used": 20,
+  "logZ_cross": 126660.4,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 8.424,
+  "chi2_std": 9.553,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T24",
+  "status": "SCORED",
+  "budget_used": 24,
+  "logZ_cross": 125236.4,
+  "marginalized": [
+   "k2",
+   "kc"
+  ],
+  "chi2_mean": 6.96,
+  "chi2_std": 7.34,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T27",
+  "status": "SCORED",
+  "budget_used": 27,
+  "logZ_cross": 127301.4,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 9.93,
+  "chi2_std": 12.21,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T30",
+  "status": "SCORED",
+  "budget_used": 30,
+  "logZ_cross": 127175.9,
+  "marginalized": [
+   "k1",
+   "C"
+  ],
+  "chi2_mean": 9.86,
+  "chi2_std": 11.24,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T34",
+  "status": "SCORED",
+  "budget_used": 34,
+  "logZ_cross": 127984.9,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 9.22,
+  "chi2_std": 10.06,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T38",
+  "status": "SCORED",
+  "budget_used": 38,
+  "logZ_cross": 127125.3,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 15.77,
+  "chi2_std": 14.44,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "T42",
+  "status": "SCORED",
+  "budget_used": 42,
+  "logZ_cross": 129956,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 10.89,
+  "chi2_std": 11.49,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "NONE",
+  "status": "HARNESS ERROR",
+  "budget_used": 43,
+  "logZ_cross": null,
+  "marginalized": null,
+  "chi2_mean": null,
+  "chi2_std": null,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "B",
+  "trial": "NONE",
+  "status": "HARNESS ERROR",
+  "budget_used": 43,
+  "logZ_cross": null,
+  "marginalized": null,
+  "chi2_mean": null,
+  "chi2_std": null,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T02",
+  "status": "SCORED",
+  "budget_used": 2,
+  "logZ_cross": 119223.3,
+  "marginalized": [
+   "k0",
+   "kc"
+  ],
+  "chi2_mean": 7.55,
+  "chi2_std": 6.95,
+  "n_coeff": 4,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T04",
+  "status": "SCORED",
+  "budget_used": 4,
+  "logZ_cross": 121705.7,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 7,
+  "chi2_std": 6.1,
+  "n_coeff": 3,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T06",
+  "status": "SCORED",
+  "budget_used": 6,
+  "logZ_cross": 123374.8,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 9.56,
+  "chi2_std": 9.29,
+  "n_coeff": 3,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T10",
+  "status": "SCORED",
+  "budget_used": 10,
+  "logZ_cross": 124995,
+  "marginalized": [
+   "k0",
+   "C"
+  ],
+  "chi2_mean": 7.81,
+  "chi2_std": 7.37,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T12",
+  "status": "SCORED",
+  "budget_used": 12,
+  "logZ_cross": 124627.3,
+  "marginalized": [
+   "k0",
+   "k1"
+  ],
+  "chi2_mean": 7.574,
+  "chi2_std": 7.634,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T15",
+  "status": "SCORED",
+  "budget_used": 16,
+  "logZ_cross": 123805.5,
+  "marginalized": [
+   "k0",
+   "A"
+  ],
+  "chi2_mean": 12.647,
+  "chi2_std": 15.104,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T18",
+  "status": "SCORED",
+  "budget_used": 18,
+  "logZ_cross": 126936.7,
+  "marginalized": [
+   "k2",
+   "B",
+   "A"
+  ],
+  "chi2_mean": 8.12,
+  "chi2_std": 8.45,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T21",
+  "status": "SCORED",
+  "budget_used": 21,
+  "logZ_cross": 125224.3,
+  "marginalized": [
+   "k2"
+  ],
+  "chi2_mean": 9.05,
+  "chi2_std": 9.71,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T23",
+  "status": "SCORED",
+  "budget_used": 23,
+  "logZ_cross": 127309.2,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 13.35,
+  "chi2_std": 16.5,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T25",
+  "status": "SCORED",
+  "budget_used": 25,
+  "logZ_cross": 127095.2,
+  "marginalized": [
+   "k1",
+   "A"
+  ],
+  "chi2_mean": 9.77,
+  "chi2_std": 11.48,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T29",
+  "status": "SCORED",
+  "budget_used": 29,
+  "logZ_cross": 127992.7,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 13.18,
+  "chi2_std": 14.99,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T32",
+  "status": "SCORED",
+  "budget_used": 32,
+  "logZ_cross": 127387.2,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 14.124,
+  "chi2_std": 17.114,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T35",
+  "status": "SCORED",
+  "budget_used": 35,
+  "logZ_cross": 128395.9,
+  "marginalized": [
+   "k1",
+   "k0"
+  ],
+  "chi2_mean": 7.98,
+  "chi2_std": 7.52,
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T45",
+  "status": "SCORED",
+  "budget_used": 45,
+  "logZ_cross": 130381.3,
+  "chi2_mean": 14.39,
+  "chi2_std": 12.2,
+  "marginalized": [
+   "k1"
+  ],
+  "n_coeff": 5,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T46",
+  "status": "SCORED",
+  "budget_used": 46,
+  "logZ_cross": 131011.6,
+  "marginalized": [
+   "k0",
+   "k1",
+   "C"
+  ],
+  "chi2_mean": 9.143,
+  "chi2_std": 8.621,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T48",
+  "status": "SCORED",
+  "budget_used": 48,
+  "logZ_cross": 127465.1,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 7.43,
+  "chi2_std": 6.15,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ },
+ {
+  "lane": "C",
+  "trial": "T50",
+  "status": "SCORED",
+  "budget_used": 50,
+  "logZ_cross": 124756.3,
+  "marginalized": [
+   "k0"
+  ],
+  "chi2_mean": 9.52,
+  "chi2_std": 8.11,
+  "n_coeff": 6,
+  "run": "w2juh4u3i"
+ }
+]

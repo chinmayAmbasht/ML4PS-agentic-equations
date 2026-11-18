@@ -1,0 +1,7 @@
+{"expr": "-D*((Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2)))) + (E*f_b - C*D)*(k/kc)**2/(1 + (k/kc)**2)",
+ "lin": ["A", "B", "C", "E"],
+ "nl": {"k2": {"lo": 0.05, "hi": 20, "spacing": "log"}, "kc": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "C": "amplitude", "E": "amplitude", "k2": "scale", "kc": "scale"},
+ "features": ["D", "f_b", "Omega_b_over_Omega_m"],
+ "hypothesis": "T18 two-scale soft-tail knee with T17's affine expelled/retained core amplitude (E f_b - C D) on the shared D-free core W2(k/kc).",
+ "predicted_logZ_cross": 127300, "predicted_chi2_mean": 8.3}

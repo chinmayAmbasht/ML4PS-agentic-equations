@@ -1,0 +1,5 @@
+{"expr": "-A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k/k1)**2/(1 + (k/k1)**2))",
+ "lin": ["A","C","E"], "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "k1": "scale"}, "features": ["D","f_b"],
+ "hypothesis": "Expelled baryons (D) give the sqrt(D)-scaled W2 knee; retained baryons (f_b) and D set a small-scale core at a D-independent scale k1 with amplitude (E f_b - C D), affine in D with a baryon-fraction floor; drops T10's unstable soft-tail B (p = 5).",
+ "predicted_logZ_cross": 126100, "predicted_chi2_mean": 15.7}

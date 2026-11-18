@@ -1,0 +1,43 @@
+{
+ "expr": "k**2*(-A0*D - A4)*exp(2*Omega_b_over_Omega_m - 2*b1 - 2*(2*Omega_m + 0.67740005)*((f_b/Omega_b_over_Omega_m) - sigma_8*((f_b/Omega_b_over_Omega_m) + 1.6117566)*exp(-(f_b/Omega_b_over_Omega_m)*b2)))/(k**2*exp(2*Omega_b_over_Omega_m - 2*b1 - 2*(2*Omega_m + 0.67740005)*((f_b/Omega_b_over_Omega_m) - sigma_8*((f_b/Omega_b_over_Omega_m) + 1.6117566)*exp(-(f_b/Omega_b_over_Omega_m)*b2))) + 1)",
+ "lin": [
+  "A0",
+  "A4"
+ ],
+ "nl": {
+  "b1": {
+   "lo": 0.048581523,
+   "hi": 4.8581522999999995,
+   "spacing": "log"
+  },
+  "b2": {
+   "lo": 0.70848646,
+   "hi": 70.848646,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "amplitude",
+  "A4": "amplitude",
+  "b1": "other",
+  "b2": "other"
+ },
+ "features": [
+  "D",
+  "Omega_b_over_Omega_m",
+  "Omega_m",
+  "f_b",
+  "sigma_8"
+ ],
+ "hypothesis": "[ablation A1 C_c27] PySR C hall of fame, complexity 27: f = ((((#3 + #3) + 0.67740005) * (#2 - ((#4 * exp(#2 * -7.0848646)) * (#2 + 1.6117566)))) + 0.48581523) - #5; g = (#2 * -2.5020585) - 0.018541615",
+ "pysr_values": {
+  "A4": 0.018541615,
+  "b2": 7.0848646,
+  "A0": 2.5020585,
+  "b1": 0.48581523
+ },
+ "frozen": {
+  "c0": 0.67740005,
+  "c2": 1.6117566
+ }
+}

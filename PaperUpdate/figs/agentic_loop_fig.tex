@@ -1,0 +1,67 @@
+\begin{figure}
+\vspace{-1em}
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tikzpicture}[
+    font=\sffamily\footnotesize,
+    box/.style={draw=black, line width=0.9pt, align=center, rounded corners=2pt,
+                minimum height=1.9cm, text width=3.1cm, inner sep=3pt, fill=white},
+    agent/.style={box, draw=NavyBlue, fill=NavyBlue!6},
+    io/.style={box, minimum height=1.5cm, text width=2.9cm, fill=black!4},
+    arr/.style={-{Latex[length=2.6mm,width=2.1mm]}, line width=0.9pt},
+    loopL/.style={font=\sffamily\footnotesize\bfseries, align=left, anchor=north west}
+  ]
+    % ---------------- loop containers (drawn first, behind) ----------------
+    \draw[NavyBlue, line width=0.8pt, dashed, rounded corners=6pt, fill=NavyBlue!2]
+      (2.15,-1.75) rectangle (18.45,5.15);
+    \node[loopL, text=NavyBlue] at (2.3,5.05)
+      {Main loop: 60 trials; up to 3 run in parallel (lanes A, B, C); each trial is a fresh, stateless proposer};
+    \draw[black!35, line width=0.6pt, rounded corners=4pt, fill=black!3]
+      (2.55,-0.95) rectangle (18.05,1.3);
+    \node[font=\sffamily\scriptsize\itshape, text=black!60, anchor=south east] at (13.9,1.33) {scoring harness (\texttt{Loop.evaluate})};
+
+    % ---------------- inputs ----------------
+    \node[io] (data) at (0,3.25)
+      {\textbf{CAMELS $z=0$}\\$\mathcal{S}(k)$, 16 bins $k\le9.92$\\$D$, $f_b$, $f_b(M)$, $\Omega_m$, $\sigma_8$};
+    \node[io] (seed) at (0,0.15)
+      {\textbf{Seed forms}};
+
+    % ---------------- main loop: agent row ----------------
+    \node[agent] (agent) at (4.3,3.25)
+      {\textbf{Proposer}\\(lane agent or\\orchestrator) reads the\\notebook and residuals;\\proposes \emph{one} form};
+    \node[agent] (notebook) at (16.3,3.25)
+      {\textbf{Lab notebook}\\scores, per-suite\\residuals, lesson\\for the next agent};
+
+    % ---------------- shared scoring harness ----------------
+    \node[box] (checks) at (4.3,0.15)
+      {\textbf{Physical checks}\\$\mathcal{S}\!\to\!0$, $\propto k^{\ge2}$, bounded;\\end-slope band;\\$p\le6$, 1--2 nonlinear};
+    \node[box] (stageone) at (8.3,0.15)
+      {\textbf{Stage 1}\\within-suite fit\\$(\hat{\mathbf c}_s, W_s)$};
+    \node[box] (stagetwo) at (12.3,0.15)
+      {\textbf{Stage 2}\\hierarchical pooling\\$(\boldsymbol\mu,\Sigma_{\rm suite})$ from\\3 training suites};
+    \node[box] (choice) at (16.3,0.15)
+      {\textbf{Held-out suite}\\$\log Z_{\rm cross}$ + promotion\\ladder (41-node grid);\\$\chi^2_\nu$, $L_0$, $L_{\rm MAP}$};
+    \node[draw=red, fill=red!5, text=red, rounded corners=1pt, line width=0.8pt,
+          font=\sffamily\footnotesize\bfseries, inner xsep=4pt, inner ysep=2pt]
+      (reject) at (4.3,-1.38) {Reject (trial still counts)};
+
+    % ---------------- output ----------------
+    \node[io, text width=3.3cm, minimum height=2.2cm] (pool) at (20.9,0.15)
+      {\textbf{Scored pool}\\4 base + 60 loop\\forms $\rightarrow$ ranking,\\marginalization basis,\\benchmark table};
+
+    % ---------------- arrows: main loop ----------------
+    \draw[arr] (data.east) -- ([yshift=0.45cm]agent.west);
+    \draw[arr] (seed.east) -- ++(0.75,0) |- ([yshift=-0.45cm]agent.west);
+    \draw[arr, NavyBlue] (agent.south) -- node[midway, right, font=\sffamily\scriptsize, text=black] {submit} (checks.north);
+    \draw[arr, draw=green!55!black, line width=1.8pt] (checks.east) -- node[midway, above, font=\sffamily\scriptsize] {pass} (stageone.west);
+    \draw[arr] (stageone.east) -- (stagetwo.west);
+    \draw[arr] (stagetwo.east) -- (choice.west);
+    \draw[arr, NavyBlue] (choice.north) -- node[midway, right, font=\sffamily\scriptsize, text=black, align=left] {scores +\\residuals} (notebook.south);
+    \draw[arr, NavyBlue, line width=1.6pt] (notebook.west) --
+      node[midway, above, font=\sffamily\footnotesize\bfseries, text=NavyBlue] {next trial, until the budget (60) is spent}
+      (agent.east);
+    \draw[arr, draw=red, line width=1.6pt] (checks.south) -- (reject.north);
+    \draw[arr] (choice.east) -- (pool.west);
+
+  \end{tikzpicture}%
+  }

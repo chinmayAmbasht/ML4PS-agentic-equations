@@ -1,0 +1,7 @@
+{"expr": "-A*D*(Omega_b_over_Omega_m*((k*D**0.5/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k*D**0.5/(k1*(Omega_m/0.3)**(1/3)))**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/(k2*(Omega_m/0.3)**(1/3)))**2/(1 + (k*D**0.5/(k2*(Omega_m/0.3)**(1/3)))**2)))",
+ "lin": ["A"],
+ "nl": {"k1": {"lo": 0.05, "hi": 10, "spacing": "log"}, "k2": {"lo": 0.05, "hi": 20, "spacing": "log"}},
+ "roles": {"A": "amplitude", "k1": "scale", "k2": "scale"},
+ "features": ["D", "Omega_b_over_Omega_m", "Omega_m"],
+ "hypothesis": "T03 (rank-1 two-scale baryon-weighted W2, k_eff ~ k sqrt(D)) with rank-3's Omega_m^(1/3) halo-scale factor on both scales: per-suite fits show this makes A and k1 more suite-universal, improving cross-suite transfer.",
+ "predicted_logZ_cross": 124800, "predicted_chi2_mean": 7.2}

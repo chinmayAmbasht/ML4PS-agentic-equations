@@ -1,0 +1,244 @@
+{
+ "_meta": {
+  "sigma_k": "hartlap",
+  "n_boxes": {
+   "IllustrisTNG": 943,
+   "SIMBA": 918,
+   "Astrid": 927,
+   "Swift-EAGLE": 938
+  },
+  "seed": 0
+ },
+ "RF": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 4.768067946165759,
+    "SIMBA": 7.589409665867761,
+    "Astrid": 4.551866218681784,
+    "Swift-EAGLE": 3.8521172850321936
+   },
+   "mean": 5.190365278936874
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 5.167485663336308,
+    "SIMBA": 11.461391782015356,
+    "Astrid": 5.626008104167205,
+    "Swift-EAGLE": 4.639791661591518
+   },
+   "mean": 6.723669302777596
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 6.092186640586989,
+    "SIMBA": 20.607325372797312,
+    "Astrid": 9.37588993542348,
+    "Swift-EAGLE": 5.967004533752876
+   },
+   "mean": 10.510601620640164
+  }
+ },
+ "vD20 published": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 38.646837177722034,
+    "SIMBA": 67.79907706377922,
+    "Astrid": 42.97017337154041,
+    "Swift-EAGLE": 42.382774943992096
+   },
+   "mean": 47.94971563925844
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 38.646837177722034,
+    "SIMBA": 67.79907706377922,
+    "Astrid": 42.97017337154041,
+    "Swift-EAGLE": 42.382774943992096
+   },
+   "mean": 47.94971563925844
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 38.646837177722034,
+    "SIMBA": 67.79907706377922,
+    "Astrid": 42.97017337154041,
+    "Swift-EAGLE": 42.382774943992096
+   },
+   "mean": 47.94971563925844
+  }
+ },
+ "vD20 refit": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 25.018614309816837,
+    "SIMBA": 44.940801516218386,
+    "Astrid": 20.271828271098894,
+    "Swift-EAGLE": 26.093444489677903
+   },
+   "mean": 29.081172146703008
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 26.273553771376328,
+    "SIMBA": 49.39292471028579,
+    "Astrid": 21.921858603970627,
+    "Swift-EAGLE": 26.906326328031724
+   },
+   "mean": 31.12366585341612
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 26.599158111497076,
+    "SIMBA": 55.49224628171867,
+    "Astrid": 23.9970459006509,
+    "Swift-EAGLE": 27.302113929982525
+   },
+   "mean": 33.3476410559623
+  }
+ },
+ "T47": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 5.746540294736305,
+    "SIMBA": 10.071035412013174,
+    "Astrid": 5.844152258317157,
+    "Swift-EAGLE": 4.275596807079163
+   },
+   "mean": 6.48433119303645
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 7.772176757591333,
+    "SIMBA": 14.097477335092533,
+    "Astrid": 6.947777124204743,
+    "Swift-EAGLE": 6.79876386029415
+   },
+   "mean": 8.90404876929569
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 8.143552909736194,
+    "SIMBA": 23.14020745400145,
+    "Astrid": 10.294787901623835,
+    "Swift-EAGLE": 7.639784008304407
+   },
+   "mean": 12.30458306841647
+  }
+ },
+ "T36": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 5.728487574144172,
+    "SIMBA": 10.060598156156574,
+    "Astrid": 6.550986615534969,
+    "Swift-EAGLE": 4.295549752264811
+   },
+   "mean": 6.658905524525132
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 7.887645414330134,
+    "SIMBA": 13.925420423957947,
+    "Astrid": 7.907895437966773,
+    "Swift-EAGLE": 6.958400986283206
+   },
+   "mean": 9.169840565634516
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 8.295925119317785,
+    "SIMBA": 23.80619628230805,
+    "Astrid": 11.127933755216626,
+    "Swift-EAGLE": 7.6943239102220335
+   },
+   "mean": 12.731094766766123
+  }
+ },
+ "T43": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 5.72660460344911,
+    "SIMBA": 10.066849814939328,
+    "Astrid": 6.515340250383906,
+    "Swift-EAGLE": 4.251197058549689
+   },
+   "mean": 6.639997931830508
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 7.4906561207200495,
+    "SIMBA": 14.056063860299167,
+    "Astrid": 7.892094723628855,
+    "Swift-EAGLE": 6.509494785918024
+   },
+   "mean": 8.987077372641524
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 7.927003892284177,
+    "SIMBA": 23.410798294448544,
+    "Astrid": 11.94412288261177,
+    "Swift-EAGLE": 7.334470870251157
+   },
+   "mean": 12.654098984898912
+  }
+ },
+ "T39": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 5.739354876315028,
+    "SIMBA": 10.095483270141926,
+    "Astrid": 6.622156449028037,
+    "Swift-EAGLE": 4.238877074252936
+   },
+   "mean": 6.673967917434482
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 8.088269500187247,
+    "SIMBA": 14.09566114534617,
+    "Astrid": 7.79018778637664,
+    "Swift-EAGLE": 7.122283915228891
+   },
+   "mean": 9.274100586784737
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 8.535166685983626,
+    "SIMBA": 23.63442653188628,
+    "Astrid": 11.907307095350605,
+    "Swift-EAGLE": 7.907529847586113
+   },
+   "mean": 12.996107540201654
+  }
+ },
+ "X01": {
+  "within": {
+   "per_suite": {
+    "IllustrisTNG": 6.727323051943927,
+    "SIMBA": 11.976032789339486,
+    "Astrid": 7.521875911458305,
+    "Swift-EAGLE": 5.4022023598966245
+   },
+   "mean": 7.906858528159585
+  },
+  "pooled": {
+   "per_suite": {
+    "IllustrisTNG": 9.814804249068672,
+    "SIMBA": 18.883356234118544,
+    "Astrid": 7.637151708076762,
+    "Swift-EAGLE": 8.653103488711796
+   },
+   "mean": 11.247103919993943
+  },
+  "transfer_population": {
+   "per_suite": {
+    "IllustrisTNG": 11.47028513710136,
+    "SIMBA": 28.625219331491767,
+    "Astrid": 7.681411336056052,
+    "Swift-EAGLE": 10.909772455142708
+   },
+   "mean": 14.671672064947971
+  }
+ }
+}

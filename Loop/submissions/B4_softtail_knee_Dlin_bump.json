@@ -1,0 +1,7 @@
+{"expr": "-D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0))) + C*(k/kb)**2/(1 + (k/kb)**2)**2)",
+ "lin": ["A", "B", "C"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "kb": {"lo": 0.05, "hi": 20, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "C": "amplitude", "k0": "scale", "kb": "scale"},
+ "features": ["D"],
+ "hypothesis": "T07 soft-tail sqrt(D) knee (shared positive B, lowest chi2) plus T08's universal D^1 low-k bump C*D*y^2/(1+y^2)^2 at its own fixed scale kb (y=k/kb): mixes D^1 into the D^2 low-k scaling for Astrid/Swift without touching the plateau.",
+ "predicted_logZ_cross": 124600, "predicted_chi2_mean": 9.0}

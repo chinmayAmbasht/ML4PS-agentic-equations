@@ -1,0 +1,35 @@
+{
+ "expr": "-A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*(D/Omega_b_over_Omega_m)**0.5/k0)**2/(1 + (k*(D/Omega_b_over_Omega_m)**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "T36 with the expelled-gas (free k0) knee reach scaled by the expelled fraction D/w instead of the absolute deficit D: x = k sqrt(D/w)/k0, matching its weight 1 - q.",
+ "predicted_logZ_cross": 130500,
+ "predicted_chi2_mean": 9.0
+}

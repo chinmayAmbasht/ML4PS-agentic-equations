@@ -1,0 +1,5 @@
+{"expr": "-D*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2)))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2)))",
+ "lin": ["A","B"], "nl": {"k1": {"lo": 0.05, "hi": 10, "spacing": "log"}, "k2": {"lo": 0.05, "hi": 20, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "k1": "scale", "k2": "scale"}, "features": ["D","Omega_b_over_Omega_m"],
+ "hypothesis": "T03 baryon-weighted two-scale sqrt(D) knee times T07's soft-tail factor (A + B x2/(1+x2)) on the k2 scale: plateau keeps falling past the knee, fixing the TNG/Swift high-k negative residuals with no new nl coefficient.",
+ "predicted_logZ_cross": 124300, "predicted_chi2_mean": 7.0}

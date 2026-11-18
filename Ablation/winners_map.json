@@ -1,0 +1,52 @@
+{
+ "A2": {
+  "expr": "A1*D*k**2*(-Omega_m + (f_b/Omega_b_over_Omega_m))*(Omega_m - (f_b/Omega_b_over_Omega_m))*exp(-2*b2)/(k**2*exp(-2*b2) + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8) + 1)",
+  "per_suite": {
+   "IllustrisTNG": 16.73737099085704,
+   "SIMBA": 14.96959878386469,
+   "Astrid": 93.55769222388037,
+   "Swift-EAGLE": 18.742582812358908
+  },
+  "mean": 36.00181120274025
+ },
+ "A3": {
+  "expr": "-D*(A1*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))",
+  "per_suite": {
+   "IllustrisTNG": 12.311611177375516,
+   "SIMBA": 15.232796083828038,
+   "Astrid": 58.04459394984894,
+   "Swift-EAGLE": 13.645941100049553
+  },
+  "mean": 24.80873557777551
+ },
+ "A1-U": {
+  "expr": "-A1*D*k**2/((f_b/Omega_b_over_Omega_m) + k/b0)**2",
+  "per_suite": {
+   "IllustrisTNG": 20.311812649868504,
+   "SIMBA": 14.025233370879521,
+   "Astrid": 111.9819813861812,
+   "Swift-EAGLE": 19.419162191749038
+  },
+  "mean": 41.43454739966957
+ },
+ "A1-C": {
+  "expr": "-A0*D*k**2*exp(2*Omega_b_over_Omega_m - 2*b1 - 2*(2*Omega_m + 0.6731418)*((f_b/Omega_b_over_Omega_m) - ((f_b/Omega_b_over_Omega_m) + 1.6210089*sigma_8)*exp(-(f_b/Omega_b_over_Omega_m)*b2)))/(k**2*exp(2*Omega_b_over_Omega_m - 2*b1 - 2*(2*Omega_m + 0.6731418)*((f_b/Omega_b_over_Omega_m) - ((f_b/Omega_b_over_Omega_m) + 1.6210089*sigma_8)*exp(-(f_b/Omega_b_over_Omega_m)*b2))) + 1)",
+  "per_suite": {
+   "IllustrisTNG": 12.233283538961663,
+   "SIMBA": 9.22528923246231,
+   "Astrid": 57.28621607913357,
+   "Swift-EAGLE": 14.269996472332865
+  },
+  "mean": 23.2536963307226
+ },
+ "PySR C": {
+  "expr": "-A0*D*k**2*exp(-2*b1*((f_b/Omega_b_over_Omega_m) - exp(-(f_b/Omega_b_over_Omega_m)*b2)))/(k**2*exp(-2*b1*((f_b/Omega_b_over_Omega_m) - exp(-(f_b/Omega_b_over_Omega_m)*b2))) + 1)",
+  "per_suite": {
+   "IllustrisTNG": 14.023121038621996,
+   "SIMBA": 10.621276386969399,
+   "Astrid": 57.98468556139449,
+   "Swift-EAGLE": 15.16159491349113
+  },
+  "mean": 24.447669475119252
+ }
+}

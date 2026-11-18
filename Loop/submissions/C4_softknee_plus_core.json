@@ -1,0 +1,5 @@
+{"expr": "-D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*((k/k1)**2/(1 + (k/k1)**2)))",
+ "lin": ["A","B","C"], "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "C": "amplitude", "k0": "scale", "k1": "scale"}, "features": ["D"],
+ "hypothesis": "T07 soft-tail sqrt(D) knee plus a D^1 small-scale core term C*D*W2(k/k1) at a D-independent scale; marginalized C supplies the per-box second DOF.",
+ "predicted_logZ_cross": 125000, "predicted_chi2_mean": 7.8}

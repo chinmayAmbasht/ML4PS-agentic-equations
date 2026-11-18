@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+cache/
+.venv/
+*.pkl
+PaperUpdate/preds/
+PaperUpdate/preds_sens/
+PySR/runs/*/search/
+Loop/ns/
+Loop/.trial.lock

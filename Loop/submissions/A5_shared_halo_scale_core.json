@@ -1,0 +1,5 @@
+{"expr": "-D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*((k/(r*k0))**2/(1 + (k/(r*k0))**2)))",
+ "lin": ["A","B","C"], "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "r": {"lo": 1, "hi": 300, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "C": "amplitude", "k0": "scale", "r": "scale"}, "features": ["D"],
+ "hypothesis": "T10 knee+D^1 core with the core scale tied to the per-box knee scale, k1 = r*k0: marginalizing k0 moves knee and core together (one per-box halo scale), r a shared core-to-knee ratio.",
+ "predicted_logZ_cross": 125300, "predicted_chi2_mean": 7.5}

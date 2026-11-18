@@ -1,0 +1,22 @@
+{
+ "expr": "-A0*D*k",
+ "lin": [],
+ "nl": {
+  "A0": {
+   "lo": 0.056183369999999996,
+   "hi": 5.618337,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "other"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "[ablation A1 U_c05] PySR U hall of fame, complexity 5: (Dx * -0.5618337) * k",
+ "pysr_values": {
+  "A0": 0.5618337
+ },
+ "frozen": {}
+}

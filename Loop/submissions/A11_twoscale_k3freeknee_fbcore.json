@@ -1,0 +1,7 @@
+{"expr": "-A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": ["A", "C", "E"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "k1": "scale"},
+ "features": ["D", "f_b", "Omega_b_over_Omega_m"],
+ "hypothesis": "T29 with the dominant free (1-w) halo component of the rank-1 two-scale knee sharpened to B9's k^3 shape x^3/(1+x^2)^1.5 (T27's k=0.36 fix) while the fixed 0.68 baryon component stays W2; D^0.75 f_b/D core unchanged; p=5.",
+ "predicted_logZ_cross": 128300, "predicted_chi2_mean": 10.5}

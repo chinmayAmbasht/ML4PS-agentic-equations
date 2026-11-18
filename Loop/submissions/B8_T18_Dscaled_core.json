@@ -1,0 +1,7 @@
+{"expr": "-D*((Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2))) + C*(k*(D/0.05)**0.5/kc)**2/(1 + (k*(D/0.05)**0.5/kc)**2))",
+ "lin": ["A", "B", "C"],
+ "nl": {"k2": {"lo": 0.05, "hi": 20, "spacing": "log"}, "kc": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "C": "amplitude", "k2": "scale", "kc": "scale"},
+ "features": ["D", "Omega_b_over_Omega_m"],
+ "hypothesis": "T18 with the D^1 core reached at a deficit-set scale W2(k (D/0.05)^0.5/kc) (B7/T20 lesson applied to C7's best): all three components scale as 1/sqrt(D); aims at Astrid's k > 3 tail and per-box chi2.",
+ "predicted_logZ_cross": 125240, "predicted_chi2_mean": 7.0}

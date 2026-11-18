@@ -1,0 +1,1621 @@
+budget: 1000
+n_used: 18
+trials:
+- trial: T01
+  expr: -A0*k**2*exp(-2*(f_b/Omega_b_over_Omega_m))/(k**2*exp(-2*(f_b/Omega_b_over_Omega_m)) + 1) + Omega_m*k**2*exp(-2*b1)/(k**2*exp(-2*b1)
+    + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.05693861
+      hi: 5.693861
+      spacing: log
+  features:
+  - Omega_m
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A2 C2_c04] PySR C2 hall of fame, complexity 4: a1 = -0.5299198; f1 = #2; a2 = #3; f2 = 0.5693861'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:47:26'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 83271.3
+  marginalized: []
+  sigma_fold: 2746.9
+  ladder:
+  - R: []
+    logZ_cross: 83271.3
+    promoted: true
+  - R:
+    - b1
+    logZ_cross: 84286.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 23086.0
+    SIMBA: 20135.2
+    Astrid: 17217.2
+    Swift-EAGLE: 22832.9
+  L_zero_shot: 38.78
+  L_zero_shot_per_fold:
+    IllustrisTNG: 21.04
+    SIMBA: 60.199
+    Astrid: 52.159
+    Swift-EAGLE: 21.723
+  L_map: 29.415
+  L_map_per_fold:
+    IllustrisTNG: 13.471
+    SIMBA: 58.557
+    Astrid: 32.101
+    Swift-EAGLE: 13.529
+  chi2_per_suite:
+    IllustrisTNG: 10.657
+    SIMBA: 2.953
+    Astrid: 102.193
+    Swift-EAGLE: 13.533
+  chi2_mean: 32.334
+  chi2_std: 40.518
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.336
+    SIMBA: 0.96
+    Astrid: 1.097
+    Swift-EAGLE: 0.357
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.5168
+      b1: -0.2273
+    SIMBA:
+      A0: 0.5014
+      b1: -0.2769
+    Astrid:
+      A0: 0.5288
+      b1: -0.3113
+    Swift-EAGLE:
+      A0: 0.518
+      b1: -0.2446
+  residuals: Loop/residuals/T01.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 25
+- trial: T02
+  expr: -A0*D*k**2*exp(-2*(f_b/Omega_b_over_Omega_m))/(k**2*exp(-2*(f_b/Omega_b_over_Omega_m)) + 1) + D*k**2*exp(-2*D)/(k**2*exp(-2*D)
+    + 1)
+  lin: []
+  nl:
+    A0:
+      lo: 0.39304364
+      hi: 39.304364
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A2 C2_c06] PySR C2 hall of fame, complexity 6: a1 = #1; f1 = #1; a2 = #1 * -3.9304364; f2 = #2'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:47:53'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 108020.3
+  marginalized: []
+  sigma_fold: 2716.2
+  ladder:
+  - R: []
+    logZ_cross: 108020.3
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 108560.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 28721.7
+    SIMBA: 22949.4
+    Astrid: 28135.8
+    Swift-EAGLE: 28213.3
+  L_zero_shot: 17.208
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.586
+    SIMBA: 33.208
+    Astrid: 10.274
+    Swift-EAGLE: 10.765
+  L_map: 16.785
+  L_map_per_fold:
+    IllustrisTNG: 13.921
+    SIMBA: 33.33
+    Astrid: 9.709
+    Swift-EAGLE: 10.181
+  chi2_per_suite:
+    IllustrisTNG: 7.671
+    SIMBA: 3.603
+    Astrid: 85.574
+    Swift-EAGLE: 11.507
+  chi2_mean: 27.089
+  chi2_std: 33.882
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.513
+    SIMBA: 1.271
+    Astrid: 0.444
+    Swift-EAGLE: 0.478
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.5444
+    SIMBA:
+      A0: 0.5611
+    Astrid:
+      A0: 0.5444
+    Swift-EAGLE:
+      A0: 0.5444
+  residuals: Loop/residuals/T02.md
+  n_coeff: 1
+  nl_nodes: 41
+  seconds: 17
+- trial: T03
+  expr: -A0*k**2*exp(-2*b1*(-Omega_b_over_Omega_m + (f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*b1*(-Omega_b_over_Omega_m +
+    (f_b/Omega_b_over_Omega_m))) + 1) + Omega_m*k**2*exp(-2*b2)/(k**2*exp(-2*b2) + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.38526757
+      hi: 38.526756999999996
+      spacing: log
+    b2:
+      lo: 0.2580767
+      hi: 25.807669999999998
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A2 C2_c08] PySR C2 hall of fame, complexity 8: a1 = -0.39970002; f1 = (#2 - #5) * 3.8526757; a2 =
+    #3; f2 = 2.580767'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:48:11'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 106416.4
+  marginalized:
+  - b2
+  - b1
+  sigma_fold: 1937.5
+  ladder:
+  - R: []
+    logZ_cross: 95003.3
+    promoted: true
+  - R:
+    - b2
+    logZ_cross: 101585.6
+    promoted: true
+  - R:
+    - b2
+    - b1
+    logZ_cross: 106416.4
+    promoted: true
+  - R:
+    - b2
+    - b1
+    - A0
+    logZ_cross: 106833.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 28175.8
+    SIMBA: 23989.8
+    Astrid: 26284.9
+    Swift-EAGLE: 27965.9
+  L_zero_shot: 28.34
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.014
+    SIMBA: 51.333
+    Astrid: 28.016
+    Swift-EAGLE: 17.997
+  L_map: 13.391
+  L_map_per_fold:
+    IllustrisTNG: 1.103
+    SIMBA: 47.875
+    Astrid: 2.535
+    Swift-EAGLE: 2.051
+  chi2_per_suite:
+    IllustrisTNG: 3.387
+    SIMBA: 5.022
+    Astrid: 25.835
+    Swift-EAGLE: 5.119
+  chi2_mean: 9.84
+  chi2_std: 9.26
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.064
+    SIMBA: 1.769
+    Astrid: 0.149
+    Swift-EAGLE: 0.106
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.4595
+      b1: 0.452
+      b2: 0.1891
+    SIMBA:
+      A0: 0.3998
+      b1: 0.6024
+      b2: 0.4617
+    Astrid:
+      A0: 0.4675
+      b1: 0.4355
+      b2: 0.1615
+    Swift-EAGLE:
+      A0: 0.4617
+      b1: 0.4357
+      b2: 0.1724
+  residuals: Loop/residuals/T03.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 127
+- trial: T04
+  expr: -A0*k**2*exp(-2*b1*(-Omega_b_over_Omega_m + (f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*b1*(-Omega_b_over_Omega_m +
+    (f_b/Omega_b_over_Omega_m))) + 1) + Omega_m*k**2*exp(-2*exp((f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*exp((f_b/Omega_b_over_Omega_m)))
+    + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.3445222
+      hi: 34.45222
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A2 C2_c09] PySR C2 hall of fame, complexity 9: a1 = -0.45162305; f1 = (#2 - #5) * 3.445222; a2 =
+    #3; f2 = exp(#2)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:50:20'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 105303.1
+  marginalized: []
+  sigma_fold: 2057.2
+  ladder:
+  - R: []
+    logZ_cross: 105303.1
+    promoted: true
+  - R:
+    - b1
+    logZ_cross: 105538.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 28003.0
+    SIMBA: 23473.6
+    Astrid: 26185.8
+    Swift-EAGLE: 27640.7
+  L_zero_shot: 19.781
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.574
+    SIMBA: 36.527
+    Astrid: 16.873
+    Swift-EAGLE: 12.151
+  L_map: 18.712
+  L_map_per_fold:
+    IllustrisTNG: 13.11
+    SIMBA: 35.332
+    Astrid: 15.39
+    Swift-EAGLE: 11.017
+  chi2_per_suite:
+    IllustrisTNG: 9.295
+    SIMBA: 3.378
+    Astrid: 74.103
+    Swift-EAGLE: 14.729
+  chi2_mean: 25.376
+  chi2_std: 28.417
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.435
+    SIMBA: 1.186
+    Astrid: 0.774
+    Swift-EAGLE: 0.469
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.5049
+      b1: 0.5872
+    SIMBA:
+      A0: 0.4776
+      b1: 0.5539
+    Astrid:
+      A0: 0.5161
+      b1: 0.5761
+    Swift-EAGLE:
+      A0: 0.5014
+      b1: 0.5706
+  residuals: Loop/residuals/T04.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 35
+- trial: T05
+  expr: Omega_m*k**2*exp(-2*b1)/(k**2*exp(-2*b1) + 1) + k**2*(-A2 - Omega_b_over_Omega_m)*exp(-2*b0*(-D + (f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*b0*(-D
+    + (f_b/Omega_b_over_Omega_m))) + 1)
+  lin:
+  - A2
+  nl:
+    b0:
+      lo: 0.28336542
+      hi: 28.336541999999998
+      spacing: log
+    b1:
+      lo: 0.23439369999999998
+      hi: 23.43937
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A2 C2_c10] PySR C2 hall of fame, complexity 10: a1 = -0.24559642 - #5; f1 = (#2 - #1) * 2.8336542;
+    a2 = #3; f2 = 2.343937'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:50:57'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 107371.7
+  marginalized:
+  - A2
+  - b0
+  sigma_fold: 1386.6
+  ladder:
+  - R: []
+    logZ_cross: 85276.0
+    promoted: true
+  - R:
+    - A2
+    logZ_cross: 104842.7
+    promoted: true
+  - R:
+    - A2
+    - b0
+    logZ_cross: 107371.7
+    promoted: true
+  - R:
+    - A2
+    - b0
+    - b1
+    logZ_cross: 107474.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 27854.9
+    SIMBA: 24819.8
+    Astrid: 27084.3
+    Swift-EAGLE: 27612.6
+  L_zero_shot: 46.119
+  L_zero_shot_per_fold:
+    IllustrisTNG: 44.921
+    SIMBA: 43.664
+    Astrid: 59.435
+    Swift-EAGLE: 36.454
+  L_map: 11.191
+  L_map_per_fold:
+    IllustrisTNG: 1.379
+    SIMBA: 38.492
+    Astrid: 3.463
+    Swift-EAGLE: 1.431
+  chi2_per_suite:
+    IllustrisTNG: 3.529
+    SIMBA: 3.432
+    Astrid: 36.889
+    Swift-EAGLE: 3.827
+  chi2_mean: 11.919
+  chi2_std: 14.417
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.063
+    SIMBA: 1.403
+    Astrid: 0.179
+    Swift-EAGLE: 0.069
+  fold_mu:
+    IllustrisTNG:
+      A2: 0.1527
+      b0: 0.1909
+      b1: 0.6012
+    SIMBA:
+      A2: 0.1407
+      b0: 0.4207
+      b1: 0.5075
+    Astrid:
+      A2: 0.1098
+      b0: 0.1363
+      b1: 0.6215
+    Swift-EAGLE:
+      A2: 0.1238
+      b0: 0.1597
+      b1: 0.6189
+  residuals: Loop/residuals/T05.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 136
+- trial: T06
+  expr: -A0*k**2*exp(-2*b1*(-Omega_b_over_Omega_m + (f_b/Omega_b_over_Omega_m)) - 2*b2)/(k**2*exp(-2*b1*(-Omega_b_over_Omega_m
+    + (f_b/Omega_b_over_Omega_m)) - 2*b2) + 1) + Omega_m*k**2*exp(-2*exp((f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*exp((f_b/Omega_b_over_Omega_m)))
+    + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.33296424999999996
+      hi: 33.296425
+      spacing: log
+    b2:
+      lo: 0.02135211
+      hi: 2.135211
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A2 C2_c11] PySR C2 hall of fame, complexity 11: a1 = -0.56920147; f1 = ((#2 - #5) * 3.3296425) +
+    0.2135211; a2 = #3; f2 = exp(#2)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:53:15'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 110859.8
+  marginalized:
+  - b2
+  sigma_fold: 2476.9
+  ladder:
+  - R: []
+    logZ_cross: 107014.8
+    promoted: true
+  - R:
+    - b2
+    logZ_cross: 110859.8
+    promoted: true
+  - R:
+    - b2
+    - b1
+    logZ_cross: 111201.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 29544.8
+    SIMBA: 24201.7
+    Astrid: 27751.6
+    Swift-EAGLE: 29361.7
+  L_zero_shot: 18.45
+  L_zero_shot_per_fold:
+    IllustrisTNG: 11.115
+    SIMBA: 37.286
+    Astrid: 15.59
+    Swift-EAGLE: 9.808
+  L_map: 11.559
+  L_map_per_fold:
+    IllustrisTNG: 3.283
+    SIMBA: 35.244
+    Astrid: 5.2
+    Swift-EAGLE: 2.508
+  chi2_per_suite:
+    IllustrisTNG: 5.933
+    SIMBA: 4.675
+    Astrid: 36.458
+    Swift-EAGLE: 5.324
+  chi2_mean: 13.098
+  chi2_std: 13.494
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.177
+    SIMBA: 1.795
+    Astrid: 0.335
+    Swift-EAGLE: 0.125
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.5755
+      b1: 0.5224
+      b2: -0.7831
+    SIMBA:
+      A0: 0.5816
+      b1: 0.4891
+      b2: -0.4772
+    Astrid:
+      A0: 0.5618
+      b1: 0.5057
+      b2: -0.7345
+    Swift-EAGLE:
+      A0: 0.5632
+      b1: 0.5224
+      b2: -0.8284
+  residuals: Loop/residuals/T06.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 92
+- trial: T07
+  expr: A3*k**2*exp(-2*b1)/(k**2*exp(-2*b1) + 1) + k**2*(-A0 + Omega_m)*exp(-2*b2*(-Omega_b_over_Omega_m*sigma_8 + (f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*b2*(-Omega_b_over_Omega_m*sigma_8
+    + (f_b/Omega_b_over_Omega_m))) + 1)
+  lin:
+  - A0
+  - A3
+  nl:
+    b1:
+      lo: 0.4169861
+      hi: 41.69861
+      spacing: log
+    b2:
+      lo: 0.33837485
+      hi: 33.837485
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c12] PySR C2 hall of fame, complexity 12: a1 = #3 + -0.6901641; f1 = (#2 - (#5 * #4)) * 3.3837485;
+    a2 = 4.1695166; f2 = 4.169861'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:54:49'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 113639.0
+  marginalized:
+  - b1
+  - A0
+  sigma_fold: 2761.4
+  ladder:
+  - R: []
+    logZ_cross: 96513.1
+    promoted: true
+  - R:
+    - b1
+    logZ_cross: 108050.3
+    promoted: true
+  - R:
+    - b1
+    - A0
+    logZ_cross: 113639.0
+    promoted: true
+  - R:
+    - b1
+    - A0
+    - b2
+    logZ_cross: 116196.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 30951.1
+    SIMBA: 24495.6
+    Astrid: 29375.2
+    Swift-EAGLE: 28817.0
+  L_zero_shot: 40.088
+  L_zero_shot_per_fold:
+    IllustrisTNG: 32.22
+    SIMBA: 57.405
+    Astrid: 26.753
+    Swift-EAGLE: 43.975
+  L_map: 12.045
+  L_map_per_fold:
+    IllustrisTNG: 0.605
+    SIMBA: 45.87
+    Astrid: 1.277
+    Swift-EAGLE: 0.429
+  chi2_per_suite:
+    IllustrisTNG: 3.54
+    SIMBA: 3.031
+    Astrid: 23.44
+    Swift-EAGLE: 3.536
+  chi2_mean: 8.387
+  chi2_std: 8.693
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.064
+    SIMBA: 1.39
+    Astrid: 0.13
+    Swift-EAGLE: 0.048
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.74
+      A3: 0.2946
+      b1: -0.0781
+      b2: 0.3787
+    SIMBA:
+      A0: 0.6247
+      A3: 0.0758
+      b1: -0.0118
+      b2: 0.531
+    Astrid:
+      A0: 0.7104
+      A3: 0.1308
+      b1: -0.2093
+      b2: 0.3336
+    Swift-EAGLE:
+      A0: 0.7497
+      A3: 0.4163
+      b1: 0.0935
+      b2: 0.3626
+  residuals: Loop/residuals/T07.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 268
+- trial: T08
+  expr: -A0*k**2*exp(-2*b1*(-Omega_b_over_Omega_m*sigma_8 + (f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*b1*(-Omega_b_over_Omega_m*sigma_8
+    + (f_b/Omega_b_over_Omega_m))) + 1) + k**2*(-Omega_b_over_Omega_m + Omega_m)*exp(-2*exp((f_b/Omega_b_over_Omega_m)))/(k**2*exp(-2*exp((f_b/Omega_b_over_Omega_m)))
+    + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.36182113
+      hi: 36.182113
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c13] PySR C2 hall of fame, complexity 13: a1 = -0.4661088; f1 = (#2 - (#4 * #5)) * 3.6182113;
+    a2 = #3 - #5; f2 = exp(#2)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:59:19'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.983
+  logZ_cross: 106728.5
+  marginalized: []
+  sigma_fold: 3143.5
+  ladder:
+  - R: []
+    logZ_cross: 106728.5
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 108764.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 29071.8
+    SIMBA: 22330.8
+    Astrid: 26422.5
+    Swift-EAGLE: 28903.3
+  L_zero_shot: 18.635
+  L_zero_shot_per_fold:
+    IllustrisTNG: 11.058
+    SIMBA: 38.033
+    Astrid: 17.262
+    Swift-EAGLE: 8.187
+  L_map: 16.277
+  L_map_per_fold:
+    IllustrisTNG: 8.365
+    SIMBA: 35.612
+    Astrid: 15.138
+    Swift-EAGLE: 5.993
+  chi2_per_suite:
+    IllustrisTNG: 6.89
+    SIMBA: 3.642
+    Astrid: 57.112
+    Swift-EAGLE: 8.911
+  chi2_mean: 19.139
+  chi2_std: 22.004
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.327
+    SIMBA: 1.501
+    Astrid: 0.797
+    Swift-EAGLE: 0.287
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.4026
+      b1: 0.5085
+    SIMBA:
+      A0: 0.4142
+      b1: 0.5418
+    Astrid:
+      A0: 0.3876
+      b1: 0.4918
+    Swift-EAGLE:
+      A0: 0.4016
+      b1: 0.509
+  residuals: Loop/residuals/T08.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 35
+- trial: T09
+  expr: -A0*Omega_b_over_Omega_m*k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m)
+    + 2*sigma_8) + 1) - A1*k**2*exp(2*b2)/(k**2*exp(2*b2) + 1)
+  lin:
+  - A0
+  - A1
+  nl:
+    b2:
+      lo: 0.0071314625000000005
+      hi: 0.7131462500000001
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c15] PySR C2 hall of fame, complexity 15: a1 = -0.0107376715; f1 = -0.071314625; a2 = #5 *
+    -1.7828557; f2 = ((#2 + (#2 + #2)) * exp(#3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 15:59:56'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.989
+  logZ_cross: 117908.1
+  marginalized:
+  - b2
+  - A1
+  sigma_fold: 1340.6
+  ladder:
+  - R: []
+    logZ_cross: 111563.1
+    promoted: true
+  - R:
+    - b2
+    logZ_cross: 114812.0
+    promoted: true
+  - R:
+    - b2
+    - A1
+    logZ_cross: 117908.1
+    promoted: true
+  - R:
+    - b2
+    - A1
+    - A0
+    logZ_cross: 118128.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 30554.6
+    SIMBA: 27671.8
+    Astrid: 29246.4
+    Swift-EAGLE: 30435.2
+  L_zero_shot: 18.952
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.289
+    SIMBA: 35.961
+    Astrid: 16.84
+    Swift-EAGLE: 9.716
+  L_map: 13.12
+  L_map_per_fold:
+    IllustrisTNG: 4.948
+    SIMBA: 35.87
+    Astrid: 7.661
+    Swift-EAGLE: 4.0
+  chi2_per_suite:
+    IllustrisTNG: 17.874
+    SIMBA: 3.49
+    Astrid: 35.811
+    Swift-EAGLE: 7.502
+  chi2_mean: 16.17
+  chi2_std: 12.496
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.242
+    SIMBA: 1.508
+    Astrid: 0.51
+    Swift-EAGLE: 0.229
+  fold_mu:
+    IllustrisTNG:
+      A0: 1.4973
+      A1: 0.0382
+      b2: -0.2015
+    SIMBA:
+      A0: 1.6107
+      A1: 0.0134
+      b2: -0.9663
+    Astrid:
+      A0: 1.4061
+      A1: 0.0439
+      b2: -0.9128
+    Swift-EAGLE:
+      A0: 1.4801
+      A1: 0.0402
+      b2: -0.4181
+  residuals: Loop/residuals/T09.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 94
+- trial: T10
+  expr: -A1*k**2*exp(-2*Omega_m)/(k**2*exp(-2*Omega_m) + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m)
+    + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m) + 2*sigma_8) + 1)
+  lin:
+  - A1
+  nl:
+    A0:
+      lo: 0.20113409999999998
+      hi: 20.11341
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c17] PySR C2 hall of fame, complexity 17: a1 = -0.018215641; f1 = #3; a2 = #5 * (#2 - 2.011341);
+    f2 = (((#2 + #2) + #2) * exp(#3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:01:32'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 112082.0
+  marginalized: []
+  sigma_fold: 2741.0
+  ladder:
+  - R: []
+    logZ_cross: 112082.0
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 113134.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 29860.3
+    SIMBA: 23985.2
+    Astrid: 28638.6
+    Swift-EAGLE: 29598.0
+  L_zero_shot: 16.421
+  L_zero_shot_per_fold:
+    IllustrisTNG: 12.095
+    SIMBA: 33.087
+    Astrid: 11.658
+    Swift-EAGLE: 8.846
+  L_map: 13.459
+  L_map_per_fold:
+    IllustrisTNG: 7.592
+    SIMBA: 33.031
+    Astrid: 7.524
+    Swift-EAGLE: 5.689
+  chi2_per_suite:
+    IllustrisTNG: 6.351
+    SIMBA: 3.577
+    Astrid: 36.433
+    Swift-EAGLE: 8.106
+  chi2_mean: 13.617
+  chi2_std: 13.272
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.306
+    SIMBA: 1.494
+    Astrid: 0.438
+    Swift-EAGLE: 0.291
+  fold_mu:
+    IllustrisTNG:
+      A1: 0.0362
+      A0: 0.2702
+    SIMBA:
+      A1: 0.0226
+      A0: 0.3035
+    Astrid:
+      A1: 0.0417
+      A0: 0.2702
+    Swift-EAGLE:
+      A1: 0.0387
+      A0: 0.2702
+  residuals: Loop/residuals/T10.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 31
+- trial: T11
+  expr: -A1*Omega_b_over_Omega_m*k**2*exp(-2*(f_b/Omega_b_over_Omega_m))/(k**2*exp(-2*(f_b/Omega_b_over_Omega_m)) + 1) + Omega_b_over_Omega_m*k**2*(-A0
+    + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m)
+    + 2*sigma_8) + 1)
+  lin:
+  - A1
+  nl:
+    A0:
+      lo: 0.18511332
+      hi: 18.511332
+      spacing: log
+  features:
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c19] PySR C2 hall of fame, complexity 19: a1 = #5 * -0.26694813; f1 = #2; a2 = (#2 - 1.8511332)
+    * #5; f2 = ((#2 + (#2 + #2)) * exp(#3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:02:05'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 114443.3
+  marginalized: []
+  sigma_fold: 2888.3
+  ladder:
+  - R: []
+    logZ_cross: 114443.3
+    promoted: true
+  - R:
+    - A1
+    logZ_cross: 116305.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31039.0
+    SIMBA: 24711.7
+    Astrid: 28153.6
+    Swift-EAGLE: 30539.0
+  L_zero_shot: 17.116
+  L_zero_shot_per_fold:
+    IllustrisTNG: 10.478
+    SIMBA: 33.471
+    Astrid: 16.711
+    Swift-EAGLE: 7.805
+  L_map: 11.172
+  L_map_per_fold:
+    IllustrisTNG: 2.752
+    SIMBA: 33.354
+    Astrid: 5.586
+    Swift-EAGLE: 2.995
+  chi2_per_suite:
+    IllustrisTNG: 5.124
+    SIMBA: 3.136
+    Astrid: 32.044
+    Swift-EAGLE: 6.22
+  chi2_mean: 11.631
+  chi2_std: 11.837
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.171
+    SIMBA: 1.368
+    Astrid: 0.376
+    Swift-EAGLE: 0.213
+  fold_mu:
+    IllustrisTNG:
+      A1: 0.3728
+      A0: 0.2008
+    SIMBA:
+      A1: 0.2648
+      A0: 0.2508
+    Astrid:
+      A1: 0.5017
+      A0: 0.1676
+    Swift-EAGLE:
+      A1: 0.4288
+      A0: 0.1843
+  residuals: Loop/residuals/T11.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 48
+- trial: T12
+  expr: D*k**2*(A1 - (f_b/Omega_b_over_Omega_m))*exp(-2*Omega_m)/(k**2*exp(-2*Omega_m) + 1) + Omega_b_over_Omega_m*k**2*(-A0
+    + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m)
+    + 2*sigma_8) + 1)
+  lin:
+  - A1
+  nl:
+    A0:
+      lo: 0.20296850000000002
+      hi: 20.296850000000003
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c21] PySR C2 hall of fame, complexity 21: a1 = (0.1486147 - #2) * #1; f1 = #3; a2 = #5 * (#2
+    - 2.029685); f2 = (((#2 + #2) + #2) * exp(#3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:02:55'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 118888.1
+  marginalized: []
+  sigma_fold: 3003.7
+  ladder:
+  - R: []
+    logZ_cross: 118888.1
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 120314.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31806.1
+    SIMBA: 25261.2
+    Astrid: 30905.1
+    Swift-EAGLE: 30915.7
+  L_zero_shot: 15.25
+  L_zero_shot_per_fold:
+    IllustrisTNG: 10.934
+    SIMBA: 32.232
+    Astrid: 9.647
+    Swift-EAGLE: 8.186
+  L_map: 10.595
+  L_map_per_fold:
+    IllustrisTNG: 2.838
+    SIMBA: 32.22
+    Astrid: 4.376
+    Swift-EAGLE: 2.945
+  chi2_per_suite:
+    IllustrisTNG: 5.571
+    SIMBA: 3.273
+    Astrid: 25.56
+    Swift-EAGLE: 4.311
+  chi2_mean: 9.679
+  chi2_std: 9.205
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.171
+    SIMBA: 1.427
+    Astrid: 0.316
+    Swift-EAGLE: 0.217
+  fold_mu:
+    IllustrisTNG:
+      A1: -0.372
+      A0: 0.1716
+    SIMBA:
+      A1: -0.0253
+      A0: 0.2574
+    Astrid:
+      A1: -0.3526
+      A0: 0.1738
+    Swift-EAGLE:
+      A1: -0.4868
+      A0: 0.1548
+  residuals: Loop/residuals/T12.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 53
+- trial: T13
+  expr: -A1*D*(f_b/Omega_b_over_Omega_m)**2*k**2*exp(-2*Omega_m)/(k**2*exp(-2*Omega_m) + 1) + Omega_b_over_Omega_m*k**2*(-A0
+    + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m)
+    + 2*sigma_8) + 1)
+  lin:
+  - A1
+  nl:
+    A0:
+      lo: 0.2006729
+      hi: 20.06729
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c23] PySR C2 hall of fame, complexity 23: a1 = #2 * (#2 * (#1 * -1.3085479)); f1 = #3; a2 =
+    #5 * (#2 - 2.006729); f2 = ((#2 + (#2 + #2)) * exp(#3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:03:50'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 117506.6
+  marginalized: []
+  sigma_fold: 2751.9
+  ladder:
+  - R: []
+    logZ_cross: 117506.6
+    promoted: true
+  - R:
+    - A1
+    logZ_cross: 118526.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31362.8
+    SIMBA: 25336.8
+    Astrid: 29988.5
+    Swift-EAGLE: 30818.5
+  L_zero_shot: 15.682
+  L_zero_shot_per_fold:
+    IllustrisTNG: 9.77
+    SIMBA: 34.82
+    Astrid: 10.88
+    Swift-EAGLE: 7.256
+  L_map: 12.668
+  L_map_per_fold:
+    IllustrisTNG: 4.608
+    SIMBA: 34.566
+    Astrid: 7.097
+    Swift-EAGLE: 4.403
+  chi2_per_suite:
+    IllustrisTNG: 6.27
+    SIMBA: 3.124
+    Astrid: 37.254
+    Swift-EAGLE: 6.28
+  chi2_mean: 13.232
+  chi2_std: 13.929
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.237
+    SIMBA: 1.402
+    Astrid: 0.44
+    Swift-EAGLE: 0.274
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.3189
+      A0: 0.2525
+    SIMBA:
+      A1: 1.6201
+      A0: 0.2692
+    Astrid:
+      A1: 2.3747
+      A0: 0.2525
+    Swift-EAGLE:
+      A1: 2.3925
+      A0: 0.2525
+  residuals: Loop/residuals/T13.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 47
+- trial: T14
+  expr: D*(f_b/Omega_b_over_Omega_m)*k**2*(Omega_m - (f_b/Omega_b_over_Omega_m))*exp(2*b1)/(k**2*exp(2*b1) + 1) + Omega_b_over_Omega_m*k**2*(-A0
+    + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8)
+    + 2*sigma_8) + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.0108606406
+      hi: 1.08606406
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c25] PySR C2 hall of fame, complexity 25: a1 = (#1 * #2) * (#3 - #2); f1 = -0.108606406; a2
+    = #5 * (#2 - 2.006729); f2 = ((#2 + (#2 + #2)) * exp(#3 * #4)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:04:39'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 118763.5
+  marginalized: []
+  sigma_fold: 2696.4
+  ladder:
+  - R: []
+    logZ_cross: 118763.5
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 119364.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31476.3
+    SIMBA: 25690.0
+    Astrid: 30512.9
+    Swift-EAGLE: 31084.4
+  L_zero_shot: 14.288
+  L_zero_shot_per_fold:
+    IllustrisTNG: 9.563
+    SIMBA: 31.43
+    Astrid: 9.462
+    Swift-EAGLE: 6.698
+  L_map: 13.952
+  L_map_per_fold:
+    IllustrisTNG: 9.355
+    SIMBA: 31.066
+    Astrid: 8.943
+    Swift-EAGLE: 6.444
+  chi2_per_suite:
+    IllustrisTNG: 9.794
+    SIMBA: 3.125
+    Astrid: 44.296
+    Swift-EAGLE: 9.353
+  chi2_mean: 16.642
+  chi2_std: 16.183
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.398
+    SIMBA: 1.368
+    Astrid: 0.59
+    Swift-EAGLE: 0.359
+  fold_mu:
+    IllustrisTNG:
+      A0: 1.9579
+      b1: -0.2866
+    SIMBA:
+      A0: 1.9817
+      b1: -0.763
+    Astrid:
+      A0: 1.9648
+      b1: -0.2705
+    Swift-EAGLE:
+      A0: 1.9717
+      b1: -0.2689
+  residuals: Loop/residuals/T14.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 46
+- trial: T15
+  expr: D*(f_b/Omega_b_over_Omega_m)*k**2*(-A1*(f_b/Omega_b_over_Omega_m) + Omega_m)*exp(-2*Omega_m)/(k**2*exp(-2*Omega_m)
+    + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8)
+    + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8) + 1)
+  lin:
+  - A1
+  nl:
+    A0:
+      lo: 0.19825413
+      hi: 19.825413
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c27] PySR C2 hall of fame, complexity 27: a1 = #2 * ((#3 - (1.4192497 * #2)) * #1); f1 = #3;
+    a2 = (#2 - 1.9825413) * #5; f2 = ((#2 + (#2 + #2)) * exp(#3 * #4)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:05:26'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 118873.3
+  marginalized: []
+  sigma_fold: 2545.1
+  ladder:
+  - R: []
+    logZ_cross: 118873.3
+    promoted: true
+  - R:
+    - A1
+    logZ_cross: 119360.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31554.9
+    SIMBA: 25983.4
+    Astrid: 30274.9
+    Swift-EAGLE: 31060.0
+  L_zero_shot: 15.175
+  L_zero_shot_per_fold:
+    IllustrisTNG: 9.266
+    SIMBA: 34.185
+    Astrid: 10.591
+    Swift-EAGLE: 6.655
+  L_map: 12.989
+  L_map_per_fold:
+    IllustrisTNG: 5.026
+    SIMBA: 33.652
+    Astrid: 8.364
+    Swift-EAGLE: 4.914
+  chi2_per_suite:
+    IllustrisTNG: 5.684
+    SIMBA: 2.93
+    Astrid: 39.45
+    Swift-EAGLE: 7.246
+  chi2_mean: 13.828
+  chi2_std: 14.874
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.262
+    SIMBA: 1.322
+    Astrid: 0.52
+    Swift-EAGLE: 0.307
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.5647
+      A0: 0.2898
+    SIMBA:
+      A1: 1.751
+      A0: 0.2639
+    Astrid:
+      A1: 2.0893
+      A0: 0.2639
+    Swift-EAGLE:
+      A1: 2.1289
+      A0: 0.2639
+  residuals: Loop/residuals/T15.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 61
+- trial: T16
+  expr: D*(f_b/Omega_b_over_Omega_m)*k**2*(Omega_m - (f_b/Omega_b_over_Omega_m)*exp(Omega_b_over_Omega_m))*exp(-2*Omega_m)/(k**2*exp(-2*Omega_m)
+    + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8)
+    + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8) + 1)
+  lin: []
+  nl:
+    A0:
+      lo: 0.19999723
+      hi: 19.999723
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c28] PySR C2 hall of fame, complexity 28: a1 = ((#3 - (exp(#5) * #2)) * #1) * #2; f1 = #3;
+    a2 = #5 * (#2 - 1.9999723); f2 = (((#2 + #2) + #2) * exp(#4 * #3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:06:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119153.6
+  marginalized: []
+  sigma_fold: 2896.2
+  ladder:
+  - R: []
+    logZ_cross: 119153.6
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 119783.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31686.5
+    SIMBA: 25485.0
+    Astrid: 30716.8
+    Swift-EAGLE: 31265.3
+  L_zero_shot: 13.817
+  L_zero_shot_per_fold:
+    IllustrisTNG: 9.137
+    SIMBA: 29.939
+    Astrid: 9.689
+    Swift-EAGLE: 6.502
+  L_map: 12.879
+  L_map_per_fold:
+    IllustrisTNG: 8.027
+    SIMBA: 30.02
+    Astrid: 7.98
+    Swift-EAGLE: 5.49
+  chi2_per_suite:
+    IllustrisTNG: 6.671
+    SIMBA: 3.047
+    Astrid: 36.186
+    Swift-EAGLE: 8.113
+  chi2_mean: 13.504
+  chi2_std: 13.225
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.348
+    SIMBA: 1.332
+    Astrid: 0.506
+    Swift-EAGLE: 0.312
+  fold_mu:
+    IllustrisTNG:
+      A0: 0.2844
+    SIMBA:
+      A0: 0.301
+    Astrid:
+      A0: 0.2844
+    Swift-EAGLE:
+      A0: 0.2844
+  residuals: Loop/residuals/T16.md
+  n_coeff: 1
+  nl_nodes: 41
+  seconds: 27
+- trial: T17
+  expr: A1*D*k**2*(-Omega_m + (f_b/Omega_b_over_Omega_m))*(Omega_m - (f_b/Omega_b_over_Omega_m))*exp(-2*b2)/(k**2*exp(-2*b2)
+    + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8)
+    + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8) + 1)
+  lin:
+  - A0
+  - A1
+  nl:
+    b2:
+      lo: 0.010482563
+      hi: 1.0482563
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c29] PySR C2 hall of fame, complexity 29: a1 = (#3 - #2) * ((#2 - #3) * (#1 * 2.0058243));
+    f1 = 0.10482563; a2 = #5 * (#2 - 1.9872901); f2 = (((#2 + #2) + #2) * exp(#4 * #3)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:06:59'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119515.1
+  marginalized: []
+  sigma_fold: 2643.5
+  ladder:
+  - R: []
+    logZ_cross: 119515.1
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 119973.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31809.8
+    SIMBA: 26012.9
+    Astrid: 30388.4
+    Swift-EAGLE: 31303.9
+  L_zero_shot: 14.514
+  L_zero_shot_per_fold:
+    IllustrisTNG: 8.794
+    SIMBA: 31.815
+    Astrid: 10.947
+    Swift-EAGLE: 6.498
+  L_map: 12.832
+  L_map_per_fold:
+    IllustrisTNG: 5.575
+    SIMBA: 31.456
+    Astrid: 9.377
+    Swift-EAGLE: 4.919
+  chi2_per_suite:
+    IllustrisTNG: 7.291
+    SIMBA: 3.319
+    Astrid: 45.092
+    Swift-EAGLE: 7.797
+  chi2_mean: 15.874
+  chi2_std: 16.957
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.293
+    SIMBA: 1.49
+    Astrid: 0.622
+    Swift-EAGLE: 0.326
+  fold_mu:
+    IllustrisTNG:
+      A0: 1.8893
+      A1: 3.2226
+      b2: -1.5881
+    SIMBA:
+      A0: 1.9135
+      A1: 2.6224
+      b2: -1.009
+    Astrid:
+      A0: 1.8711
+      A1: 3.5511
+      b2: -1.4316
+    Swift-EAGLE:
+      A0: 1.8912
+      A1: 3.3072
+      b2: -1.6828
+  residuals: Loop/residuals/T17.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 110
+- trial: T18
+  expr: D*k**2*(-Omega_m + (f_b/Omega_b_over_Omega_m))*(Omega_m - (f_b/Omega_b_over_Omega_m))*exp(-2*b1)*exp(sigma_8)/(k**2*exp(-2*b1)
+    + 1) + Omega_b_over_Omega_m*k**2*(-A0 + (f_b/Omega_b_over_Omega_m))*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8)
+    + 2*sigma_8)/(k**2*exp(-6*(f_b/Omega_b_over_Omega_m)*exp(Omega_m*sigma_8) + 2*sigma_8) + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.014861469999999998
+      hi: 1.4861469999999999
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  - sigma_8
+  hypothesis: '[ablation A2 C2_c30] PySR C2 hall of fame, complexity 30: a1 = #1 * ((#2 - #3) * ((#3 - #2) * exp(#4))); f1
+    = 0.1486147; a2 = #5 * (#2 - 1.9849933); f2 = (((#2 + #2) + #2) * exp(#3 * #4)) - #4'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 16:08:51'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 118929.6
+  marginalized: []
+  sigma_fold: 2650.0
+  ladder:
+  - R: []
+    logZ_cross: 118929.6
+    promoted: true
+  - R:
+    - A0
+    logZ_cross: 119342.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31513.1
+    SIMBA: 25806.0
+    Astrid: 30506.9
+    Swift-EAGLE: 31103.6
+  L_zero_shot: 14.145
+  L_zero_shot_per_fold:
+    IllustrisTNG: 8.926
+    SIMBA: 31.29
+    Astrid: 9.843
+    Swift-EAGLE: 6.52
+  L_map: 13.919
+  L_map_per_fold:
+    IllustrisTNG: 8.732
+    SIMBA: 31.296
+    Astrid: 9.367
+    Swift-EAGLE: 6.283
+  chi2_per_suite:
+    IllustrisTNG: 7.611
+    SIMBA: 3.137
+    Astrid: 42.565
+    Swift-EAGLE: 9.108
+  chi2_mean: 15.605
+  chi2_std: 15.719
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.379
+    SIMBA: 1.396
+    Astrid: 0.599
+    Swift-EAGLE: 0.355
+  fold_mu:
+    IllustrisTNG:
+      A0: 1.9227
+      b1: -1.4468
+    SIMBA:
+      A0: 1.9423
+      b1: -1.2362
+    Astrid:
+      A0: 1.9204
+      b1: -1.7036
+    Swift-EAGLE:
+      A0: 1.9314
+      b1: -1.5074
+  residuals: Loop/residuals/T18.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 55

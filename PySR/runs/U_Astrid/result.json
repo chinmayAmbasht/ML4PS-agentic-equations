@@ -1,0 +1,18 @@
+{
+ "variant": "U",
+ "fold": "Astrid",
+ "train": [
+  "IllustrisTNG",
+  "SIMBA",
+  "Swift-EAGLE"
+ ],
+ "seed": 0,
+ "timeout_s": 2700,
+ "seconds": 2722,
+ "n_rows": 44784,
+ "best_equation": "-3.3941941 / (exp(1.938304 / (k + Dx)) / Dx)",
+ "best_complexity": 10,
+ "best_loss": 0.000118679614,
+ "L_zero_corr": 743.856448125181,
+ "n_heldout_boxes": 927
+}

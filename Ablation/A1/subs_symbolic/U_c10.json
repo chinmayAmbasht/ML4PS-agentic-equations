@@ -1,0 +1,28 @@
+{
+ "expr": "-A0*D*log(b1 + k)/(f_b/Omega_b_over_Omega_m)",
+ "lin": [
+  "A0"
+ ],
+ "nl": {
+  "b1": {
+   "lo": 0.080063736,
+   "hi": 8.0063736,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "amplitude",
+  "b1": "other"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "[ablation A1 U_c10] PySR U hall of fame, complexity 10: (Dx * -0.3719838) * (log(k + 0.80063736) / q)",
+ "pysr_values": {
+  "A0": 0.3719838,
+  "b1": 0.80063736
+ },
+ "frozen": {}
+}

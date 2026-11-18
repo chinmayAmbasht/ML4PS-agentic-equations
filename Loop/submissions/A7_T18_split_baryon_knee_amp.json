@@ -1,0 +1,10 @@
+{
+ "expr": "-D*(G*Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2)*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2))) + C*(k/kc)**2/(1 + (k/kc)**2))",
+ "lin": ["G", "A", "B", "C"],
+ "nl": {"k2": {"lo": 0.05, "hi": 20, "spacing": "log"}, "kc": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"G": "amplitude", "A": "amplitude", "B": "other", "C": "amplitude", "k2": "scale", "kc": "scale"},
+ "features": ["D", "Omega_b_over_Omega_m"],
+ "hypothesis": "T18 with the large-scale baryon knee (fixed k1 = 0.68) given its own linear amplitude G, and the soft-tail factor (A + B x2/(1+x2)) applied only to the (1-w) k2 component. In T18 the product ties the large-scale knee to A and to the tail, so the per-box DOFs [k2, B, A] cannot move k <= 1.1 independently of k > 3; G is a separately marginalizable per-box large-scale amplitude aimed at the Astrid/TNG k <= 1.1 chi2 sink (TNG k=0.36 +3.2, Astrid +1.6 / -1.2..-1.4 at 0.6-1.1). Nests T18 (G = A, B on both).",
+ "predicted_logZ_cross": 127300,
+ "predicted_chi2_mean": 7.5
+}

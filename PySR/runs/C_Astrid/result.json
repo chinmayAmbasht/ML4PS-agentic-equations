@@ -1,0 +1,18 @@
+{
+ "variant": "C",
+ "fold": "Astrid",
+ "train": [
+  "IllustrisTNG",
+  "SIMBA",
+  "Swift-EAGLE"
+ ],
+ "seed": 0,
+ "timeout_s": 2700,
+ "seconds": 2724,
+ "n_rows": 44784,
+ "best_equation": "f = #2; g = #2 * -2.2339358",
+ "best_complexity": 4,
+ "best_loss": 0.00013288694,
+ "L_zero_corr": 526.3884726550532,
+ "n_heldout_boxes": 927
+}

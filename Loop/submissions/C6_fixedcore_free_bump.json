@@ -1,0 +1,7 @@
+{"expr": "-D*(A*(k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2) + C*(k/4.5)**2/(1 + (k/4.5)**2) + E*(k/kb)**2/(1 + (k/kb)**2)**2)",
+ "lin": ["A", "C", "E"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "kb": {"lo": 0.05, "hi": 20, "spacing": "log"}},
+ "roles": {"A": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "kb": "scale"},
+ "features": ["D"],
+ "hypothesis": "sqrt(D)-scaled W2 deficit knee plus a D^1 inner-halo W2 core fixed at k = 4.5 h/Mpc (T10 fold median) and a D^1 transient bump at its own free scale kb for the large-scale floor; soft-tail B dropped (unstable sign).",
+ "predicted_logZ_cross": 124600, "predicted_chi2_mean": 7.5}

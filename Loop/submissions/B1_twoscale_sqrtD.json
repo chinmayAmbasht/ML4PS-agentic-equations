@@ -1,0 +1,7 @@
+{"expr": "-A*D*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2)))",
+ "lin": ["A"],
+ "nl": {"k1": {"lo": 0.05, "hi": 10, "spacing": "log"}, "k2": {"lo": 0.05, "hi": 20, "spacing": "log"}},
+ "roles": {"A": "amplitude", "k1": "scale", "k2": "scale"},
+ "features": ["D", "Omega_b_over_Omega_m"],
+ "hypothesis": "Paper rank-1 two-scale baryon-weighted W2 with the D-scaling exponent fixed at beta=-1/2 (k_eff = k_i/sqrt(D)), freeing the third nonlinear slot.",
+ "predicted_logZ_cross": 123000, "predicted_chi2_mean": 7.5}

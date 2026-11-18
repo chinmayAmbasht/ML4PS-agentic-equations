@@ -1,0 +1,10 @@
+{
+ "expr": "-D*(A*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + B*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))**2) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": ["A", "B", "C", "E"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "k1": "scale"},
+ "features": ["D", "f_b"],
+ "hypothesis": "T23 (D^0.75 f_b/D core) with a linear mix of soft and sharp sqrt(D) knee, -D(A W2(x) + B W2(x)^2): knee sharpness is suite-dependent (T25: k^4 helps TNG/Astrid k=0.36, hurts SIMBA/Swift), so let the k^2 low-k knee amplitude A be a per-box DOF while B sets the sharp plateau.",
+ "predicted_logZ_cross": 127500,
+ "predicted_chi2_mean": 9.5
+}

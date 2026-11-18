@@ -1,0 +1,34 @@
+{
+ "expr": "-D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "B",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b"
+ ],
+ "hypothesis": "[orchestrator-proposed; Chi2Push X07, chi2-targeted; resubmitted to the main loop as T57 on 2026-11-14] T07 + T36 redistribution core"
+}

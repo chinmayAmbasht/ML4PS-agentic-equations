@@ -1,0 +1,27 @@
+{
+ "expr": "-A*D*(((k/(k1))**2/(1 + (k/(k1))**2)) + ((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))",
+ "lin": [
+  "A"
+ ],
+ "nl": {
+  "k1": {
+   "lo": 0.05,
+   "hi": 50.0,
+   "spacing": "log"
+  },
+  "alpha": {
+   "lo": -5.0,
+   "hi": 30.0,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "k1": "scale",
+  "alpha": "other"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "[ablation A3 G021] prescreen rank 13: [ablation A3 grammar G021] M2 kernels=[('1', 'none', 'k1'), ('1', 'alphaD', 'k1')] shared_amp=True"
+}

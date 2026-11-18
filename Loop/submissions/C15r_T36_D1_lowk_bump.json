@@ -1,0 +1,10 @@
+{
+ "expr": "-A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2)) - G*D*(k/0.4)**2/(1 + (k/0.4)**2)**2",
+ "lin": ["A", "C", "E", "G"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "C": "amplitude", "E": "amplitude", "G": "amplitude", "k0": "scale", "k1": "scale"},
+ "features": ["D", "f_b", "Omega_b_over_Omega_m"],
+ "hypothesis": "T36 plus a localized large-scale D^1 bump -G*D*u^2/(1+u^2)^2, u=k/0.4: T36's low-k terms all scale as D^2 or steeper while -S(0.36) ~ D^1 in Astrid/Swift; a per-box large-scale amplitude targets the k=0.36 suite split (Astrid +2.1, Swift -2.2) without touching k>=3.",
+ "predicted_logZ_cross": 131500,
+ "predicted_chi2_mean": 8.0
+}

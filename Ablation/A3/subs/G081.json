@@ -1,0 +1,29 @@
+{
+ "expr": "-A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))",
+ "lin": [
+  "A"
+ ],
+ "nl": {
+  "k1": {
+   "lo": 0.05,
+   "hi": 50.0,
+   "spacing": "log"
+  },
+  "beta": {
+   "lo": -1.5,
+   "hi": 1.5,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "k1": "scale",
+  "beta": "exponent"
+ },
+ "features": [
+  "D",
+  "Omega_m",
+  "f_b"
+ ],
+ "hypothesis": "[ablation A3 G081] prescreen rank 59: [ablation A3 grammar G081] M2 kernels=[('1', 'Dbeta', 'k1'), ('fb', 'Om', 'k1')] shared_amp=True"
+}

@@ -1,0 +1,40 @@
+{
+ "expr": "-A*k**a*(2**a + 2**b*(C*(1 - D/Omega_b_over_Omega_m))**(b - a))/(1 + (C*(1 - D/Omega_b_over_Omega_m))**(b - a)*k**(a - b))*exp(d*(1 - D/Omega_b_over_Omega_m))",
+ "lin": [
+  "A"
+ ],
+ "nl": {
+  "a": {
+   "lo": 0.5,
+   "hi": 3,
+   "spacing": "lin"
+  },
+  "b": {
+   "lo": 0.5,
+   "hi": 3,
+   "spacing": "lin"
+  },
+  "C": {
+   "lo": 0.3,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "d": {
+   "lo": -5,
+   "hi": 5,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "a": "exponent",
+  "b": "exponent",
+  "C": "scale",
+  "d": "other"
+ },
+ "features": [
+  "D",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "ML4PS paper Table 1 rank 32 (van Daalen 2020 rewritten)."
+}

@@ -1,0 +1,38 @@
+{
+ "expr": "-D*(A*(f_b/Omega_b_over_Omega_m)*((k*D**0.5/(0.68*(Omega_m/0.3)**(1/3)))**2/(1 + (k*D**0.5/(0.68*(Omega_m/0.3)**(1/3)))**2)) + B*(1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "B",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m",
+  "Omega_m"
+ ],
+ "hypothesis": "T47 with the fixed retained-gas knee scale 0.68/sqrt(D) scaled by (Omega_m/0.3)^(1/3) (cosmology-dependent halo-radius scale, as in T01), to move the knee per box without a new coefficient; p = 6.",
+ "predicted_logZ_cross": 131500,
+ "predicted_chi2_mean": 9.0
+}

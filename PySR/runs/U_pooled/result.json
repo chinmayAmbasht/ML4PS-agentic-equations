@@ -1,0 +1,17 @@
+{
+ "variant": "U",
+ "fold": "pooled",
+ "train": [
+  "IllustrisTNG",
+  "SIMBA",
+  "Astrid",
+  "Swift-EAGLE"
+ ],
+ "seed": 0,
+ "timeout_s": 2700,
+ "seconds": 2723,
+ "n_rows": 59616,
+ "best_equation": "square(k / ((k / 4.5654597) + q)) * (Dx * -0.19331188)",
+ "best_complexity": 12,
+ "best_loss": 0.0001674594
+}

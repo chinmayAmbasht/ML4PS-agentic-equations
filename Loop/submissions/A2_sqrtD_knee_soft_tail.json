@@ -1,0 +1,5 @@
+{"expr": "-D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0)))",
+ "lin": ["A","B"], "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "other", "k0": "scale"}, "features": ["D"],
+ "hypothesis": "Single sqrt(D)-scaled W2 knee with a linear soft-tail factor (A + B x/(1+x)): plateau keeps growing slowly past the knee, fixing the TNG/Swift mid-k positive / high-k negative residuals with one nl coefficient.",
+ "predicted_logZ_cross": 123300, "predicted_chi2_mean": 6.6}

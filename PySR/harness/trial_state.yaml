@@ -1,0 +1,186 @@
+budget: 50
+n_used: 2
+trials:
+- trial: T01
+  expr: A1*D*k**2/((f_b/Omega_b_over_Omega_m) + b0*k)**2
+  lin:
+  - A1
+  nl:
+    b0:
+      lo: 0.021903599324291485
+      hi: 2.1903599324291485
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'PySR U pooled-search equation: square(k / ((k / 4.5654597) + q)) * (Dx * -0.19331188)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 09:04:50'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 112493.8
+  marginalized:
+  - A1
+  sigma_fold: 2611.0
+  ladder:
+  - R: []
+    logZ_cross: 101042.9
+    promoted: true
+  - R:
+    - A1
+    logZ_cross: 112493.8
+    promoted: true
+  - R:
+    - A1
+    - b0
+    logZ_cross: 115071.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 29811.4
+    SIMBA: 24237.2
+    Astrid: 29017.2
+    Swift-EAGLE: 29428.0
+  L_zero_shot: 25.278
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.25
+    SIMBA: 37.619
+    Astrid: 34.456
+    Swift-EAGLE: 13.788
+  L_map: 11.759
+  L_map_per_fold:
+    IllustrisTNG: 3.809
+    SIMBA: 36.269
+    Astrid: 4.201
+    Swift-EAGLE: 2.754
+  chi2_per_suite:
+    IllustrisTNG: 13.046
+    SIMBA: 2.883
+    Astrid: 60.212
+    Swift-EAGLE: 9.437
+  chi2_mean: 21.394
+  chi2_std: 22.705
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.247
+    SIMBA: 1.154
+    Astrid: 0.274
+    Swift-EAGLE: 0.202
+  fold_mu:
+    IllustrisTNG:
+      A1: -0.4996
+      b0: -0.4428
+    SIMBA:
+      A1: -0.2645
+      b0: -0.5928
+    Astrid:
+      A1: -0.4913
+      b0: -0.4762
+    Swift-EAGLE:
+      A1: -0.4911
+      b0: -0.4595
+  residuals: Loop/residuals/T01.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 25
+- trial: T02
+  expr: -A0*D*k**2*exp(-2*b1*((f_b/Omega_b_over_Omega_m) - exp(-(f_b/Omega_b_over_Omega_m)*b2)))/(k**2*exp(-2*b1*((f_b/Omega_b_over_Omega_m)
+    - exp(-(f_b/Omega_b_over_Omega_m)*b2))) + 1)
+  lin:
+  - A0
+  nl:
+    b1:
+      lo: 0.14397743000000002
+      hi: 14.397743
+      spacing: log
+    b2:
+      lo: 0.8148949999999999
+      hi: 81.48949999999999
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'PySR C pooled-search equation: f = (#2 - exp(#2 * -8.14895)) * 1.4397743; g = #2 * -2.4904518'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 09:06:30'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120080.5
+  marginalized:
+  - b2
+  sigma_fold: 1158.1
+  ladder:
+  - R: []
+    logZ_cross: 111626.2
+    promoted: true
+  - R:
+    - b2
+    logZ_cross: 120080.5
+    promoted: true
+  - R:
+    - b2
+    - A0
+    logZ_cross: 120403.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31154.3
+    SIMBA: 28468.1
+    Astrid: 29882.0
+    Swift-EAGLE: 30576.2
+  L_zero_shot: 18.412
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.867
+    SIMBA: 37.87
+    Astrid: 9.683
+    Swift-EAGLE: 11.23
+  L_map: 10.041
+  L_map_per_fold:
+    IllustrisTNG: 8.794
+    SIMBA: 19.588
+    Astrid: 5.502
+    Swift-EAGLE: 6.28
+  chi2_per_suite:
+    IllustrisTNG: 4.531
+    SIMBA: 2.009
+    Astrid: 17.156
+    Swift-EAGLE: 4.301
+  chi2_mean: 6.999
+  chi2_std: 5.946
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.41
+    SIMBA: 0.702
+    Astrid: 0.361
+    Swift-EAGLE: 0.364
+  fold_mu:
+    IllustrisTNG:
+      A0: 2.5284
+      b1: 0.1083
+      b2: 0.9228
+    SIMBA:
+      A0: 2.7686
+      b1: 0.1916
+      b2: 1.3595
+    Astrid:
+      A0: 2.7445
+      b1: 0.125
+      b2: 1.1626
+    Swift-EAGLE:
+      A0: 2.5863
+      b1: 0.1083
+      b2: 0.9083
+  residuals: Loop/residuals/T02.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 58

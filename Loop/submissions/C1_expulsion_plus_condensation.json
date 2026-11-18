@@ -1,0 +1,7 @@
+{"expr": "-A*D*((k/(k0*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k0*(Omega_m/0.3)**(1/3)))**2)) + B*f_b*((k/kc)**2/(1 + (k/kc)**2))",
+ "lin": ["A", "B"],
+ "nl": {"k0": {"lo": 0.1, "hi": 30, "spacing": "log"}, "kc": {"lo": 1, "hi": 100, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "amplitude", "k0": "scale", "kc": "scale"},
+ "features": ["D", "f_b", "Omega_m"],
+ "hypothesis": "Expulsion (-A D W2 at Omega_m-scaled k0) plus a retained-baryon condensation term B f_b W2(k/kc) at its own scale, for Astrid's low-D small-scale enhancement.",
+ "predicted_logZ_cross": 120500, "predicted_chi2_mean": 6.0}

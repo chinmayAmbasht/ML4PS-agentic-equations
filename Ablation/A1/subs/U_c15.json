@@ -1,0 +1,29 @@
+{
+ "expr": "-A0*D*(-b1/sigma_8 + k)**4/((f_b/Omega_b_over_Omega_m) + k)**4",
+ "lin": [
+  "A0"
+ ],
+ "nl": {
+  "b1": {
+   "lo": 0.004710073,
+   "hi": 0.4710073,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "amplitude",
+  "b1": "other"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "sigma_8",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "[ablation A1 U_c15] PySR U hall of fame, complexity 15: (Dx * square(square((k - (0.04710073 / s8)) / (q + k)))) * -3.2534604",
+ "pysr_values": {
+  "A0": 3.2534604,
+  "b1": 0.04710073
+ },
+ "frozen": {}
+}

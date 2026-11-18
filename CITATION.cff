@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Bayesian Agentic Equation Discovery for Cosmological Inference with Discrepant Simulators"
+authors:
+  - family-names: Ambasht
+    given-names: Chinmay
+    affiliation: University of Texas at Austin
+  - family-names: Wadekar
+    given-names: Jay
+    affiliation: University of Texas at Austin
+  - family-names: Pandey
+    given-names: Shivam
+    affiliation: University of Arizona
+year: 2026
+type: software

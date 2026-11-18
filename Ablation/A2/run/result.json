@@ -1,0 +1,18 @@
+{
+ "variant": "C2",
+ "fold": "pooled",
+ "train": [
+  "IllustrisTNG",
+  "SIMBA",
+  "Astrid",
+  "Swift-EAGLE"
+ ],
+ "seed": 0,
+ "timeout_s": 2700,
+ "seconds": 2735,
+ "n_rows": 59616,
+ "combine": "a1(Dx, q, Om, s8, wb) * ((k / exp(f1(Dx, q, Om, s8, wb)))^2 / (1 + (k / exp(f1(Dx, q, Om, s8, wb)))^2)) + a2(Dx, q, Om, s8, wb) * ((k / exp(f2(Dx, q, Om, s8, wb)))^2 / (1 + (k / exp(f2(Dx, q, Om, s8, wb)))^2))",
+ "best_equation": "a1 = -0.39970002; f1 = (#2 - #5) * 3.8526757; a2 = #3; f2 = 2.580767",
+ "best_complexity": 8,
+ "best_loss": 0.00017370323
+}

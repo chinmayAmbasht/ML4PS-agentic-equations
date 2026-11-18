@@ -1,0 +1,34 @@
+{
+ "expr": "-A*D*((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b"
+ ],
+ "hypothesis": "T23 (best, e = 0.75 f_b/D core) with a sharper sqrt(D) knee x^3/(1+x^2)^1.5 (leading k^3, plateau 1): TNG k=0.36 (+3.4) and Astrid k=0.36 (+4.3) are over-suppressed while k~0.9-1.4 is under-suppressed, i.e. the data rise faster than k^2 between 0.36 and 1; the core keeps a k^2 tail for the low-k floor. Dry run: 127,301 [k1, A], chi2 mean 9.93 (T23 13.35).",
+ "predicted_logZ_cross": 127300,
+ "predicted_chi2_mean": 9.9
+}

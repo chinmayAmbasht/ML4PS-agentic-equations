@@ -1,0 +1,37 @@
+{
+ "expr": "-D*(A*(f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + B*(1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": [
+  "A",
+  "B",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "T36 with separate amplitudes on the retained-gas knee (A, q-weighted fixed 0.68) and the expelled-gas knee (B, (1-q)-weighted free k0), so the ladder can marginalize the expelled-gas amplitude per box; dry run 131,696 [k0, k1, B].",
+ "predicted_logZ_cross": 131700,
+ "predicted_chi2_mean": 8.0
+}

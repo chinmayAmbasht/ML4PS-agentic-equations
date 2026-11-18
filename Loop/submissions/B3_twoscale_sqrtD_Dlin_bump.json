@@ -1,0 +1,32 @@
+{
+ "expr": "-D*(A*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2))) + C*(k/k2)**2/(1 + (k/k2)**2)**2)",
+ "lin": [
+  "A",
+  "C"
+ ],
+ "nl": {
+  "k1": {
+   "lo": 0.05,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k2": {
+   "lo": 0.05,
+   "hi": 20,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "other",
+  "k1": "scale",
+  "k2": "scale"
+ },
+ "features": [
+  "D",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "T03 + linear bounded bump C*D*y^2/(1+y^2)^2 with y=k/k2 (no sqrt(D)): adds a low-k component with S ~ D^1 (Astrid/Swift-like) next to T03's D^2 low-k scaling, vanishing at high k so the plateau -A D is kept.",
+ "predicted_logZ_cross": 124500,
+ "predicted_chi2_mean": 15.0
+}

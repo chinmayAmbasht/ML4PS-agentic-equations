@@ -1,0 +1,34 @@
+{
+ "expr": "-A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k*(D/0.05)**0.5/k1)**2/(1 + (k*(D/0.05)**0.5/k1)**2))",
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b"
+ ],
+ "hypothesis": "T17 with the f_b/D core reached at a deficit-set scale like the knee: both W2 scales ~ 1/sqrt(D) (rank 1 two-scale structure), core amplitude affine (E f_b - C D).",
+ "predicted_logZ_cross": 126660,
+ "predicted_chi2_mean": 8.4
+}

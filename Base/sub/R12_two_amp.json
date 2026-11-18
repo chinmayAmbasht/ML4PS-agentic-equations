@@ -1,0 +1,29 @@
+{
+ "expr": "-D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*((k/(k1*exp(dl)))**2/(1 + (k/(k1*exp(dl)))**2)))",
+ "lin": [
+  "A1",
+  "A2"
+ ],
+ "nl": {
+  "k1": {
+   "lo": 0.1,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "dl": {
+   "lo": 0.1,
+   "hi": 5,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A1": "amplitude",
+  "A2": "amplitude",
+  "k1": "scale",
+  "dl": "other"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "ML4PS paper Table 1 rank 12."
+}

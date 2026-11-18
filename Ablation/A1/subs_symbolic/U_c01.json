@@ -1,0 +1,20 @@
+{
+ "expr": "-A0",
+ "lin": [],
+ "nl": {
+  "A0": {
+   "lo": 0.0013303628,
+   "hi": 0.13303628,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "other"
+ },
+ "features": [],
+ "hypothesis": "[ablation A1 U_c01] PySR U hall of fame, complexity 1: -0.013303628",
+ "pysr_values": {
+  "A0": 0.013303628
+ },
+ "frozen": {}
+}

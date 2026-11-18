@@ -1,0 +1,35 @@
+{
+ "expr": "-D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0))) + C*(k/k1)**2/(1 + (k/k1)**2) + E*(k/k1)**2/(1 + (k/k1)**2)**2)",
+ "lin": [
+  "A",
+  "B",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "other",
+  "C": "amplitude",
+  "E": "other",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "T07 soft-tail sqrt(D) knee plus a D^1 small-scale core at one nl scale k1 with a linear shape basis (step C*W2(k/k1) + bump E*y^2/(1+y^2)^2): unifies T10 and T11's core terms; nests T10.",
+ "predicted_logZ_cross": 125300,
+ "predicted_chi2_mean": 7.0
+}

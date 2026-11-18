@@ -1,0 +1,27 @@
+{
+ "expr": "-A*D*((k/(k00/(1 + alpha*D)))**2/(1 + (k/(k00/(1 + alpha*D)))**2))",
+ "lin": [
+  "A"
+ ],
+ "nl": {
+  "k00": {
+   "lo": 0.1,
+   "hi": 30,
+   "spacing": "log"
+  },
+  "alpha": {
+   "lo": -5,
+   "hi": 30,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "k00": "scale",
+  "alpha": "other"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "ML4PS paper Table 1 rank 2."
+}

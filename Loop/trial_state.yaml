@@ -1,0 +1,6570 @@
+budget: 60
+n_used: 60
+trials:
+- trial: T01
+  expr: -A*D*(k/(k0*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k0*(Omega_m/0.3)**(1/3)))**n)**(2/n)
+  lin:
+  - A
+  nl:
+    k0:
+      lo: 0.1
+      hi: 30
+      spacing: log
+    n:
+      lo: 0.4
+      hi: 4
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: 'Rank-3 form with a free transition sharpness n: W_n(x)=x^2/(1+x^n)^(2/n); softer turnover should fix the mid-k
+    positive / high-k negative residual pattern in TNG and Swift.'
+  predicted_logZ_cross: 119500
+  predicted_chi2_mean: 6.2
+  submitted: '2026-11-11 07:18:42'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120230.2
+  marginalized:
+  - k0
+  sigma_fold: 1890.1
+  ladder:
+  - R: []
+    logZ_cross: 105740.5
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120230.2
+    promoted: true
+  - R:
+    - k0
+    - n
+    logZ_cross: 120714.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32031.9
+    SIMBA: 28969.2
+    Astrid: 27995.5
+    Swift-EAGLE: 31233.6
+  L_zero_shot: 96.593
+  L_zero_shot_per_fold:
+    IllustrisTNG: 62.611
+    SIMBA: 220.142
+    Astrid: 50.647
+    Swift-EAGLE: 52.971
+  L_map: 21.422
+  L_map_per_fold:
+    IllustrisTNG: 14.289
+    SIMBA: 53.263
+    Astrid: 9.309
+    Swift-EAGLE: 8.827
+  chi2_per_suite:
+    IllustrisTNG: 15.266
+    SIMBA: 1.924
+    Astrid: 44.489
+    Swift-EAGLE: 8.685
+  chi2_mean: 17.591
+  chi2_std: 16.23
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.363
+    SIMBA: 0.563
+    Astrid: 0.38
+    Swift-EAGLE: 0.319
+  fold_mu:
+    IllustrisTNG:
+      A: 3.251
+      k0: 0.0533
+      n: 1.1215
+    SIMBA:
+      A: 3.4619
+      k0: 0.2798
+      n: 1.2991
+    Astrid:
+      A: 3.4323
+      k0: 0.1973
+      n: 1.2442
+    Swift-EAGLE:
+      A: 3.287
+      k0: 0.0783
+      n: 1.1616
+  residuals: Loop/residuals/T01.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 56
+- trial: T02
+  expr: -A*D*((k/(k0*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k0*(Omega_m/0.3)**(1/3)))**2)) + B*f_b*((k/kc)**2/(1 + (k/kc)**2))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.1
+      hi: 30
+      spacing: log
+    kc:
+      lo: 1
+      hi: 100
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_m
+  hypothesis: Expulsion (-A D W2 at Omega_m-scaled k0) plus a retained-baryon condensation term B f_b W2(k/kc) at its own
+    scale, for Astrid's low-D small-scale enhancement.
+  predicted_logZ_cross: 120500
+  predicted_chi2_mean: 6.0
+  submitted: '2026-11-11 07:20:02'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.963
+  logZ_cross: 119223.3
+  marginalized:
+  - k0
+  - kc
+  sigma_fold: 2277.2
+  ladder:
+  - R: []
+    logZ_cross: 95168.4
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 111701.6
+    promoted: true
+  - R:
+    - k0
+    - kc
+    logZ_cross: 119223.3
+    promoted: true
+  - R:
+    - k0
+    - kc
+    - A
+    logZ_cross: 119629.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32082.9
+    SIMBA: 28415.9
+    Astrid: 27356.5
+    Swift-EAGLE: 31368.1
+  L_zero_shot: 113.791
+  L_zero_shot_per_fold:
+    IllustrisTNG: 91.549
+    SIMBA: 233.49
+    Astrid: 68.425
+    Swift-EAGLE: 61.698
+  L_map: 10.214
+  L_map_per_fold:
+    IllustrisTNG: 11.785
+    SIMBA: 24.392
+    Astrid: 2.467
+    Swift-EAGLE: 2.212
+  chi2_per_suite:
+    IllustrisTNG: 6.37
+    SIMBA: 1.452
+    Astrid: 19.195
+    Swift-EAGLE: 3.177
+  chi2_mean: 7.548
+  chi2_std: 6.952
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.243
+    SIMBA: 0.355
+    Astrid: 0.104
+    Swift-EAGLE: 0.081
+  fold_mu:
+    IllustrisTNG:
+      A: 2.3936
+      B: -1.5579
+      k0: 0.1558
+      kc: 0.6719
+    SIMBA:
+      A: 2.5562
+      B: -1.8083
+      k0: 0.3005
+      kc: 0.8473
+    Astrid:
+      A: 2.4311
+      B: -2.068
+      k0: 0.2386
+      kc: 1.0512
+    Swift-EAGLE:
+      A: 2.4666
+      B: -0.8843
+      k0: 0.1766
+      kc: 0.6267
+  residuals: Loop/residuals/T02.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 123
+- trial: T03
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: Paper rank-1 two-scale baryon-weighted W2 with the D-scaling exponent fixed at beta=-1/2 (k_eff = k_i/sqrt(D)),
+    freeing the third nonlinear slot.
+  predicted_logZ_cross: 123000
+  predicted_chi2_mean: 7.5
+  submitted: '2026-11-11 07:22:06'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123992.6
+  marginalized:
+  - k2
+  sigma_fold: 1773.7
+  ladder:
+  - R: []
+    logZ_cross: 109408.1
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 123992.6
+    promoted: true
+  - R:
+    - k2
+    - k1
+    logZ_cross: 124892.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32759.6
+    SIMBA: 29837.3
+    Astrid: 29147.4
+    Swift-EAGLE: 32248.3
+  L_zero_shot: 86.202
+  L_zero_shot_per_fold:
+    IllustrisTNG: 34.149
+    SIMBA: 238.083
+    Astrid: 42.911
+    Swift-EAGLE: 29.664
+  L_map: 15.139
+  L_map_per_fold:
+    IllustrisTNG: 8.959
+    SIMBA: 39.863
+    Astrid: 6.432
+    Swift-EAGLE: 5.3
+  chi2_per_suite:
+    IllustrisTNG: 4.011
+    SIMBA: 1.479
+    Astrid: 21.802
+    Swift-EAGLE: 3.851
+  chi2_mean: 7.786
+  chi2_std: 8.154
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.287
+    SIMBA: 0.468
+    Astrid: 0.329
+    Swift-EAGLE: 0.236
+  fold_mu:
+    IllustrisTNG:
+      A: 2.8163
+      k1: 0.0021
+      k2: -0.3036
+    SIMBA:
+      A: 3.0408
+      k1: -0.1133
+      k2: -0.1084
+    Astrid:
+      A: 3.0135
+      k1: -0.1503
+      k2: -0.1735
+    Swift-EAGLE:
+      A: 2.9293
+      k1: -0.0161
+      k2: -0.2819
+  residuals: Loop/residuals/T03.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 78
+- trial: T04
+  expr: -A*D*((k*(D/0.05)**b/k0)**2/(1 + (k*(D/0.05)**b/k0)**2))
+  lin:
+  - A
+  nl:
+    k0:
+      lo: 0.05
+      hi: 30
+      spacing: log
+    b:
+      lo: -0.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  hypothesis: 'Single W2 knee with scale k0*(D/0.05)^-b, b free: the low-k slope of S vs D is suite dependent (~2 TNG/SIMBA,
+    ~1 Astrid/Swift), so a marginalized exponent lets each suite pick its own low-k D^(1+2b) scaling while high-k S ~ D.'
+  predicted_logZ_cross: 122000
+  predicted_chi2_mean: 6.5
+  submitted: '2026-11-11 07:23:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121705.7
+  marginalized:
+  - k0
+  sigma_fold: 2035.1
+  ladder:
+  - R: []
+    logZ_cross: 108868.8
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 121705.7
+    promoted: true
+  - R:
+    - k0
+    - b
+    logZ_cross: 122184.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32364.0
+    SIMBA: 28445.9
+    Astrid: 28907.4
+    Swift-EAGLE: 31988.5
+  L_zero_shot: 82.622
+  L_zero_shot_per_fold:
+    IllustrisTNG: 36.643
+    SIMBA: 217.457
+    Astrid: 38.965
+    Swift-EAGLE: 37.424
+  L_map: 32.435
+  L_map_per_fold:
+    IllustrisTNG: 7.674
+    SIMBA: 110.659
+    Astrid: 6.041
+    Swift-EAGLE: 5.365
+  chi2_per_suite:
+    IllustrisTNG: 3.992
+    SIMBA: 2.627
+    Astrid: 17.531
+    Swift-EAGLE: 3.84
+  chi2_mean: 6.997
+  chi2_std: 6.104
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.271
+    SIMBA: 0.944
+    Astrid: 0.31
+    Swift-EAGLE: 0.249
+  fold_mu:
+    IllustrisTNG:
+      A: 2.6023
+      k0: 0.3659
+      b: 0.5
+    SIMBA:
+      A: 2.8675
+      k0: 0.5511
+      b: 0.6154
+    Astrid:
+      A: 2.8512
+      k0: 0.4122
+      b: 0.4519
+    Swift-EAGLE:
+      A: 2.6674
+      k0: 0.3427
+      b: 0.45
+  residuals: Loop/residuals/T04.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 65
+- trial: T05
+  expr: -D*(A*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2))) + B*((k*D**0.5/k2)**2/(1 + (k*D**0.5/k2)**2))**2)
+  lin:
+  - A
+  - B
+  nl:
+    k1:
+      lo: 0.05
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: T03 (two-scale baryon-weighted W2 with k_eff = k_i/sqrt(D)) plus a linear knee-sharpening term B*D*W2(x2)^2
+    that adds tail suppression at k > 6 and relieves k ~ 1-4, without a new nonlinear coefficient.
+  predicted_logZ_cross: 125000
+  predicted_chi2_mean: 6.8
+  submitted: '2026-11-11 07:29:02'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123832.9
+  marginalized:
+  - k2
+  sigma_fold: 1891.5
+  ladder:
+  - R: []
+    logZ_cross: 108842.1
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 123832.9
+    promoted: true
+  - R:
+    - k2
+    - k1
+    logZ_cross: 124915.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32826.1
+    SIMBA: 29844.1
+    Astrid: 28890.4
+    Swift-EAGLE: 32272.3
+  L_zero_shot: 85.453
+  L_zero_shot_per_fold:
+    IllustrisTNG: 36.43
+    SIMBA: 231.345
+    Astrid: 41.616
+    Swift-EAGLE: 32.42
+  L_map: 7.311
+  L_map_per_fold:
+    IllustrisTNG: 7.872
+    SIMBA: 12.266
+    Astrid: 6.001
+    Swift-EAGLE: 3.105
+  chi2_per_suite:
+    IllustrisTNG: 4.203
+    SIMBA: 0.962
+    Astrid: 21.564
+    Swift-EAGLE: 3.8
+  chi2_mean: 7.632
+  chi2_std: 8.14
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.283
+    SIMBA: 0.235
+    Astrid: 0.341
+    Swift-EAGLE: 0.169
+  fold_mu:
+    IllustrisTNG:
+      A: 2.823
+      B: -0.0235
+      k1: -0.0806
+      k2: -0.3036
+    SIMBA:
+      A: 2.9292
+      B: 0.1267
+      k1: -0.1634
+      k2: -0.1143
+    Astrid:
+      A: 2.7027
+      B: 0.319
+      k1: -0.2268
+      k2: -0.1989
+    Swift-EAGLE:
+      A: 3.1186
+      B: -0.2256
+      k1: -0.0508
+      k2: -0.2766
+  residuals: Loop/residuals/T05.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 209
+- trial: T06
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k*D**0.5/(k1*(Omega_m/0.3)**(1/3)))**2))
+    + (1 - Omega_b_over_Omega_m)*((k*D**0.5/(k2*(Omega_m/0.3)**(1/3)))**2/(1 + (k*D**0.5/(k2*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: 'T03 (rank-1 two-scale baryon-weighted W2, k_eff ~ k sqrt(D)) with rank-3''s Omega_m^(1/3) halo-scale factor
+    on both scales: per-suite fits show this makes A and k1 more suite-universal, improving cross-suite transfer.'
+  predicted_logZ_cross: 124800
+  predicted_chi2_mean: 7.2
+  submitted: '2026-11-11 07:33:04'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123374.8
+  marginalized:
+  - k2
+  sigma_fold: 1877.1
+  ladder:
+  - R: []
+    logZ_cross: 110224.8
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 123374.8
+    promoted: true
+  - R:
+    - k2
+    - A
+    logZ_cross: 123748.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32725.1
+    SIMBA: 28954.1
+    Astrid: 29532.4
+    Swift-EAGLE: 32163.2
+  L_zero_shot: 84.182
+  L_zero_shot_per_fold:
+    IllustrisTNG: 39.029
+    SIMBA: 218.149
+    Astrid: 39.378
+    Swift-EAGLE: 40.171
+  L_map: 27.408
+  L_map_per_fold:
+    IllustrisTNG: 10.095
+    SIMBA: 86.103
+    Astrid: 7.104
+    Swift-EAGLE: 6.329
+  chi2_per_suite:
+    IllustrisTNG: 5.589
+    SIMBA: 2.212
+    Astrid: 25.507
+    Swift-EAGLE: 4.925
+  chi2_mean: 9.558
+  chi2_std: 9.294
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.31
+    SIMBA: 0.785
+    Astrid: 0.33
+    Swift-EAGLE: 0.271
+  fold_mu:
+    IllustrisTNG:
+      A: 2.8331
+      k1: 0.2609
+      k2: -0.3036
+    SIMBA:
+      A: 3.1345
+      k1: 0.3313
+      k2: -0.1518
+    Astrid:
+      A: 3.0495
+      k1: 0.2498
+      k2: -0.2168
+    Swift-EAGLE:
+      A: 2.8876
+      k1: 0.2551
+      k2: -0.3036
+  residuals: Loop/residuals/T06.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 68
+- trial: T07
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0)))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+  features:
+  - D
+  hypothesis: 'Single sqrt(D)-scaled W2 knee with a linear soft-tail factor (A + B x/(1+x)): plateau keeps growing slowly
+    past the knee, fixing the TNG/Swift mid-k positive / high-k negative residuals with one nl coefficient.'
+  predicted_logZ_cross: 123300
+  predicted_chi2_mean: 6.6
+  submitted: '2026-11-11 07:34:13'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123336.4
+  marginalized:
+  - k0
+  sigma_fold: 1790.0
+  ladder:
+  - R: []
+    logZ_cross: 108502.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 123336.4
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 123971.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32645.8
+    SIMBA: 29162.1
+    Astrid: 29436.8
+    Swift-EAGLE: 32091.8
+  L_zero_shot: 83.172
+  L_zero_shot_per_fold:
+    IllustrisTNG: 39.64
+    SIMBA: 214.417
+    Astrid: 36.822
+    Swift-EAGLE: 41.808
+  L_map: 18.768
+  L_map_per_fold:
+    IllustrisTNG: 5.663
+    SIMBA: 59.576
+    Astrid: 5.397
+    Swift-EAGLE: 4.438
+  chi2_per_suite:
+    IllustrisTNG: 3.288
+    SIMBA: 1.936
+    Astrid: 17.356
+    Swift-EAGLE: 3.883
+  chi2_mean: 6.616
+  chi2_std: 6.241
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.231
+    SIMBA: 0.624
+    Astrid: 0.285
+    Swift-EAGLE: 0.227
+  fold_mu:
+    IllustrisTNG:
+      A: 0.9716
+      B: 1.8556
+      k0: -0.4275
+    SIMBA:
+      A: 1.9679
+      B: 1.1
+      k0: -0.2127
+    Astrid:
+      A: 1.4835
+      B: 1.5771
+      k0: -0.325
+    Swift-EAGLE:
+      A: 0.9964
+      B: 1.9029
+      k0: -0.427
+  residuals: Loop/residuals/T07.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 111
+- trial: T08
+  expr: -D*(A*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2))) + C*(k/k2)**2/(1 + (k/k2)**2)**2)
+  lin:
+  - A
+  - C
+  nl:
+    k1:
+      lo: 0.05
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: 'T03 + linear bounded bump C*D*y^2/(1+y^2)^2 with y=k/k2 (no sqrt(D)): adds a low-k component with S ~ D^1 (Astrid/Swift-like)
+    next to T03''s D^2 low-k scaling, vanishing at high k so the plateau -A D is kept.'
+  predicted_logZ_cross: 124500
+  predicted_chi2_mean: 15.0
+  submitted: '2026-11-11 07:41:50'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 124429.7
+  marginalized:
+  - k2
+  sigma_fold: 1756.3
+  ladder:
+  - R: []
+    logZ_cross: 110212.1
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 124429.7
+    promoted: true
+  - R:
+    - k2
+    - k1
+    logZ_cross: 125109.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32826.2
+    SIMBA: 29832.6
+    Astrid: 29372.7
+    Swift-EAGLE: 32398.1
+  L_zero_shot: 82.739
+  L_zero_shot_per_fold:
+    IllustrisTNG: 39.171
+    SIMBA: 219.314
+    Astrid: 39.263
+    Swift-EAGLE: 33.21
+  L_map: 20.892
+  L_map_per_fold:
+    IllustrisTNG: 12.351
+    SIMBA: 58.176
+    Astrid: 6.949
+    Swift-EAGLE: 6.093
+  chi2_per_suite:
+    IllustrisTNG: 13.336
+    SIMBA: 2.106
+    Astrid: 29.506
+    Swift-EAGLE: 5.126
+  chi2_mean: 12.518
+  chi2_std: 10.634
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.364
+    SIMBA: 0.698
+    Astrid: 0.364
+    Swift-EAGLE: 0.278
+  fold_mu:
+    IllustrisTNG:
+      A: 2.7958
+      C: 0.2657
+      k1: 0.0214
+      k2: -0.3036
+    SIMBA:
+      A: 3.1179
+      C: 0.3092
+      k1: -0.0459
+      k2: -0.0867
+    Astrid:
+      A: 3.028
+      C: 0.2559
+      k1: -0.0929
+      k2: -0.1735
+    Swift-EAGLE:
+      A: 2.8953
+      C: 0.2135
+      k1: -0.0152
+      k2: -0.2819
+  residuals: Loop/residuals/T08.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 197
+- trial: T09
+  expr: -D*(Omega_b_over_Omega_m*((k*D**0.5/k1)**2/(1 + (k*D**0.5/k1)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2)))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2)))
+  lin:
+  - A
+  - B
+  nl:
+    k1:
+      lo: 0.05
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: 'T03 baryon-weighted two-scale sqrt(D) knee times T07''s soft-tail factor (A + B x2/(1+x2)) on the k2 scale:
+    plateau keeps falling past the knee, fixing the TNG/Swift high-k negative residuals with no new nl coefficient.'
+  predicted_logZ_cross: 124300
+  predicted_chi2_mean: 7.0
+  submitted: '2026-11-11 07:46:21'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 124776.6
+  marginalized:
+  - k2
+  sigma_fold: 1727.5
+  ladder:
+  - R: []
+    logZ_cross: 109420.6
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 124776.6
+    promoted: true
+  - R:
+    - k2
+    - k1
+    logZ_cross: 125621.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32916.3
+    SIMBA: 29977.2
+    Astrid: 29462.0
+    Swift-EAGLE: 32421.1
+  L_zero_shot: 85.832
+  L_zero_shot_per_fold:
+    IllustrisTNG: 36.281
+    SIMBA: 232.745
+    Astrid: 40.193
+    Swift-EAGLE: 34.107
+  L_map: 10.719
+  L_map_per_fold:
+    IllustrisTNG: 5.7
+    SIMBA: 28.45
+    Astrid: 5.285
+    Swift-EAGLE: 3.443
+  chi2_per_suite:
+    IllustrisTNG: 3.47
+    SIMBA: 1.405
+    Astrid: 21.762
+    Swift-EAGLE: 4.051
+  chi2_mean: 7.672
+  chi2_std: 8.194
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.254
+    SIMBA: 0.406
+    Astrid: 0.309
+    Swift-EAGLE: 0.209
+  fold_mu:
+    IllustrisTNG:
+      A: 0.7458
+      B: 2.2352
+      k1: -0.1341
+      k2: -0.478
+    SIMBA:
+      A: 2.0241
+      B: 1.164
+      k1: -0.1841
+      k2: -0.179
+    Astrid:
+      A: 1.9362
+      B: 1.1627
+      k1: -0.2133
+      k2: -0.2649
+    Swift-EAGLE:
+      A: 1.2434
+      B: 1.7423
+      k1: -0.1169
+      k2: -0.4378
+  residuals: Loop/residuals/T09.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 192
+- trial: T10
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*((k/k1)**2/(1 + (k/k1)**2)))
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  hypothesis: T07 soft-tail sqrt(D) knee plus a D^1 small-scale core term C*D*W2(k/k1) at a D-independent scale; marginalized
+    C supplies the per-box second DOF.
+  predicted_logZ_cross: 125000
+  predicted_chi2_mean: 7.8
+  submitted: '2026-11-11 07:49:38'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.997
+  logZ_cross: 124995.0
+  marginalized:
+  - k0
+  - C
+  sigma_fold: 1958.5
+  ladder:
+  - R: []
+    logZ_cross: 114780.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122581.6
+    promoted: true
+  - R:
+    - k0
+    - C
+    logZ_cross: 124995.0
+    promoted: true
+  - R:
+    - k0
+    - C
+    - B
+    logZ_cross: 125322.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33296.6
+    SIMBA: 29312.5
+    Astrid: 29859.1
+    Swift-EAGLE: 32526.8
+  L_zero_shot: 74.782
+  L_zero_shot_per_fold:
+    IllustrisTNG: 29.233
+    SIMBA: 197.953
+    Astrid: 51.129
+    Swift-EAGLE: 20.816
+  L_map: 16.253
+  L_map_per_fold:
+    IllustrisTNG: 4.294
+    SIMBA: 53.671
+    Astrid: 3.222
+    Swift-EAGLE: 3.823
+  chi2_per_suite:
+    IllustrisTNG: 4.927
+    SIMBA: 1.82
+    Astrid: 20.431
+    Swift-EAGLE: 4.075
+  chi2_mean: 7.813
+  chi2_std: 7.373
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.169
+    SIMBA: 0.556
+    Astrid: 0.203
+    Swift-EAGLE: 0.21
+  fold_mu:
+    IllustrisTNG:
+      A: 2.6506
+      B: -1.122
+      C: 2.2099
+      k0: -0.1884
+      k1: 0.6543
+    SIMBA:
+      A: 3.7604
+      B: -1.9947
+      C: 2.7334
+      k0: -0.1499
+      k1: 1.1304
+    Astrid:
+      A: 3.348
+      B: -1.9113
+      C: 2.3413
+      k0: -0.1345
+      k1: 0.6344
+    Swift-EAGLE:
+      A: 2.2111
+      B: -0.3221
+      C: 1.7528
+      k0: -0.209
+      k1: 0.6394
+  residuals: Loop/residuals/T10.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 227
+- trial: T11
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0))) + C*(k/kb)**2/(1 + (k/kb)**2)**2)
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    kb:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  hypothesis: 'T07 soft-tail sqrt(D) knee (shared positive B, lowest chi2) plus T08''s universal D^1 low-k bump C*D*y^2/(1+y^2)^2
+    at its own fixed scale kb (y=k/kb): mixes D^1 into the D^2 low-k scaling for Astrid/Swift without touching the plateau.'
+  predicted_logZ_cross: 124600
+  predicted_chi2_mean: 9.0
+  submitted: '2026-11-11 07:53:25'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 125019.5
+  marginalized:
+  - k0
+  - kb
+  sigma_fold: 1990.8
+  ladder:
+  - R: []
+    logZ_cross: 106607.8
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120576.1
+    promoted: true
+  - R:
+    - k0
+    - kb
+    logZ_cross: 125019.5
+    promoted: true
+  - R:
+    - k0
+    - kb
+    - C
+    logZ_cross: 125432.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33285.2
+    SIMBA: 29237.2
+    Astrid: 29889.0
+    Swift-EAGLE: 32608.1
+  L_zero_shot: 76.469
+  L_zero_shot_per_fold:
+    IllustrisTNG: 52.861
+    SIMBA: 177.521
+    Astrid: 48.182
+    Swift-EAGLE: 27.313
+  L_map: 18.982
+  L_map_per_fold:
+    IllustrisTNG: 5.846
+    SIMBA: 62.401
+    Astrid: 4.636
+    Swift-EAGLE: 3.046
+  chi2_per_suite:
+    IllustrisTNG: 4.876
+    SIMBA: 1.896
+    Astrid: 16.983
+    Swift-EAGLE: 4.312
+  chi2_mean: 7.017
+  chi2_std: 5.862
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.222
+    SIMBA: 0.6
+    Astrid: 0.305
+    Swift-EAGLE: 0.195
+  fold_mu:
+    IllustrisTNG:
+      A: 2.949
+      B: -0.6408
+      C: 2.4833
+      k0: -0.2259
+      kb: 0.5415
+    SIMBA:
+      A: 4.3836
+      B: -1.9707
+      C: 1.0844
+      k0: -0.1266
+      kb: 0.7943
+    Astrid:
+      A: 3.8523
+      B: -1.5086
+      C: 2.4368
+      k0: -0.1232
+      kb: 0.6123
+    Swift-EAGLE:
+      A: 2.7081
+      B: 0.4005
+      C: -0.7323
+      k0: -0.251
+      kb: 0.3465
+  residuals: Loop/residuals/T11.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 240
+- trial: T12
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*(k/k1)**2/(1 + k/k1)**2)
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  hypothesis: 'T10 soft-tail sqrt(D) knee plus a D^1 core with a soft knee y^2/(1+y)^2, y = k/k1 (leading k^2, slow approach
+    to plateau): less core suppression at k ~ 1-4 relative to k ~ 10, fixing TNG/Swift mid-k positive residuals; marginalized
+    C as the per-box second DOF.'
+  predicted_logZ_cross: 125300
+  predicted_chi2_mean: 7.5
+  submitted: '2026-11-11 07:57:26'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: false
+    G0_U_min_frac_pass: 0.873
+  logZ_cross: 124627.3
+  marginalized:
+  - k0
+  - k1
+  sigma_fold: 1665.8
+  ladder:
+  - R: []
+    logZ_cross: 106116.1
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120645.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 124627.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - A
+    logZ_cross: 125336.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32983.8
+    SIMBA: 29538.2
+    Astrid: 29969.8
+    Swift-EAGLE: 32135.5
+  L_zero_shot: 92.285
+  L_zero_shot_per_fold:
+    IllustrisTNG: 64.293
+    SIMBA: 199.028
+    Astrid: 45.997
+    Swift-EAGLE: 59.821
+  L_map: 15.328
+  L_map_per_fold:
+    IllustrisTNG: 1.219
+    SIMBA: 54.421
+    Astrid: 4.541
+    Swift-EAGLE: 1.129
+  chi2_per_suite:
+    IllustrisTNG: 4.647
+    SIMBA: 1.835
+    Astrid: 20.684
+    Swift-EAGLE: 3.129
+  chi2_mean: 7.574
+  chi2_std: 7.634
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.062
+    SIMBA: 0.562
+    Astrid: 0.29
+    Swift-EAGLE: 0.071
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0765
+      B: -0.6829
+      C: 7.4508
+      k0: -0.4669
+      k1: 0.8228
+    SIMBA:
+      A: 3.6981
+      B: -1.9111
+      C: 9.6795
+      k0: -0.1501
+      k1: 1.343
+    Astrid:
+      A: 3.0224
+      B: -1.7707
+      C: 7.4253
+      k0: -0.3474
+      k1: 0.7848
+    Swift-EAGLE:
+      A: 1.543
+      B: 0.2344
+      C: 5.8398
+      k0: -0.4866
+      k1: 0.8098
+  residuals: Loop/residuals/T12.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 621
+- trial: T13
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + (k*D**0.5/k0))) + C*(k/k1)**2/(1 + (k/k1)**2)
+    + E*(k/k1)**2/(1 + (k/k1)**2)**2)
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  hypothesis: 'T07 soft-tail sqrt(D) knee plus a D^1 small-scale core at one nl scale k1 with a linear shape basis (step C*W2(k/k1)
+    + bump E*y^2/(1+y^2)^2): unifies T10 and T11''s core terms; nests T10.'
+  predicted_logZ_cross: 125300
+  predicted_chi2_mean: 7.0
+  submitted: '2026-11-11 08:09:16'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 124829.8
+  marginalized:
+  - k1
+  - k0
+  sigma_fold: 1799.9
+  ladder:
+  - R: []
+    logZ_cross: 104794.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 119723.5
+    promoted: true
+  - R:
+    - k1
+    - k0
+    logZ_cross: 124829.8
+    promoted: true
+  - R:
+    - k1
+    - k0
+    - A
+    logZ_cross: 126266.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33131.2
+    SIMBA: 29558.2
+    Astrid: 29793.5
+    Swift-EAGLE: 32346.9
+  L_zero_shot: 88.602
+  L_zero_shot_per_fold:
+    IllustrisTNG: 35.069
+    SIMBA: 202.82
+    Astrid: 85.399
+    Swift-EAGLE: 31.12
+  L_map: 25.676
+  L_map_per_fold:
+    IllustrisTNG: 1.05
+    SIMBA: 94.552
+    Astrid: 5.923
+    Swift-EAGLE: 1.178
+  chi2_per_suite:
+    IllustrisTNG: 3.805
+    SIMBA: 2.688
+    Astrid: 29.097
+    Swift-EAGLE: 4.106
+  chi2_mean: 9.924
+  chi2_std: 11.082
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.067
+    SIMBA: 0.963
+    Astrid: 0.373
+    Swift-EAGLE: 0.075
+  fold_mu:
+    IllustrisTNG:
+      A: 3.5671
+      B: -1.7034
+      C: 1.0424
+      E: -3.3201
+      k0: -0.1999
+      k1: 0.1273
+    SIMBA:
+      A: 5.491
+      B: -3.4934
+      C: 1.0818
+      E: -2.9646
+      k0: -0.0853
+      k1: 0.6468
+    Astrid:
+      A: 4.5231
+      B: -2.8497
+      C: 1.2666
+      E: -3.5029
+      k0: -0.1077
+      k1: 0.196
+    Swift-EAGLE:
+      A: 2.9578
+      B: -0.643
+      C: 0.7936
+      E: -3.1409
+      k0: -0.2275
+      k1: 0.1214
+  residuals: Loop/residuals/T13.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 610
+- trial: T14
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*(k/k1)**4/(1 + (k/k1)**2)**2)
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  hypothesis: 'T10 with a sharper D^1 core W2(k/k1)^2 (leading k^4): confines the inner-halo redistribution to small scales
+    so it stops over-suppressing k = 0.36 (TNG/Astrid) and k ~ 1-4 (TNG/Swift).'
+  predicted_logZ_cross: 125200
+  predicted_chi2_mean: 7.3
+  submitted: '2026-11-11 08:19:59'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122237.5
+  marginalized:
+  - k0
+  sigma_fold: 2189.5
+  ladder:
+  - R: []
+    logZ_cross: 111685.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122237.5
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 124425.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32776.5
+    SIMBA: 29337.7
+    Astrid: 28127.9
+    Swift-EAGLE: 31995.3
+  L_zero_shot: 78.508
+  L_zero_shot_per_fold:
+    IllustrisTNG: 27.173
+    SIMBA: 201.499
+    Astrid: 66.207
+    Swift-EAGLE: 19.154
+  L_map: 20.731
+  L_map_per_fold:
+    IllustrisTNG: 4.281
+    SIMBA: 70.569
+    Astrid: 6.586
+    Swift-EAGLE: 1.486
+  chi2_per_suite:
+    IllustrisTNG: 3.765
+    SIMBA: 2.045
+    Astrid: 27.01
+    Swift-EAGLE: 3.505
+  chi2_mean: 9.081
+  chi2_std: 10.372
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.18
+    SIMBA: 0.672
+    Astrid: 0.377
+    Swift-EAGLE: 0.089
+  fold_mu:
+    IllustrisTNG:
+      A: 3.186
+      B: -1.7309
+      C: 1.5853
+      k0: -0.132
+      k1: 0.3431
+    SIMBA:
+      A: 4.3572
+      B: -2.7198
+      C: 1.7048
+      k0: -0.1177
+      k1: 0.7592
+    Astrid:
+      A: 4.0659
+      B: -2.7686
+      C: 1.8096
+      k0: -0.0234
+      k1: 0.3697
+    Swift-EAGLE:
+      A: 2.5885
+      B: -0.7331
+      C: 1.3485
+      k0: -0.1566
+      k1: 0.3429
+  residuals: Loop/residuals/T14.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 361
+- trial: T15
+  expr: -D*(A*(k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2) + C*(k/4.5)**2/(1 + (k/4.5)**2) + E*(k/kb)**2/(1 + (k/kb)**2)**2)
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    kb:
+      lo: 0.05
+      hi: 20
+      spacing: log
+  features:
+  - D
+  hypothesis: sqrt(D)-scaled W2 deficit knee plus a D^1 inner-halo W2 core fixed at k = 4.5 h/Mpc (T10 fold median) and a
+    D^1 transient bump at its own free scale kb for the large-scale floor; soft-tail B dropped (unstable sign).
+  predicted_logZ_cross: 124600
+  predicted_chi2_mean: 7.5
+  submitted: '2026-11-11 08:26:03'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: false
+    G0_U_min_frac_pass: 0.875
+  logZ_cross: 123805.5
+  marginalized:
+  - k0
+  - A
+  sigma_fold: 1937.5
+  ladder:
+  - R: []
+    logZ_cross: 77570.6
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 119159.1
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 123805.5
+    promoted: true
+  - R:
+    - k0
+    - A
+    - C
+    logZ_cross: 124952.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33073.1
+    SIMBA: 29306.8
+    Astrid: 29308.9
+    Swift-EAGLE: 32116.8
+  L_zero_shot: 103.553
+  L_zero_shot_per_fold:
+    IllustrisTNG: 72.587
+    SIMBA: 177.922
+    Astrid: 72.504
+    Swift-EAGLE: 91.201
+  L_map: 27.177
+  L_map_per_fold:
+    IllustrisTNG: 6.844
+    SIMBA: 88.225
+    Astrid: 8.953
+    Swift-EAGLE: 4.687
+  chi2_per_suite:
+    IllustrisTNG: 4.951
+    SIMBA: 2.604
+    Astrid: 38.766
+    Swift-EAGLE: 4.266
+  chi2_mean: 12.647
+  chi2_std: 15.104
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.266
+    SIMBA: 0.856
+    Astrid: 0.417
+    Swift-EAGLE: 0.24
+  fold_mu:
+    IllustrisTNG:
+      A: 2.59
+      C: -0.5265
+      E: 3.2999
+      k0: -0.25
+      kb: 0.4685
+    SIMBA:
+      A: 2.9264
+      C: -1.817
+      E: 6.267
+      k0: -0.2
+      kb: 0.8442
+    Astrid:
+      A: 2.7573
+      C: -1.7774
+      E: 7.8034
+      k0: -0.1747
+      kb: 0.6701
+    Swift-EAGLE:
+      A: 2.6423
+      C: -0.6691
+      E: 3.7364
+      k0: -0.2502
+      kb: 0.4759
+  residuals: Loop/residuals/T15.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 335
+- trial: T16
+  expr: -D*(((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + C*((k/(r*k0))**2/(1 + (k/(r*k0))**2)))
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    r:
+      lo: 1
+      hi: 300
+      spacing: log
+  features:
+  - D
+  hypothesis: 'T10 knee+D^1 core with the core scale tied to the per-box knee scale, k1 = r*k0: marginalizing k0 moves knee
+    and core together (one per-box halo scale), r a shared core-to-knee ratio.'
+  predicted_logZ_cross: 125300
+  predicted_chi2_mean: 7.5
+  submitted: '2026-11-11 08:31:43'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.997
+  logZ_cross: 121244.5
+  marginalized:
+  - C
+  sigma_fold: 2941.5
+  ladder:
+  - R: []
+    logZ_cross: 114193.0
+    promoted: true
+  - R:
+    - C
+    logZ_cross: 121244.5
+    promoted: true
+  - R:
+    - C
+    - k0
+    logZ_cross: 123664.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33239.2
+    SIMBA: 26743.3
+    Astrid: 29139.4
+    Swift-EAGLE: 32122.5
+  L_zero_shot: 75.945
+  L_zero_shot_per_fold:
+    IllustrisTNG: 31.305
+    SIMBA: 197.681
+    Astrid: 51.607
+    Swift-EAGLE: 23.188
+  L_map: 17.922
+  L_map_per_fold:
+    IllustrisTNG: 4.23
+    SIMBA: 58.388
+    Astrid: 5.236
+    Swift-EAGLE: 3.832
+  chi2_per_suite:
+    IllustrisTNG: 4.996
+    SIMBA: 1.817
+    Astrid: 21.964
+    Swift-EAGLE: 4.163
+  chi2_mean: 8.235
+  chi2_std: 8.012
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.171
+    SIMBA: 0.577
+    Astrid: 0.329
+    Swift-EAGLE: 0.216
+  fold_mu:
+    IllustrisTNG:
+      A: 2.5383
+      B: -0.9753
+      C: 2.1746
+      k0: -0.222
+      r: 0.8685
+    SIMBA:
+      A: 3.7604
+      B: -1.9844
+      C: 2.7603
+      k0: -0.1499
+      r: 1.2817
+    Astrid:
+      A: 3.3877
+      B: -1.9619
+      C: 2.329
+      k0: -0.1271
+      r: 0.762
+    Swift-EAGLE:
+      A: 2.0818
+      B: -0.1511
+      C: 1.7156
+      k0: -0.2455
+      r: 0.8785
+  residuals: Loop/residuals/T16.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 229
+- trial: T17
+  expr: -A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k/k1)**2/(1 + (k/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: Expelled baryons (D) give the sqrt(D)-scaled W2 knee; retained baryons (f_b) and D set a small-scale core at
+    a D-independent scale k1 with amplitude (E f_b - C D), affine in D with a baryon-fraction floor; drops T10's unstable
+    soft-tail B (p = 5).
+  predicted_logZ_cross: 126100
+  predicted_chi2_mean: 15.7
+  submitted: '2026-11-11 08:37:06'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.988
+  logZ_cross: 126149.3
+  marginalized:
+  - k0
+  - k1
+  sigma_fold: 2083.5
+  ladder:
+  - R: []
+    logZ_cross: 105320.8
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122311.0
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 126149.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - E
+    logZ_cross: 126420.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33722.1
+    SIMBA: 29787.0
+    Astrid: 29724.6
+    Swift-EAGLE: 32915.7
+  L_zero_shot: 91.495
+  L_zero_shot_per_fold:
+    IllustrisTNG: 40.269
+    SIMBA: 210.316
+    Astrid: 82.74
+    Swift-EAGLE: 32.656
+  L_map: 31.213
+  L_map_per_fold:
+    IllustrisTNG: 7.741
+    SIMBA: 105.779
+    Astrid: 9.53
+    Swift-EAGLE: 1.804
+  chi2_per_suite:
+    IllustrisTNG: 6.541
+    SIMBA: 3.105
+    Astrid: 49.685
+    Swift-EAGLE: 3.632
+  chi2_mean: 15.74
+  chi2_std: 19.641
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.242
+    SIMBA: 1.149
+    Astrid: 0.446
+    Swift-EAGLE: 0.092
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0965
+      C: 0.7997
+      E: -0.528
+      k0: -0.3693
+      k1: 0.826
+    SIMBA:
+      A: 2.4798
+      C: 0.393
+      E: -0.8318
+      k0: -0.2
+      k1: 1.041
+    Astrid:
+      A: 2.1734
+      C: 0.3125
+      E: -0.9596
+      k0: -0.1296
+      k1: 0.6365
+    Swift-EAGLE:
+      A: 2.0998
+      C: 0.7366
+      E: -0.4216
+      k0: -0.345
+      k1: 0.7607
+  residuals: Loop/residuals/T17.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 247
+- trial: T18
+  expr: -D*((Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2))) + C*(k/kc)**2/(1 + (k/kc)**2))
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+    kc:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: T09's baryon-weighted two-scale sqrt(D) soft-tail knee with the baryon scale fixed at its fold mean (k1 = 0.68,
+    T03/T09 lesson that it is shared), spending the freed nl slot on T10's D^1 W2 core at a D-independent scale kc (inner-halo
+    redistribution, the per-box second DOF the ladder accepts). Dry run 126,937 marg [k2, B, A].
+  predicted_logZ_cross: 126900
+  predicted_chi2_mean: 8.1
+  submitted: '2026-11-11 09:03:31'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 126936.7
+  marginalized:
+  - k2
+  - B
+  - A
+  sigma_fold: 1697.9
+  ladder:
+  - R: []
+    logZ_cross: 96766.7
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 122998.8
+    promoted: true
+  - R:
+    - k2
+    - B
+    logZ_cross: 125418.4
+    promoted: true
+  - R:
+    - k2
+    - B
+    - A
+    logZ_cross: 126936.7
+    promoted: true
+  - R:
+    - k2
+    - B
+    - A
+    - C
+    logZ_cross: 127201.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33510.0
+    SIMBA: 30097.9
+    Astrid: 30479.5
+    Swift-EAGLE: 32849.3
+  L_zero_shot: 103.256
+  L_zero_shot_per_fold:
+    IllustrisTNG: 44.722
+    SIMBA: 200.072
+    Astrid: 49.167
+    Swift-EAGLE: 119.063
+  L_map: 7.78
+  L_map_per_fold:
+    IllustrisTNG: 4.661
+    SIMBA: 19.538
+    Astrid: 4.597
+    Swift-EAGLE: 2.324
+  chi2_per_suite:
+    IllustrisTNG: 4.919
+    SIMBA: 1.177
+    Astrid: 22.577
+    Swift-EAGLE: 3.821
+  chi2_mean: 8.123
+  chi2_std: 8.455
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.206
+    SIMBA: 0.306
+    Astrid: 0.302
+    Swift-EAGLE: 0.137
+  fold_mu:
+    IllustrisTNG:
+      A: 1.8993
+      B: 0.5545
+      C: 0.5085
+      k2: -0.428
+      kc: 0.5758
+    SIMBA:
+      A: 3.4606
+      B: -1.2114
+      C: 1.0759
+      k2: -0.1338
+      kc: 0.7006
+    Astrid:
+      A: 3.8878
+      B: -2.9914
+      C: 1.6828
+      k2: -0.1368
+      kc: 0.8703
+    Swift-EAGLE:
+      A: 2.0778
+      B: 1.2798
+      C: 0.4396
+      k2: -0.4705
+      kc: 0.6229
+  residuals: Loop/residuals/T18.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 428
+- trial: T19
+  expr: (F*f_b - A*D)*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k/k1)**2/(1 + (k/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  - F
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T17 + retained-baryon amplitude on the sqrt(D) knee: both knee and D-free core have amplitudes affine in expelled
+    (D) and retained (f_b) baryons.'
+  predicted_logZ_cross: 126000
+  predicted_chi2_mean: 11.6
+  submitted: '2026-11-11 09:10:41'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.99
+  logZ_cross: 126023.2
+  marginalized:
+  - k0
+  - E
+  sigma_fold: 1730.1
+  ladder:
+  - R: []
+    logZ_cross: 104504.4
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122173.4
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 126023.2
+    promoted: true
+  - R:
+    - k0
+    - E
+    - k1
+    logZ_cross: 126983.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33586.8
+    SIMBA: 29728.7
+    Astrid: 30503.9
+    Swift-EAGLE: 32203.9
+  L_zero_shot: 92.388
+  L_zero_shot_per_fold:
+    IllustrisTNG: 30.339
+    SIMBA: 212.097
+    Astrid: 93.472
+    Swift-EAGLE: 33.645
+  L_map: 5.85
+  L_map_per_fold:
+    IllustrisTNG: 5.222
+    SIMBA: 7.223
+    Astrid: 5.429
+    Swift-EAGLE: 5.526
+  chi2_per_suite:
+    IllustrisTNG: 4.773
+    SIMBA: 0.934
+    Astrid: 36.51
+    Swift-EAGLE: 4.187
+  chi2_mean: 11.601
+  chi2_std: 14.455
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.2
+    SIMBA: 0.2
+    Astrid: 0.405
+    Swift-EAGLE: 0.301
+  fold_mu:
+    IllustrisTNG:
+      A: 1.8339
+      C: 0.7573
+      E: -0.6271
+      F: 0.0143
+      k0: -0.2
+      k1: 0.4466
+    SIMBA:
+      A: 2.3348
+      C: 0.4293
+      E: -1.3305
+      F: 0.156
+      k0: -0.2249
+      k1: 0.9596
+    Astrid:
+      A: 1.7841
+      C: 0.6188
+      E: -0.4131
+      F: -0.5068
+      k0: -0.0495
+      k1: 0.2699
+    Swift-EAGLE:
+      A: 1.5444
+      C: 1.0363
+      E: -0.0262
+      F: -0.3453
+      k0: -0.1504
+      k1: 0.0914
+  residuals: Loop/residuals/T19.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 333
+- trial: T20
+  expr: -A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k*(D/0.05)**0.5/k1)**2/(1 + (k*(D/0.05)**0.5/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T17 with the f_b/D core reached at a deficit-set scale like the knee: both W2 scales ~ 1/sqrt(D) (rank 1 two-scale
+    structure), core amplitude affine (E f_b - C D).'
+  predicted_logZ_cross: 126660
+  predicted_chi2_mean: 8.4
+  submitted: '2026-11-11 09:16:14'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.998
+  logZ_cross: 126660.4
+  marginalized:
+  - k0
+  sigma_fold: 1924.3
+  ladder:
+  - R: []
+    logZ_cross: 115301.3
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 126660.4
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 127722.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33845.8
+    SIMBA: 30161.5
+    Astrid: 29936.8
+    Swift-EAGLE: 32716.3
+  L_zero_shot: 100.194
+  L_zero_shot_per_fold:
+    IllustrisTNG: 22.952
+    SIMBA: 317.002
+    Astrid: 40.695
+    Swift-EAGLE: 20.126
+  L_map: 4.914
+  L_map_per_fold:
+    IllustrisTNG: 1.479
+    SIMBA: 7.743
+    Astrid: 6.29
+    Swift-EAGLE: 4.144
+  chi2_per_suite:
+    IllustrisTNG: 3.941
+    SIMBA: 0.827
+    Astrid: 24.814
+    Swift-EAGLE: 4.114
+  chi2_mean: 8.424
+  chi2_std: 9.553
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.072
+    SIMBA: 0.18
+    Astrid: 0.422
+    Swift-EAGLE: 0.24
+  fold_mu:
+    IllustrisTNG:
+      A: 1.7523
+      C: 0.6628
+      E: -0.6741
+      k0: -0.2
+      k1: 0.6668
+    SIMBA:
+      A: 1.6524
+      C: 0.7417
+      E: -0.8058
+      k0: -0.0742
+      k1: 0.691
+    Astrid:
+      A: 1.7845
+      C: 0.4105
+      E: -1.05
+      k0: -0.35
+      k1: 0.8519
+    Swift-EAGLE:
+      A: 1.3306
+      C: 1.2791
+      E: -0.3999
+      k0: -0.25
+      k1: 0.5736
+  residuals: Loop/residuals/T20.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 210
+- trial: T21
+  expr: -D*((Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2)))) + (E*f_b - C*D)*(k/kc)**2/(1 + (k/kc)**2)
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+    kc:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T18 two-scale soft-tail knee with T17's affine expelled/retained core amplitude (E f_b - C D) on the shared
+    D-free core W2(k/kc).
+  predicted_logZ_cross: 127300
+  predicted_chi2_mean: 8.3
+  submitted: '2026-11-11 09:19:44'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.994
+  logZ_cross: 125224.3
+  marginalized:
+  - k2
+  sigma_fold: 2521.5
+  ladder:
+  - R: []
+    logZ_cross: 106186.9
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 125224.3
+    promoted: true
+  - R:
+    - k2
+    - E
+    logZ_cross: 127401.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33674.0
+    SIMBA: 30119.9
+    Astrid: 28331.8
+    Swift-EAGLE: 33098.7
+  L_zero_shot: 90.711
+  L_zero_shot_per_fold:
+    IllustrisTNG: 60.382
+    SIMBA: 207.271
+    Astrid: 45.802
+    Swift-EAGLE: 49.387
+  L_map: 10.254
+  L_map_per_fold:
+    IllustrisTNG: 5.254
+    SIMBA: 26.335
+    Astrid: 6.264
+    Swift-EAGLE: 3.162
+  chi2_per_suite:
+    IllustrisTNG: 4.796
+    SIMBA: 1.468
+    Astrid: 25.726
+    Swift-EAGLE: 4.224
+  chi2_mean: 9.054
+  chi2_std: 9.708
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.21
+    SIMBA: 0.418
+    Astrid: 0.487
+    Swift-EAGLE: 0.201
+  fold_mu:
+    IllustrisTNG:
+      A: 1.2571
+      B: 1.7023
+      C: -0.3201
+      E: -0.6777
+      k2: -0.4909
+      kc: 0.5742
+    SIMBA:
+      A: 3.0792
+      B: -0.3759
+      C: -0.4217
+      E: -0.9974
+      k2: -0.1501
+      kc: 0.7543
+    Astrid:
+      A: 3.2212
+      B: -1.2113
+      C: 0.1454
+      E: -1.0015
+      k2: -0.2155
+      kc: 0.887
+    Swift-EAGLE:
+      A: 1.7805
+      B: 0.9915
+      C: -0.4513
+      E: -0.5658
+      k2: -0.4434
+      kc: 0.5363
+  residuals: Loop/residuals/T21.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 466
+- trial: T22
+  expr: -D*(G*Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2)*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2))) + C*(k/kc)**2/(1 + (k/kc)**2))
+  lin:
+  - G
+  - A
+  - B
+  - C
+  nl:
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+    kc:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: T18 with the large-scale baryon knee (fixed k1 = 0.68) given its own linear amplitude G, and the soft-tail factor
+    (A + B x2/(1+x2)) applied only to the (1-w) k2 component. In T18 the product ties the large-scale knee to A and to the
+    tail, so the per-box DOFs [k2, B, A] cannot move k <= 1.1 independently of k > 3; G is a separately marginalizable per-box
+    large-scale amplitude aimed at the Astrid/TNG k <= 1.1 chi2 sink (TNG k=0.36 +3.2, Astrid +1.6 / -1.2..-1.4 at 0.6-1.1).
+    Nests T18 (G = A, B on both).
+  predicted_logZ_cross: 127300
+  predicted_chi2_mean: 7.5
+  submitted: '2026-11-11 09:27:34'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.992
+  logZ_cross: 120978.9
+  marginalized:
+  - C
+  sigma_fold: 3557.0
+  ladder:
+  - R: []
+    logZ_cross: 107089.7
+    promoted: true
+  - R:
+    - C
+    logZ_cross: 120978.9
+    promoted: true
+  - R:
+    - C
+    - k2
+    logZ_cross: 124029.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33692.3
+    SIMBA: 26713.4
+    Astrid: 27679.1
+    Swift-EAGLE: 32894.1
+  L_zero_shot: 84.185
+  L_zero_shot_per_fold:
+    IllustrisTNG: 46.583
+    SIMBA: 205.809
+    Astrid: 49.933
+    Swift-EAGLE: 34.414
+  L_map: 9.966
+  L_map_per_fold:
+    IllustrisTNG: 5.705
+    SIMBA: 28.036
+    Astrid: 2.414
+    Swift-EAGLE: 3.71
+  chi2_per_suite:
+    IllustrisTNG: 7.899
+    SIMBA: 1.32
+    Astrid: 22.215
+    Swift-EAGLE: 5.392
+  chi2_mean: 9.206
+  chi2_std: 7.869
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.219
+    SIMBA: 0.361
+    Astrid: 0.174
+    Swift-EAGLE: 0.197
+  fold_mu:
+    IllustrisTNG:
+      G: 3.0898
+      A: 4.1408
+      B: -3.7566
+      C: 1.7436
+      k2: -0.2964
+      kc: 0.5983
+    SIMBA:
+      G: 3.6039
+      A: 6.14
+      B: -8.3314
+      C: 3.4486
+      k2: 0.009
+      kc: 0.7379
+    Astrid:
+      G: 4.0501
+      A: 6.7532
+      B: -10.3842
+      C: 4.2582
+      k2: -0.0217
+      kc: 0.9231
+    Swift-EAGLE:
+      G: 3.5018
+      A: 3.7606
+      B: -3.7084
+      C: 1.808
+      k2: -0.2824
+      kc: 0.5964
+  residuals: Loop/residuals/T22.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 518
+- trial: T23
+  expr: -A*D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T20 (B7) with the f_b/D core scale steeper in the deficit, k1/(D/0.05)^0.75: the core reach scales faster with
+    D than the sqrt(D) knee (D-exponent scan on T17''s core: 0.125/0.25/0.5/0.75/1.0 -> 123.8k/125.1k/126.7k/127.3k/124.7k
+    in dry runs).'
+  predicted_logZ_cross: 127300
+  predicted_chi2_mean: 13.4
+  submitted: '2026-11-11 09:36:12'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127309.2
+  marginalized:
+  - k1
+  - A
+  sigma_fold: 2013.7
+  ladder:
+  - R: []
+    logZ_cross: 114052.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124048.8
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 127309.2
+    promoted: true
+  - R:
+    - k1
+    - A
+    - C
+    logZ_cross: 127705.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33932.0
+    SIMBA: 29624.6
+    Astrid: 30676.6
+    Swift-EAGLE: 33076.0
+  L_zero_shot: 76.603
+  L_zero_shot_per_fold:
+    IllustrisTNG: 36.558
+    SIMBA: 188.585
+    Astrid: 43.755
+    Swift-EAGLE: 37.512
+  L_map: 20.83
+  L_map_per_fold:
+    IllustrisTNG: 7.171
+    SIMBA: 62.788
+    Astrid: 8.766
+    Swift-EAGLE: 4.596
+  chi2_per_suite:
+    IllustrisTNG: 5.04
+    SIMBA: 2.221
+    Astrid: 41.877
+    Swift-EAGLE: 4.255
+  chi2_mean: 13.348
+  chi2_std: 16.503
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.249
+    SIMBA: 0.745
+    Astrid: 0.514
+    Swift-EAGLE: 0.26
+  fold_mu:
+    IllustrisTNG:
+      A: 1.3997
+      C: 1.0554
+      E: -0.51
+      k0: -0.3381
+      k1: 0.6228
+    SIMBA:
+      A: 1.4217
+      C: 0.9127
+      E: -0.6632
+      k0: -0.2545
+      k1: 0.6153
+    Astrid:
+      A: 1.0219
+      C: 1.2033
+      E: -0.9233
+      k0: -0.4504
+      k1: 0.8058
+    Swift-EAGLE:
+      A: 1.3136
+      C: 1.1379
+      E: -0.4572
+      k0: -0.3482
+      k1: 0.5977
+  residuals: Loop/residuals/T23.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 205
+- trial: T24
+  expr: -D*((Omega_b_over_Omega_m*(k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2) + (1 - Omega_b_over_Omega_m)*(k*D**0.5/k2)**2/(1
+    + (k*D**0.5/k2)**2))*(A + B*(k*D**0.5/k2)/(1 + (k*D**0.5/k2))) + C*(k*(D/0.05)**0.5/kc)**2/(1 + (k*(D/0.05)**0.5/kc)**2))
+  lin:
+  - A
+  - B
+  - C
+  nl:
+    k2:
+      lo: 0.05
+      hi: 20
+      spacing: log
+    kc:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: 'T18 with the D^1 core reached at a deficit-set scale W2(k (D/0.05)^0.5/kc) (B7/T20 lesson applied to C7''s
+    best): all three components scale as 1/sqrt(D); aims at Astrid''s k > 3 tail and per-box chi2.'
+  predicted_logZ_cross: 125240
+  predicted_chi2_mean: 7.0
+  submitted: '2026-11-11 09:39:37'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 125236.4
+  marginalized:
+  - k2
+  - kc
+  sigma_fold: 1575.5
+  ladder:
+  - R: []
+    logZ_cross: 99483.4
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 119960.2
+    promoted: true
+  - R:
+    - k2
+    - kc
+    logZ_cross: 125236.4
+    promoted: true
+  - R:
+    - k2
+    - kc
+    - A
+    logZ_cross: 125703.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33054.0
+    SIMBA: 30008.0
+    Astrid: 29944.7
+    Swift-EAGLE: 32229.7
+  L_zero_shot: 98.027
+  L_zero_shot_per_fold:
+    IllustrisTNG: 46.415
+    SIMBA: 231.907
+    Astrid: 61.222
+    Swift-EAGLE: 52.563
+  L_map: 7.94
+  L_map_per_fold:
+    IllustrisTNG: 0.963
+    SIMBA: 25.301
+    Astrid: 4.216
+    Swift-EAGLE: 1.279
+  chi2_per_suite:
+    IllustrisTNG: 3.427
+    SIMBA: 1.16
+    Astrid: 19.559
+    Swift-EAGLE: 3.699
+  chi2_mean: 6.961
+  chi2_std: 7.34
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.05
+    SIMBA: 0.313
+    Astrid: 0.282
+    Swift-EAGLE: 0.082
+  fold_mu:
+    IllustrisTNG:
+      A: 1.4256
+      B: -0.8733
+      C: 1.8528
+      k2: -0.5225
+      kc: 0.4456
+    SIMBA:
+      A: 2.1412
+      B: -0.9035
+      C: 1.7242
+      k2: -0.1552
+      kc: 0.697
+    Astrid:
+      A: 2.3432
+      B: -1.4086
+      C: 1.695
+      k2: -0.2728
+      kc: 0.2713
+    Swift-EAGLE:
+      A: 1.0543
+      B: 1.8486
+      C: 0.085
+      k2: -0.5046
+      kc: 0.2515
+  residuals: Loop/residuals/T24.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 514
+- trial: T25
+  expr: -A*D*((k*D**0.5/k0)**4/(1 + (k*D**0.5/k0)**2)**2) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T23 with a sharp k^4 sqrt(D) knee W2(x)^2: the D^0.75 f_b/D core carries the large-scale k^2 term, so a sharp
+    knee stops over-suppressing k = 0.36 (TNG/Astrid chi2 sink). Dry run 127,095 [k1, A], chi2 mean 9.77.'
+  predicted_logZ_cross: 127100
+  predicted_chi2_mean: 9.8
+  submitted: '2026-11-11 09:58:13'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127095.2
+  marginalized:
+  - k1
+  - A
+  sigma_fold: 2008.8
+  ladder:
+  - R: []
+    logZ_cross: 114101.5
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124554.2
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 127095.2
+    promoted: true
+  - R:
+    - k1
+    - A
+    - E
+    logZ_cross: 127288.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33815.3
+    SIMBA: 29589.7
+    Astrid: 30588.7
+    Swift-EAGLE: 33101.6
+  L_zero_shot: 83.287
+  L_zero_shot_per_fold:
+    IllustrisTNG: 28.77
+    SIMBA: 232.109
+    Astrid: 43.319
+    Swift-EAGLE: 28.951
+  L_map: 30.448
+  L_map_per_fold:
+    IllustrisTNG: 5.571
+    SIMBA: 104.133
+    Astrid: 7.795
+    Swift-EAGLE: 4.293
+  chi2_per_suite:
+    IllustrisTNG: 2.337
+    SIMBA: 2.325
+    Astrid: 29.579
+    Swift-EAGLE: 4.828
+  chi2_mean: 9.767
+  chi2_std: 11.484
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.224
+    SIMBA: 0.935
+    Astrid: 0.495
+    Swift-EAGLE: 0.253
+  fold_mu:
+    IllustrisTNG:
+      A: 1.1211
+      C: 1.3532
+      E: -0.5131
+      k0: -0.5273
+      k1: 0.6419
+    SIMBA:
+      A: 0.6085
+      C: 1.833
+      E: -0.6068
+      k0: -0.4761
+      k1: 0.6432
+    Astrid:
+      A: 0.7957
+      C: 1.4654
+      E: -0.8807
+      k0: -0.7409
+      k1: 0.7868
+    Swift-EAGLE:
+      A: 1.0443
+      C: 1.4241
+      E: -0.4655
+      k0: -0.55
+      k1: 0.6205
+  residuals: Loop/residuals/T25.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 349
+- trial: T26
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1
+    + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T23 + T07''s soft tail (A + B x/(1+x)) on the sqrt(D) knee: B is positive and shared again once the f_b/D core
+    sits at a D^0.75-scaled scale; fixes the TNG/Swift mid-k +/high-k - pattern and moves the promoted DOF to [k0, k1].'
+  predicted_logZ_cross: 127400
+  predicted_chi2_mean: 12.5
+  submitted: '2026-11-11 10:04:06'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127407.1
+  marginalized:
+  - k0
+  - k1
+  sigma_fold: 1756.5
+  ladder:
+  - R: []
+    logZ_cross: 112516.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 124623.1
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 127407.1
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - E
+    logZ_cross: 127995.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33865.2
+    SIMBA: 29972.4
+    Astrid: 30873.4
+    Swift-EAGLE: 32696.1
+  L_zero_shot: 76.832
+  L_zero_shot_per_fold:
+    IllustrisTNG: 40.521
+    SIMBA: 168.878
+    Astrid: 41.493
+    Swift-EAGLE: 56.435
+  L_map: 13.594
+  L_map_per_fold:
+    IllustrisTNG: 1.798
+    SIMBA: 43.844
+    Astrid: 7.148
+    Swift-EAGLE: 1.588
+  chi2_per_suite:
+    IllustrisTNG: 4.271
+    SIMBA: 1.853
+    Astrid: 39.425
+    Swift-EAGLE: 4.316
+  chi2_mean: 12.466
+  chi2_std: 15.596
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.1
+    SIMBA: 0.594
+    Astrid: 0.497
+    Swift-EAGLE: 0.131
+  fold_mu:
+    IllustrisTNG:
+      A: 1.3017
+      B: 0.2508
+      C: 0.8942
+      E: -0.5786
+      k0: -0.3836
+      k1: 0.6381
+    SIMBA:
+      A: 0.6037
+      B: 0.9335
+      C: 0.8404
+      E: -0.7113
+      k0: -0.4037
+      k1: 0.5828
+    Astrid:
+      A: 0.8085
+      B: 0.2831
+      C: 1.2027
+      E: -0.9151
+      k0: -0.5191
+      k1: 0.8204
+    Swift-EAGLE:
+      A: 0.5362
+      B: 1.0243
+      C: 0.9742
+      E: -0.4749
+      k0: -0.5448
+      k1: 0.5825
+  residuals: Loop/residuals/T26.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 522
+- trial: T27
+  expr: -A*D*((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T23 (best, e = 0.75 f_b/D core) with a sharper sqrt(D) knee x^3/(1+x^2)^1.5 (leading k^3, plateau 1): TNG k=0.36
+    (+3.4) and Astrid k=0.36 (+4.3) are over-suppressed while k~0.9-1.4 is under-suppressed, i.e. the data rise faster than
+    k^2 between 0.36 and 1; the core keeps a k^2 tail for the low-k floor. Dry run: 127,301 [k1, A], chi2 mean 9.93 (T23 13.35).'
+  predicted_logZ_cross: 127300
+  predicted_chi2_mean: 9.9
+  submitted: '2026-11-11 10:12:53'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127301.4
+  marginalized:
+  - k1
+  - A
+  sigma_fold: 2009.0
+  ladder:
+  - R: []
+    logZ_cross: 115514.8
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124418.1
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 127301.4
+    promoted: true
+  - R:
+    - k1
+    - A
+    - E
+    logZ_cross: 127582.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33887.9
+    SIMBA: 29658.5
+    Astrid: 30621.8
+    Swift-EAGLE: 33133.1
+  L_zero_shot: 73.673
+  L_zero_shot_per_fold:
+    IllustrisTNG: 29.467
+    SIMBA: 191.75
+    Astrid: 43.412
+    Swift-EAGLE: 30.062
+  L_map: 19.65
+  L_map_per_fold:
+    IllustrisTNG: 5.776
+    SIMBA: 60.58
+    Astrid: 8.031
+    Swift-EAGLE: 4.212
+  chi2_per_suite:
+    IllustrisTNG: 2.424
+    SIMBA: 2.11
+    Astrid: 31.038
+    Swift-EAGLE: 4.138
+  chi2_mean: 9.927
+  chi2_std: 12.212
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.224
+    SIMBA: 0.705
+    Astrid: 0.503
+    Swift-EAGLE: 0.249
+  fold_mu:
+    IllustrisTNG:
+      A: 1.1559
+      C: 1.323
+      E: -0.518
+      k0: -0.45
+      k1: 0.6437
+    SIMBA:
+      A: 1.0805
+      C: 1.2503
+      E: -0.6574
+      k0: -0.4248
+      k1: 0.5974
+    Astrid:
+      A: 0.9103
+      C: 1.3281
+      E: -0.9309
+      k0: -0.6247
+      k1: 0.8057
+    Swift-EAGLE:
+      A: 1.0678
+      C: 1.4076
+      E: -0.4671
+      k0: -0.4742
+      k1: 0.6205
+  residuals: Loop/residuals/T27.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 249
+- trial: T28
+  expr: -D*(A*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)) + B*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))**2) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1
+    + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'T23 (D^0.75 f_b/D core) with a linear mix of soft and sharp sqrt(D) knee, -D(A W2(x) + B W2(x)^2): knee sharpness
+    is suite-dependent (T25: k^4 helps TNG/Astrid k=0.36, hurts SIMBA/Swift), so let the k^2 low-k knee amplitude A be a per-box
+    DOF while B sets the sharp plateau.'
+  predicted_logZ_cross: 127500
+  predicted_chi2_mean: 9.5
+  submitted: '2026-11-11 10:17:05'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127097.1
+  marginalized:
+  - k1
+  - C
+  sigma_fold: 1996.4
+  ladder:
+  - R: []
+    logZ_cross: 114568.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121726.8
+    promoted: true
+  - R:
+    - k1
+    - C
+    logZ_cross: 127097.1
+    promoted: true
+  - R:
+    - k1
+    - C
+    - k0
+    logZ_cross: 127773.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33913.9
+    SIMBA: 29581.3
+    Astrid: 30667.7
+    Swift-EAGLE: 32934.3
+  L_zero_shot: 69.759
+  L_zero_shot_per_fold:
+    IllustrisTNG: 35.711
+    SIMBA: 153.686
+    Astrid: 40.93
+    Swift-EAGLE: 48.708
+  L_map: 14.493
+  L_map_per_fold:
+    IllustrisTNG: 7.28
+    SIMBA: 40.58
+    Astrid: 7.485
+    Swift-EAGLE: 2.628
+  chi2_per_suite:
+    IllustrisTNG: 5.599
+    SIMBA: 2.024
+    Astrid: 39.959
+    Swift-EAGLE: 4.078
+  chi2_mean: 12.915
+  chi2_std: 15.665
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.279
+    SIMBA: 0.636
+    Astrid: 0.513
+    Swift-EAGLE: 0.205
+  fold_mu:
+    IllustrisTNG:
+      A: 1.7628
+      B: -0.3405
+      C: 1.0349
+      E: -0.5345
+      k0: -0.2848
+      k1: 0.6381
+    SIMBA:
+      A: 0.9179
+      B: 0.2859
+      C: 1.1427
+      E: -0.6466
+      k0: -0.402
+      k1: 0.593
+    Astrid:
+      A: 0.965
+      B: -0.0011
+      C: 1.2769
+      E: -0.9286
+      k0: -0.5261
+      k1: 0.8152
+    Swift-EAGLE:
+      A: 1.22
+      B: 0.0316
+      C: 1.2191
+      E: -0.4713
+      k0: -0.4332
+      k1: 0.613
+  residuals: Loop/residuals/T28.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 542
+- trial: T29
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: Rank-1 two-scale baryon-weighted knee (cosmic fraction w at fixed baryon scale 0.68, rest at free k0, both sqrt(D)-scaled)
+    on T23's D^0.75-scaled f_b/D core; frees k0 as a per-box DOF alongside k1.
+  predicted_logZ_cross: 128000
+  predicted_chi2_mean: 13.2
+  submitted: '2026-11-11 10:26:08'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127992.7
+  marginalized:
+  - k1
+  - k0
+  sigma_fold: 2024.0
+  ladder:
+  - R: []
+    logZ_cross: 112693.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124333.8
+    promoted: true
+  - R:
+    - k1
+    - k0
+    logZ_cross: 127992.7
+    promoted: true
+  - R:
+    - k1
+    - k0
+    - E
+    logZ_cross: 128340.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34066.0
+    SIMBA: 29744.8
+    Astrid: 30883.0
+    Swift-EAGLE: 33299.0
+  L_zero_shot: 73.226
+  L_zero_shot_per_fold:
+    IllustrisTNG: 43.081
+    SIMBA: 157.51
+    Astrid: 42.725
+    Swift-EAGLE: 49.588
+  L_map: 8.571
+  L_map_per_fold:
+    IllustrisTNG: 8.344
+    SIMBA: 12.666
+    Astrid: 7.919
+    Swift-EAGLE: 5.356
+  chi2_per_suite:
+    IllustrisTNG: 6.939
+    SIMBA: 1.103
+    Astrid: 38.871
+    Swift-EAGLE: 5.792
+  chi2_mean: 13.176
+  chi2_std: 14.995
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.282
+    SIMBA: 0.273
+    Astrid: 0.491
+    Swift-EAGLE: 0.274
+  fold_mu:
+    IllustrisTNG:
+      A: 1.6936
+      C: 0.705
+      E: -0.4984
+      k0: -0.4094
+      k1: 0.6121
+    SIMBA:
+      A: 1.383
+      C: 0.9194
+      E: -0.6409
+      k0: -0.3453
+      k1: 0.5741
+    Astrid:
+      A: 1.2131
+      C: 1.0184
+      E: -0.915
+      k0: -0.4732
+      k1: 0.8289
+    Swift-EAGLE:
+      A: 1.6275
+      C: 0.7565
+      E: -0.4519
+      k0: -0.4466
+      k1: 0.5755
+  residuals: Loop/residuals/T29.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 256
+- trial: T30
+  expr: -D*((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5)*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1
+    + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: 'Combine B9''s k^3 sqrt(D) knee (T27, chi2 9.9, best L_zero) with A8''s shared positive soft tail B x/(1+x)
+    (T26, best evidence): the k^3 knee fixes the k=0.36 over-suppression, the soft tail fixes the TNG/Swift mid-k positive
+    / high-k negative pattern, on T23''s D^0.75-scaled f_b/D core.'
+  predicted_logZ_cross: 127176
+  predicted_chi2_mean: 9.86
+  submitted: '2026-11-11 10:30:30'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127175.9
+  marginalized:
+  - k1
+  - C
+  sigma_fold: 2117.2
+  ladder:
+  - R: []
+    logZ_cross: 112253.7
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124334.0
+    promoted: true
+  - R:
+    - k1
+    - C
+    logZ_cross: 127175.9
+    promoted: true
+  - R:
+    - k1
+    - C
+    - B
+    logZ_cross: 127793.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33892.7
+    SIMBA: 29660.4
+    Astrid: 30313.0
+    Swift-EAGLE: 33309.8
+  L_zero_shot: 77.949
+  L_zero_shot_per_fold:
+    IllustrisTNG: 38.681
+    SIMBA: 185.201
+    Astrid: 44.09
+    Swift-EAGLE: 43.824
+  L_map: 15.026
+  L_map_per_fold:
+    IllustrisTNG: 4.883
+    SIMBA: 44.041
+    Astrid: 6.843
+    Swift-EAGLE: 4.336
+  chi2_per_suite:
+    IllustrisTNG: 3.394
+    SIMBA: 1.788
+    Astrid: 29.219
+    Swift-EAGLE: 5.029
+  chi2_mean: 9.857
+  chi2_std: 11.237
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.242
+    SIMBA: 0.564
+    Astrid: 0.505
+    Swift-EAGLE: 0.296
+  fold_mu:
+    IllustrisTNG:
+      A: 0.6599
+      B: 0.7021
+      C: 1.1341
+      E: -0.5194
+      k0: -0.5612
+      k1: 0.5974
+    SIMBA:
+      A: 0.1896
+      B: 1.0512
+      C: 1.18
+      E: -0.6636
+      k0: -0.5373
+      k1: 0.5674
+    Astrid:
+      A: 0.8824
+      B: 0.0081
+      C: 1.3328
+      E: -0.9321
+      k0: -0.6294
+      k1: 0.8057
+    Swift-EAGLE:
+      A: 0.1243
+      B: 1.3077
+      C: 1.0909
+      E: -0.4618
+      k0: -0.6541
+      k1: 0.5743
+  residuals: Loop/residuals/T30.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 445
+- trial: T31
+  expr: -D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2)))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T29 (best) times the soft tail (A + B x0/(1+x0)), x0 = k sqrt(D)/k0, on the whole two-scale knee (T18's product
+    structure, load-bearing per T22) with T23's D^0.75 f_b/D core. TNG/Swift keep the soft-tail residual pattern (+0.6..1
+    sigma at k 1-4, -0.3..-0.4 at k > 8); A8 (T26) showed the tail is a shared positive feature on the D^0.75 core (+98 on
+    T23).
+  predicted_logZ_cross: 128300
+  predicted_chi2_mean: 11.5
+  submitted: '2026-11-11 10:37:55'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127927.3
+  marginalized:
+  - E
+  - k0
+  sigma_fold: 1975.2
+  ladder:
+  - R: []
+    logZ_cross: 112054.3
+    promoted: true
+  - R:
+    - E
+    logZ_cross: 124669.1
+    promoted: true
+  - R:
+    - E
+    - k0
+    logZ_cross: 127927.3
+    promoted: true
+  - R:
+    - E
+    - k0
+    - k1
+    logZ_cross: 129146.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34024.0
+    SIMBA: 30316.8
+    Astrid: 30261.9
+    Swift-EAGLE: 33324.5
+  L_zero_shot: 75.939
+  L_zero_shot_per_fold:
+    IllustrisTNG: 46.691
+    SIMBA: 161.407
+    Astrid: 41.478
+    Swift-EAGLE: 54.182
+  L_map: 14.33
+  L_map_per_fold:
+    IllustrisTNG: 6.675
+    SIMBA: 41.07
+    Astrid: 5.088
+    Swift-EAGLE: 4.488
+  chi2_per_suite:
+    IllustrisTNG: 8.034
+    SIMBA: 1.869
+    Astrid: 34.504
+    Swift-EAGLE: 5.453
+  chi2_mean: 12.465
+  chi2_std: 12.911
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.282
+    SIMBA: 0.608
+    Astrid: 0.374
+    Swift-EAGLE: 0.306
+  fold_mu:
+    IllustrisTNG:
+      A: 1.2745
+      B: 0.3294
+      C: 0.8307
+      E: -0.5072
+      k0: -0.4709
+      k1: 0.5821
+    SIMBA:
+      A: 0.3772
+      B: 1.0771
+      C: 0.9513
+      E: -0.6312
+      k0: -0.5025
+      k1: 0.5686
+    Astrid:
+      A: 1.2017
+      B: -0.1695
+      C: 1.17
+      E: -0.9168
+      k0: -0.5258
+      k1: 0.8157
+    Swift-EAGLE:
+      A: 0.5913
+      B: 1.1715
+      C: 0.7392
+      E: -0.4424
+      k0: -0.6091
+      k1: 0.5546
+  residuals: Loop/residuals/T31.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 552
+- trial: T32
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**3/(1 + (k*D**0.5/0.68)**2)**1.5) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T29 with the fixed 0.68 baryon component of the rank-1 two-scale knee sharpened to k^3 (u^3/(1+u^2)^1.5) to
+    stop k=0.36 over-suppression in TNG/Astrid/Swift; free (1-w) W2 knee and D^0.75 f_b/D core unchanged; p=5.
+  predicted_logZ_cross: 128200
+  predicted_chi2_mean: 10.5
+  submitted: '2026-11-11 10:47:11'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127387.2
+  marginalized:
+  - k1
+  - k0
+  sigma_fold: 1807.9
+  ladder:
+  - R: []
+    logZ_cross: 112725.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123587.7
+    promoted: true
+  - R:
+    - k1
+    - k0
+    logZ_cross: 127387.2
+    promoted: true
+  - R:
+    - k1
+    - k0
+    - E
+    logZ_cross: 128147.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33492.2
+    SIMBA: 30115.7
+    Astrid: 30458.3
+    Swift-EAGLE: 33321.0
+  L_zero_shot: 73.387
+  L_zero_shot_per_fold:
+    IllustrisTNG: 47.1
+    SIMBA: 159.098
+    Astrid: 41.762
+    Swift-EAGLE: 45.586
+  L_map: 14.986
+  L_map_per_fold:
+    IllustrisTNG: 3.028
+    SIMBA: 43.244
+    Astrid: 8.203
+    Swift-EAGLE: 5.469
+  chi2_per_suite:
+    IllustrisTNG: 5.262
+    SIMBA: 1.94
+    Astrid: 43.661
+    Swift-EAGLE: 5.632
+  chi2_mean: 14.124
+  chi2_std: 17.114
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.14
+    SIMBA: 0.615
+    Astrid: 0.498
+    Swift-EAGLE: 0.28
+  fold_mu:
+    IllustrisTNG:
+      A: 1.5779
+      C: 0.8436
+      E: -0.4278
+      k0: -0.4748
+      k1: 0.5753
+    SIMBA:
+      A: 1.4224
+      C: 0.9052
+      E: -0.6264
+      k0: -0.3582
+      k1: 0.5686
+    Astrid:
+      A: 1.1161
+      C: 1.1391
+      E: -0.8464
+      k0: -0.5225
+      k1: 0.786
+    Swift-EAGLE:
+      A: 1.6612
+      C: 0.7355
+      E: -0.4382
+      k0: -0.4499
+      k1: 0.5562
+  residuals: Loop/residuals/T32.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 359
+- trial: T33
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**3/(1
+    + (k*D**0.5/k0)**2)**1.5)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T29 with the dominant free (1-w) halo component of the rank-1 two-scale knee sharpened to B9's k^3 shape x^3/(1+x^2)^1.5
+    (T27's k=0.36 fix) while the fixed 0.68 baryon component stays W2; D^0.75 f_b/D core unchanged; p=5.
+  predicted_logZ_cross: 128300
+  predicted_chi2_mean: 10.5
+  submitted: '2026-11-11 10:53:16'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127612.9
+  marginalized:
+  - k0
+  sigma_fold: 2129.8
+  ladder:
+  - R: []
+    logZ_cross: 116888.6
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 127612.9
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 127783.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34014.3
+    SIMBA: 29697.4
+    Astrid: 30487.6
+    Swift-EAGLE: 33413.7
+  L_zero_shot: 79.716
+  L_zero_shot_per_fold:
+    IllustrisTNG: 35.083
+    SIMBA: 210.903
+    Astrid: 41.639
+    Swift-EAGLE: 31.24
+  L_map: 39.209
+  L_map_per_fold:
+    IllustrisTNG: 9.251
+    SIMBA: 133.42
+    Astrid: 7.534
+    Swift-EAGLE: 6.632
+  chi2_per_suite:
+    IllustrisTNG: 9.343
+    SIMBA: 3.042
+    Astrid: 32.46
+    Swift-EAGLE: 7.51
+  chi2_mean: 13.089
+  chi2_std: 11.416
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.329
+    SIMBA: 1.268
+    Astrid: 0.488
+    Swift-EAGLE: 0.349
+  fold_mu:
+    IllustrisTNG:
+      A: 1.0869
+      C: 1.3403
+      E: -0.4628
+      k0: -0.7286
+      k1: 0.7345
+    SIMBA:
+      A: 0.6629
+      C: 1.7083
+      E: -0.6345
+      k0: -0.6563
+      k1: 0.7364
+    Astrid:
+      A: 1.0025
+      C: 1.2525
+      E: -0.8613
+      k0: -0.6649
+      k1: 0.7875
+    Swift-EAGLE:
+      A: 1.1954
+      C: 1.2315
+      E: -0.5033
+      k0: -0.7
+      k1: 0.7614
+  residuals: Loop/residuals/T33.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 318
+- trial: T34
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.6/k1)**2/(1 + (k*(D/0.05)**0.6/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T29 with the f_b/D core-scale D-exponent lowered 0.75 -> 0.6: on the two-scale knee the large-scale k^2 is
+    carried by the knee, so a milder deficit scaling of the core reach keeps T29''s evidence while halving per-box chi2 (Astrid,
+    TNG k=0.36).'
+  predicted_logZ_cross: 127985
+  predicted_chi2_mean: 9.2
+  submitted: '2026-11-11 11:00:28'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.998
+  logZ_cross: 127984.9
+  marginalized:
+  - k1
+  - k0
+  sigma_fold: 1985.2
+  ladder:
+  - R: []
+    logZ_cross: 116490.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 125435.2
+    promoted: true
+  - R:
+    - k1
+    - k0
+    logZ_cross: 127984.9
+    promoted: true
+  - R:
+    - k1
+    - k0
+    - A
+    logZ_cross: 128458.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34053.9
+    SIMBA: 29930.3
+    Astrid: 30711.7
+    Swift-EAGLE: 33289.0
+  L_zero_shot: 79.19
+  L_zero_shot_per_fold:
+    IllustrisTNG: 28.332
+    SIMBA: 218.251
+    Astrid: 41.128
+    Swift-EAGLE: 29.049
+  L_map: 15.477
+  L_map_per_fold:
+    IllustrisTNG: 2.113
+    SIMBA: 48.378
+    Astrid: 6.303
+    Swift-EAGLE: 5.114
+  chi2_per_suite:
+    IllustrisTNG: 4.146
+    SIMBA: 1.926
+    Astrid: 26.582
+    Swift-EAGLE: 4.241
+  chi2_mean: 9.224
+  chi2_std: 10.064
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.095
+    SIMBA: 0.615
+    Astrid: 0.433
+    Swift-EAGLE: 0.284
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0194
+      C: 0.2964
+      E: -0.683
+      k0: -0.2757
+      k1: 0.6721
+    SIMBA:
+      A: 1.9636
+      C: 0.255
+      E: -0.8239
+      k0: -0.2194
+      k1: 0.646
+    Astrid:
+      A: 1.848
+      C: 0.3243
+      E: -1.0459
+      k0: -0.3651
+      k1: 0.8789
+    Swift-EAGLE:
+      A: 1.5955
+      C: 0.8903
+      E: -0.4241
+      k0: -0.3527
+      k1: 0.5809
+  residuals: Loop/residuals/T34.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 316
+- trial: T35
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**3/(1 + (k*(D/0.05)**0.75/k1)**2)**1.5)
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T29 with the D^0.75-scaled f_b/D core sharpened to a k^3 onset y^3/(1+y^2)^1.5 (plateau 1): removes the core''s
+    k^2 leak that over-suppresses k = 0.36 (TNG/Astrid/Swift), leaving both W2 knees as the k^2 large-scale carriers.'
+  predicted_logZ_cross: 128400
+  predicted_chi2_mean: 8.0
+  submitted: '2026-11-11 11:05:48'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 128395.9
+  marginalized:
+  - k1
+  - k0
+  sigma_fold: 1941.4
+  ladder:
+  - R: []
+    logZ_cross: 116242.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123212.4
+    promoted: true
+  - R:
+    - k1
+    - k0
+    logZ_cross: 128395.9
+    promoted: true
+  - R:
+    - k1
+    - k0
+    - A
+    logZ_cross: 128559.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34094.5
+    SIMBA: 30035.5
+    Astrid: 30894.9
+    Swift-EAGLE: 33371.0
+  L_zero_shot: 67.775
+  L_zero_shot_per_fold:
+    IllustrisTNG: 39.181
+    SIMBA: 163.365
+    Astrid: 36.019
+    Swift-EAGLE: 32.535
+  L_map: 17.722
+  L_map_per_fold:
+    IllustrisTNG: 8.391
+    SIMBA: 54.717
+    Astrid: 5.19
+    Swift-EAGLE: 2.591
+  chi2_per_suite:
+    IllustrisTNG: 5.097
+    SIMBA: 2.054
+    Astrid: 20.876
+    Swift-EAGLE: 3.911
+  chi2_mean: 7.985
+  chi2_std: 7.522
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.272
+    SIMBA: 0.689
+    Astrid: 0.399
+    Swift-EAGLE: 0.174
+  fold_mu:
+    IllustrisTNG:
+      A: 1.8064
+      C: 0.5508
+      E: -0.5285
+      k0: -0.3998
+      k1: 0.5071
+    SIMBA:
+      A: 1.636
+      C: 0.6209
+      E: -0.6614
+      k0: -0.3568
+      k1: 0.4724
+    Astrid:
+      A: 2.8249
+      C: -0.5318
+      E: -0.8511
+      k0: -0.3158
+      k1: 0.725
+    Swift-EAGLE:
+      A: 3.169
+      C: -0.6738
+      E: -0.3825
+      k0: -0.2558
+      k1: 0.4832
+  residuals: Loop/residuals/T35.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 433
+- trial: T36
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T29 with the large-scale 0.68 baryon-knee weight changed from the cosmic fraction w=Omega_b/Omega_m to the
+    retained fraction q=f_b/w (1-q = expelled fraction): the knee splits by how much of the baryon budget halos kept, not
+    by cosmology; targets TNG/Astrid k=0.36 over-suppression without touching the D^0.75 f_b/D core.'
+  predicted_logZ_cross: 127000
+  predicted_chi2_mean: 12.0
+  submitted: '2026-11-11 11:26:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 131102.6
+  marginalized:
+  - k1
+  - C
+  - k0
+  sigma_fold: 1752.6
+  ladder:
+  - R: []
+    logZ_cross: 92988.7
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124718.6
+    promoted: true
+  - R:
+    - k1
+    - C
+    logZ_cross: 128331.3
+    promoted: true
+  - R:
+    - k1
+    - C
+    - k0
+    logZ_cross: 131102.6
+    promoted: true
+  - R:
+    - k1
+    - C
+    - k0
+    - A
+    logZ_cross: 131150.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34525.2
+    SIMBA: 30690.0
+    Astrid: 32009.0
+    Swift-EAGLE: 33878.5
+  L_zero_shot: 95.159
+  L_zero_shot_per_fold:
+    IllustrisTNG: 106.388
+    SIMBA: 99.721
+    Astrid: 52.432
+    Swift-EAGLE: 122.095
+  L_map: 6.698
+  L_map_per_fold:
+    IllustrisTNG: 4.922
+    SIMBA: 11.737
+    Astrid: 4.059
+    Swift-EAGLE: 6.072
+  chi2_per_suite:
+    IllustrisTNG: 5.501
+    SIMBA: 1.092
+    Astrid: 22.477
+    Swift-EAGLE: 6.314
+  chi2_mean: 8.846
+  chi2_std: 8.117
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.337
+    SIMBA: 0.314
+    Astrid: 0.299
+    Swift-EAGLE: 0.447
+  fold_mu:
+    IllustrisTNG:
+      A: 3.4414
+      C: -1.2003
+      E: -0.6282
+      k0: -0.6156
+      k1: 0.2733
+    SIMBA:
+      A: 2.5965
+      C: -0.4046
+      E: -0.8172
+      k0: -0.4257
+      k1: 0.5968
+    Astrid:
+      A: 1.966
+      C: 0.1996
+      E: -0.9112
+      k0: -0.5331
+      k1: 0.5048
+    Swift-EAGLE:
+      A: 3.3825
+      C: -1.1532
+      E: -0.584
+      k0: -0.6248
+      k1: 0.2502
+  residuals: Loop/residuals/T36.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 559
+- trial: T37
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + E*f_b*((k*(D/0.05)**0.75/k1)**3/(1 + (k*(D/0.05)**0.75/k1)**2)**1.5)
+  lin:
+  - A
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T35 with the core''s -C*D dropped (p = 4): fold C flips sign across suites on T35, so the D^0.75-scaled k^3
+    core is carried by the retained-baryon amplitude E*f_b alone; tests whether one marginalized coefficient (k0) suffices
+    (reviewer question) at tie evidence.'
+  predicted_logZ_cross: 127950
+  predicted_chi2_mean: 12.5
+  submitted: '2026-11-11 11:35:51'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.995
+  logZ_cross: 127951.9
+  marginalized:
+  - k0
+  sigma_fold: 1961.2
+  ladder:
+  - R: []
+    logZ_cross: 116836.7
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 127951.9
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 128321.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33900.7
+    SIMBA: 29971.1
+    Astrid: 30660.3
+    Swift-EAGLE: 33419.7
+  L_zero_shot: 75.053
+  L_zero_shot_per_fold:
+    IllustrisTNG: 39.907
+    SIMBA: 187.513
+    Astrid: 38.846
+    Swift-EAGLE: 33.944
+  L_map: 13.502
+  L_map_per_fold:
+    IllustrisTNG: 10.099
+    SIMBA: 27.686
+    Astrid: 9.631
+    Swift-EAGLE: 6.593
+  chi2_per_suite:
+    IllustrisTNG: 6.201
+    SIMBA: 1.399
+    Astrid: 37.455
+    Swift-EAGLE: 4.834
+  chi2_mean: 12.472
+  chi2_std: 14.529
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.273
+    SIMBA: 0.419
+    Astrid: 0.525
+    Swift-EAGLE: 0.263
+  fold_mu:
+    IllustrisTNG:
+      A: 2.1265
+      E: -1.1697
+      k0: -0.4183
+      k1: 0.8063
+    SIMBA:
+      A: 2.147
+      E: -0.7412
+      k0: -0.275
+      k1: 0.5239
+    Astrid:
+      A: 2.0285
+      E: -1.1366
+      k0: -0.35
+      k1: 0.8058
+    Swift-EAGLE:
+      A: 2.091
+      E: -1.2525
+      k0: -0.425
+      k1: 0.8754
+  residuals: Loop/residuals/T37.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 148
+- trial: T38
+  expr: -A*D*(Omega_b_over_Omega_m*((k*D**0.5*(sigma_8/0.8)/0.68)**2/(1 + (k*D**0.5*(sigma_8/0.8)/0.68)**2)) + (1 - Omega_b_over_Omega_m)*((k*D**0.5*(sigma_8/0.8)/k0)**2/(1
+    + (k*D**0.5*(sigma_8/0.8)/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  - sigma_8
+  hypothesis: 'T29 with both sqrt(D)-scaled knee components (fixed 0.68 baryon knee and free (1-w) k0 knee) scaled by sigma_8/0.8:
+    in higher-sigma_8 cosmologies halos are more massive at fixed k, so the deficit-driven redistribution reaches larger scales
+    (k_eff ~ k sqrt(D) sigma_8). New cosmological ingredient (sigma_8) on the knee; core unchanged.'
+  predicted_logZ_cross: 127125
+  predicted_chi2_mean: 13.0
+  submitted: '2026-11-11 11:38:23'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127125.3
+  marginalized:
+  - k0
+  sigma_fold: 2414.2
+  ladder:
+  - R: []
+    logZ_cross: 118256.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 127125.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 128268.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34068.6
+    SIMBA: 28864.0
+    Astrid: 30765.2
+    Swift-EAGLE: 33427.5
+  L_zero_shot: 65.232
+  L_zero_shot_per_fold:
+    IllustrisTNG: 35.809
+    SIMBA: 154.392
+    Astrid: 40.589
+    Swift-EAGLE: 30.135
+  L_map: 17.833
+  L_map_per_fold:
+    IllustrisTNG: 12.438
+    SIMBA: 43.531
+    Astrid: 8.03
+    Swift-EAGLE: 7.333
+  chi2_per_suite:
+    IllustrisTNG: 12.345
+    SIMBA: 1.892
+    Astrid: 39.918
+    Swift-EAGLE: 8.925
+  chi2_mean: 15.77
+  chi2_std: 14.442
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.388
+    SIMBA: 0.612
+    Astrid: 0.49
+    Swift-EAGLE: 0.364
+  fold_mu:
+    IllustrisTNG:
+      A: 1.4885
+      C: 0.9456
+      E: -0.596
+      k0: -0.5
+      k1: 0.8362
+    SIMBA:
+      A: 1.3728
+      C: 0.9063
+      E: -0.6513
+      k0: -0.35
+      k1: 0.5739
+    Astrid:
+      A: 1.2117
+      C: 1.015
+      E: -0.9165
+      k0: -0.4596
+      k1: 0.8287
+    Swift-EAGLE:
+      A: 1.3662
+      C: 1.0571
+      E: -0.544
+      k0: -0.5206
+      k1: 0.8055
+  residuals: Loop/residuals/T38.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 288
+- trial: T39
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**3/(1 + (k*(D/0.05)**0.75/k1)**2)**1.5)
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 (retained-fraction weighted two-scale knee) with T35''s k^3 core onset y^3/(1+y^2)^1.5: the knee-weight
+    fix and the core k^2-leak fix touch different terms and should stack, cutting the remaining k = 0.36 excess in TNG/Astrid.'
+  predicted_logZ_cross: 131500
+  predicted_chi2_mean: 7.0
+  submitted: '2026-11-11 11:43:15'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 129485.4
+  marginalized:
+  - k0
+  - E
+  sigma_fold: 1772.2
+  ladder:
+  - R: []
+    logZ_cross: 95863.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 125161.0
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 129485.4
+    promoted: true
+  - R:
+    - k0
+    - E
+    - k1
+    logZ_cross: 130463.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33919.5
+    SIMBA: 30538.3
+    Astrid: 31167.6
+    Swift-EAGLE: 33860.1
+  L_zero_shot: 92.578
+  L_zero_shot_per_fold:
+    IllustrisTNG: 100.117
+    SIMBA: 102.587
+    Astrid: 48.246
+    Swift-EAGLE: 119.36
+  L_map: 4.86
+  L_map_per_fold:
+    IllustrisTNG: 2.741
+    SIMBA: 6.557
+    Astrid: 3.704
+    Swift-EAGLE: 6.438
+  chi2_per_suite:
+    IllustrisTNG: 5.011
+    SIMBA: 0.934
+    Astrid: 17.211
+    Swift-EAGLE: 5.837
+  chi2_mean: 7.248
+  chi2_std: 6.044
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.24
+    SIMBA: 0.247
+    Astrid: 0.289
+    Swift-EAGLE: 0.48
+  fold_mu:
+    IllustrisTNG:
+      A: 3.397
+      C: -1.1886
+      E: -0.6368
+      k0: -0.6
+      k1: 0.1575
+    SIMBA:
+      A: 2.3236
+      C: -0.165
+      E: -0.7831
+      k0: -0.4469
+      k1: 0.4613
+    Astrid:
+      A: 2.1994
+      C: -0.0611
+      E: -0.9197
+      k0: -0.5197
+      k1: 0.4122
+    Swift-EAGLE:
+      A: 3.3533
+      C: -1.1185
+      E: -0.5557
+      k0: -0.6187
+      k1: 0.1343
+  residuals: Loop/residuals/T39.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 762
+- trial: T40
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/1.0)**2/(1 + (k*D**0.5/1.0)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 with the fixed baryon knee scale 0.68 -> 1.0 h/Mpc: under retained-fraction q=f_b/w weighting that knee
+    carries most of the knee, so its optimum scale moves; tests knee scale under q weighting (dry run 130,777 [k0,E]).'
+  predicted_logZ_cross: 130780
+  predicted_chi2_mean: 8.7
+  submitted: '2026-11-11 11:55:59'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 130776.9
+  marginalized:
+  - k0
+  - E
+  sigma_fold: 1624.9
+  ladder:
+  - R: []
+    logZ_cross: 110519.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 128308.0
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 130776.9
+    promoted: true
+  - R:
+    - k0
+    - E
+    - k1
+    logZ_cross: 131984.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34287.9
+    SIMBA: 30928.5
+    Astrid: 31720.0
+    Swift-EAGLE: 33840.5
+  L_zero_shot: 71.218
+  L_zero_shot_per_fold:
+    IllustrisTNG: 60.27
+    SIMBA: 111.783
+    Astrid: 37.516
+    Swift-EAGLE: 75.302
+  L_map: 6.424
+  L_map_per_fold:
+    IllustrisTNG: 2.266
+    SIMBA: 13.949
+    Astrid: 4.302
+    Swift-EAGLE: 5.178
+  chi2_per_suite:
+    IllustrisTNG: 3.959
+    SIMBA: 1.07
+    Astrid: 22.76
+    Swift-EAGLE: 6.868
+  chi2_mean: 8.664
+  chi2_std: 8.392
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.157
+    SIMBA: 0.32
+    Astrid: 0.321
+    Swift-EAGLE: 0.327
+  fold_mu:
+    IllustrisTNG:
+      A: 3.4446
+      C: -1.126
+      E: -0.7022
+      k0: -0.5318
+      k1: 0.3364
+    SIMBA:
+      A: 2.6081
+      C: -0.4163
+      E: -0.8743
+      k0: -0.421
+      k1: 0.5742
+    Astrid:
+      A: 2.218
+      C: -0.0276
+      E: -0.9441
+      k0: -0.47
+      k1: 0.5387
+    Swift-EAGLE:
+      A: 3.2505
+      C: -0.9089
+      E: -0.6182
+      k0: -0.5587
+      k1: 0.2964
+  residuals: Loop/residuals/T40.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 450
+- trial: T41
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + k*(D/0.05)**0.75/k1)**2)
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T36 with a softer-saturating core y^2/(1+y)^2 (k^2 onset, slower approach to plateau) so the core keeps rising
+    toward k~10, targeting TNG/Swift high-k over-prediction and mid-k under-suppression.
+  predicted_logZ_cross: 131000
+  predicted_chi2_mean: 8.5
+  submitted: '2026-11-11 12:03:34'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.989
+  logZ_cross: 128304.2
+  marginalized:
+  - k0
+  sigma_fold: 1575.0
+  ladder:
+  - R: []
+    logZ_cross: 118434.0
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 128304.2
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 128505.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33620.3
+    SIMBA: 30144.1
+    Astrid: 31479.4
+    Swift-EAGLE: 33060.4
+  L_zero_shot: 63.338
+  L_zero_shot_per_fold:
+    IllustrisTNG: 30.06
+    SIMBA: 156.507
+    Astrid: 41.802
+    Swift-EAGLE: 24.982
+  L_map: 10.983
+  L_map_per_fold:
+    IllustrisTNG: 10.315
+    SIMBA: 23.995
+    Astrid: 6.806
+    Swift-EAGLE: 2.816
+  chi2_per_suite:
+    IllustrisTNG: 8.622
+    SIMBA: 1.558
+    Astrid: 28.089
+    Swift-EAGLE: 4.662
+  chi2_mean: 10.733
+  chi2_std: 10.329
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.339
+    SIMBA: 0.479
+    Astrid: 0.447
+    Swift-EAGLE: 0.141
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0778
+      C: 0.4063
+      E: -2.8203
+      k0: -0.425
+      k1: 1.1
+    SIMBA:
+      A: 2.3737
+      C: -0.2933
+      E: -1.4584
+      k0: -0.3
+      k1: 0.5174
+    Astrid:
+      A: 2.0518
+      C: 0.1021
+      E: -1.6816
+      k0: -0.2952
+      k1: 0.8518
+    Swift-EAGLE:
+      A: 1.9785
+      C: 0.6512
+      E: -2.4539
+      k0: -0.4
+      k1: 1.0114
+  residuals: Loop/residuals/T41.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 332
+- trial: T42
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)**0.5*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m)**0.5)*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'Knee-weight law on T36: weight sqrt(q), q=f_b/w, on the fixed 0.68 baryon knee and 1-sqrt(q) on the free k0
+    knee; brackets T36''s linear q (q^2 dry run lost 2.1k). Retained gas dominates the inner knee more than linearly.'
+  predicted_logZ_cross: 129950
+  predicted_chi2_mean: 10.9
+  submitted: '2026-11-11 12:09:08'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 129956.0
+  marginalized:
+  - k0
+  sigma_fold: 1994.7
+  ladder:
+  - R: []
+    logZ_cross: 112260.3
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 129956.0
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 131046.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34521.9
+    SIMBA: 30547.7
+    Astrid: 31023.7
+    Swift-EAGLE: 33862.7
+  L_zero_shot: 69.436
+  L_zero_shot_per_fold:
+    IllustrisTNG: 58.39
+    SIMBA: 121.463
+    Astrid: 30.545
+    Swift-EAGLE: 67.347
+  L_map: 6.123
+  L_map_per_fold:
+    IllustrisTNG: 6.705
+    SIMBA: 6.363
+    Astrid: 6.282
+    Swift-EAGLE: 5.144
+  chi2_per_suite:
+    IllustrisTNG: 6.533
+    SIMBA: 0.91
+    Astrid: 30.435
+    Swift-EAGLE: 5.664
+  chi2_mean: 10.885
+  chi2_std: 11.488
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.299
+    SIMBA: 0.222
+    Astrid: 0.437
+    Swift-EAGLE: 0.352
+  fold_mu:
+    IllustrisTNG:
+      A: 3.1321
+      C: -0.7819
+      E: -0.5584
+      k0: -0.5858
+      k1: 0.4491
+    SIMBA:
+      A: 2.376
+      C: -0.123
+      E: -0.8438
+      k0: -0.4601
+      k1: 0.5966
+    Astrid:
+      A: 2.0208
+      C: 0.203
+      E: -0.8271
+      k0: -0.5234
+      k1: 0.6874
+    Swift-EAGLE:
+      A: 3.005
+      C: -0.6384
+      E: -0.4766
+      k0: -0.6181
+      k1: 0.419
+  residuals: Loop/residuals/T42.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 2841
+- trial: T43
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.8)**2/(1 + (k*D**0.5/0.8)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 with the fixed q-weighted baryon knee scale 0.68 -> 0.8 h/Mpc: brackets the knee-scale optimum between
+    T36 (0.68, [k1,C,k0]) and T40 (1.0, [k0,E]); dry run 131,032 [k0,E], 0.9 gave 129,092 [k0].'
+  predicted_logZ_cross: 131030
+  predicted_chi2_mean: 8.7
+  submitted: '2026-11-11 12:56:34'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 131032.5
+  marginalized:
+  - k0
+  - E
+  sigma_fold: 1679.5
+  ladder:
+  - R: []
+    logZ_cross: 100583.0
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 127416.1
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 131032.5
+    promoted: true
+  - R:
+    - k0
+    - E
+    - k1
+    logZ_cross: 131692.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34450.2
+    SIMBA: 31128.2
+    Astrid: 31514.6
+    Swift-EAGLE: 33939.4
+  L_zero_shot: 86.912
+  L_zero_shot_per_fold:
+    IllustrisTNG: 81.026
+    SIMBA: 114.654
+    Astrid: 48.915
+    Swift-EAGLE: 103.054
+  L_map: 7.794
+  L_map_per_fold:
+    IllustrisTNG: 2.304
+    SIMBA: 19.296
+    Astrid: 4.177
+    Swift-EAGLE: 5.397
+  chi2_per_suite:
+    IllustrisTNG: 3.43
+    SIMBA: 1.221
+    Astrid: 22.539
+    Swift-EAGLE: 6.493
+  chi2_mean: 8.421
+  chi2_std: 8.363
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.193
+    SIMBA: 0.381
+    Astrid: 0.31
+    Swift-EAGLE: 0.387
+  fold_mu:
+    IllustrisTNG:
+      A: 3.4222
+      C: -1.1417
+      E: -0.6572
+      k0: -0.5712
+      k1: 0.3027
+    SIMBA:
+      A: 2.5245
+      C: -0.3068
+      E: -0.8218
+      k0: -0.4057
+      k1: 0.6153
+    Astrid:
+      A: 2.0838
+      C: 0.0885
+      E: -0.9309
+      k0: -0.5237
+      k1: 0.5056
+    Swift-EAGLE:
+      A: 3.2897
+      C: -1.0042
+      E: -0.5977
+      k0: -0.5996
+      k1: 0.2733
+  residuals: Loop/residuals/T43.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 435
+- trial: T44
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*(((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))*(1 + 2*(k*(D/0.05)**0.75/k1))/(1
+    + (k*(D/0.05)**0.75/k1)))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 with the W2 f_b/D core multiplied by a slow bounded high-k rise (1+2y)/(1+y): keeps the k^2 core onset
+    that fits TNG k=0.36 but lets the core keep deepening into k~10 (TNG/Swift k>=6 residuals -0.5..-1.3), unlike the soft
+    y^2/(1+y)^2 core that leaked to large scales.'
+  predicted_logZ_cross: 130700
+  predicted_chi2_mean: 8.4
+  submitted: '2026-11-11 16:18:14'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 130712.5
+  marginalized:
+  - k0
+  - k1
+  sigma_fold: 1679.7
+  ladder:
+  - R: []
+    logZ_cross: 92952.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122631.4
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 130712.5
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - E
+    logZ_cross: 131010.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34426.7
+    SIMBA: 31037.5
+    Astrid: 31460.2
+    Swift-EAGLE: 33788.1
+  L_zero_shot: 94.805
+  L_zero_shot_per_fold:
+    IllustrisTNG: 101.369
+    SIMBA: 103.452
+    Astrid: 54.491
+    Swift-EAGLE: 119.907
+  L_map: 7.403
+  L_map_per_fold:
+    IllustrisTNG: 2.664
+    SIMBA: 19.04
+    Astrid: 5.15
+    Swift-EAGLE: 2.758
+  chi2_per_suite:
+    IllustrisTNG: 3.608
+    SIMBA: 1.296
+    Astrid: 23.834
+    Swift-EAGLE: 5.019
+  chi2_mean: 8.439
+  chi2_std: 8.987
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.239
+    SIMBA: 0.4
+    Astrid: 0.385
+    Swift-EAGLE: 0.275
+  fold_mu:
+    IllustrisTNG:
+      A: 3.6159
+      C: -0.7159
+      E: -0.3442
+      k0: -0.5831
+      k1: 0.229
+    SIMBA:
+      A: 2.4878
+      C: -0.1352
+      E: -0.4238
+      k0: -0.4227
+      k1: 0.5301
+    Astrid:
+      A: 2.1315
+      C: 0.0307
+      E: -0.5109
+      k0: -0.5273
+      k1: 0.435
+    Swift-EAGLE:
+      A: 3.5418
+      C: -0.679
+      E: -0.3168
+      k0: -0.5998
+      k1: 0.2038
+  residuals: Loop/residuals/T44.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 411
+- trial: T45
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D/Omega_b_over_Omega_m)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 with the core''s D lever on the expelled fraction D/w instead of D: (E*f_b - C*D/w)*W2(k (D/0.05)^0.75/k1).
+    Retained gas (f_b) and expelled fraction (D/w) set the small-scale core, matching T36''s q = f_b/w knee split; dry run
+    gives a universal-sign C (0.11-0.16 in all folds, T36''s C flips) and 1-DOF evidence 130,381 (T36 124,719).'
+  predicted_logZ_cross: 130380
+  predicted_chi2_mean: 14.4
+  submitted: '2026-11-11 16:25:07'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 130381.3
+  marginalized:
+  - k1
+  sigma_fold: 1763.1
+  ladder:
+  - R: []
+    logZ_cross: 120878.7
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 130381.3
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 130891.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34417.9
+    SIMBA: 30427.4
+    Astrid: 31979.1
+    Swift-EAGLE: 33556.9
+  L_zero_shot: 74.088
+  L_zero_shot_per_fold:
+    IllustrisTNG: 29.346
+    SIMBA: 206.302
+    Astrid: 35.045
+    Swift-EAGLE: 25.659
+  L_map: 35.39
+  L_map_per_fold:
+    IllustrisTNG: 14.189
+    SIMBA: 111.593
+    Astrid: 7.792
+    Swift-EAGLE: 7.988
+  chi2_per_suite:
+    IllustrisTNG: 11.576
+    SIMBA: 2.946
+    Astrid: 34.835
+    Swift-EAGLE: 8.193
+  chi2_mean: 14.388
+  chi2_std: 12.199
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.431
+    SIMBA: 1.273
+    Astrid: 0.48
+    Swift-EAGLE: 0.392
+  fold_mu:
+    IllustrisTNG:
+      A: 1.813
+      C: 0.1368
+      E: -0.883
+      k0: -0.5
+      k1: 0.9914
+    SIMBA:
+      A: 1.5829
+      C: 0.1557
+      E: -1.0427
+      k0: -0.3593
+      k1: 0.9118
+    Astrid:
+      A: 1.6607
+      C: 0.1085
+      E: -1.1003
+      k0: -0.4297
+      k1: 0.9473
+    Swift-EAGLE:
+      A: 1.8243
+      C: 0.1209
+      E: -0.8334
+      k0: -0.4842
+      k1: 0.9719
+  residuals: Loop/residuals/T45.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 168
+- trial: T46
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2)) - G*D*(k/0.4)**2/(1 +
+    (k/0.4)**2)**2
+  lin:
+  - A
+  - C
+  - E
+  - G
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 plus a localized large-scale D^1 bump -G*D*u^2/(1+u^2)^2, u=k/0.4: T36''s low-k terms all scale as D^2
+    or steeper while -S(0.36) ~ D^1 in Astrid/Swift; a per-box large-scale amplitude targets the k=0.36 suite split (Astrid
+    +2.1, Swift -2.2) without touching k>=3.'
+  predicted_logZ_cross: 131500
+  predicted_chi2_mean: 8.0
+  submitted: '2026-11-11 16:29:08'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 131011.6
+  marginalized:
+  - k0
+  - k1
+  - C
+  sigma_fold: 1686.2
+  ladder:
+  - R: []
+    logZ_cross: 90983.8
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 123393.5
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 128532.5
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - C
+    logZ_cross: 131011.6
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - C
+    - G
+    logZ_cross: 131239.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34493.1
+    SIMBA: 31111.4
+    Astrid: 31520.0
+    Swift-EAGLE: 33887.2
+  L_zero_shot: 97.184
+  L_zero_shot_per_fold:
+    IllustrisTNG: 102.186
+    SIMBA: 99.097
+    Astrid: 51.157
+    Swift-EAGLE: 136.296
+  L_map: 5.166
+  L_map_per_fold:
+    IllustrisTNG: 2.454
+    SIMBA: 6.112
+    Astrid: 5.161
+    Swift-EAGLE: 6.937
+  chi2_per_suite:
+    IllustrisTNG: 3.342
+    SIMBA: 0.993
+    Astrid: 23.186
+    Swift-EAGLE: 9.051
+  chi2_mean: 9.143
+  chi2_std: 8.621
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.247
+    SIMBA: 0.265
+    Astrid: 0.437
+    Swift-EAGLE: 0.521
+  fold_mu:
+    IllustrisTNG:
+      A: 3.4059
+      C: -1.1712
+      E: -0.6358
+      G: -0.1765
+      k0: -0.6226
+      k1: 0.2965
+    SIMBA:
+      A: 2.4986
+      C: -0.3218
+      E: -0.8363
+      G: -0.0653
+      k0: -0.4476
+      k1: 0.5996
+    Astrid:
+      A: 1.9255
+      C: 0.2354
+      E: -0.9231
+      G: -0.1992
+      k0: -0.5789
+      k1: 0.5279
+    Swift-EAGLE:
+      A: 3.3232
+      C: -1.0991
+      E: -0.5918
+      G: -0.221
+      k0: -0.662
+      k1: 0.2733
+  residuals: Loop/residuals/T46.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 615
+- trial: T47
+  expr: -D*(A*(f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + B*(1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: T36 with separate amplitudes on the retained-gas knee (A, q-weighted fixed 0.68) and the expelled-gas knee (B,
+    (1-q)-weighted free k0), so the ladder can marginalize the expelled-gas amplitude per box; dry run 131,696 [k0, k1, B].
+  predicted_logZ_cross: 131700
+  predicted_chi2_mean: 8.0
+  submitted: '2026-11-11 16:42:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 131695.9
+  marginalized:
+  - k0
+  - k1
+  - B
+  sigma_fold: 1391.6
+  ladder:
+  - R: []
+    logZ_cross: 91947.4
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 124643.7
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 130084.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - B
+    logZ_cross: 131695.9
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - B
+    - C
+    logZ_cross: 132192.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34269.5
+    SIMBA: 31280.6
+    Astrid: 32281.0
+    Swift-EAGLE: 33864.8
+  L_zero_shot: 97.137
+  L_zero_shot_per_fold:
+    IllustrisTNG: 106.926
+    SIMBA: 105.585
+    Astrid: 57.264
+    Swift-EAGLE: 118.772
+  L_map: 6.419
+  L_map_per_fold:
+    IllustrisTNG: 4.765
+    SIMBA: 13.463
+    Astrid: 5.167
+    Swift-EAGLE: 2.281
+  chi2_per_suite:
+    IllustrisTNG: 5.15
+    SIMBA: 1.261
+    Astrid: 24.97
+    Swift-EAGLE: 4.588
+  chi2_mean: 8.992
+  chi2_std: 9.344
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.358
+    SIMBA: 0.375
+    Astrid: 0.435
+    Swift-EAGLE: 0.279
+  fold_mu:
+    IllustrisTNG:
+      A: 3.2627
+      B: 3.775
+      C: -1.4055
+      E: -0.7816
+      k0: -0.5807
+      k1: 0.2748
+    SIMBA:
+      A: 2.5619
+      B: 2.6434
+      C: -0.4125
+      E: -0.8883
+      k0: -0.4053
+      k1: 0.5977
+    Astrid:
+      A: 1.6404
+      B: 2.4072
+      C: -0.0654
+      E: -1.0749
+      k0: -0.5041
+      k1: 0.5068
+    Swift-EAGLE:
+      A: 3.6187
+      B: 3.4342
+      C: -1.2263
+      E: -0.5804
+      k0: -0.6158
+      k1: 0.2592
+  residuals: Loop/residuals/T47.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 921
+- trial: T48
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) - B*D*(1 - (f_b/Omega_b_over_Omega_m))*(((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5) - ((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T36 plus a localized linear knee-sharpness lever -B*D*(1-q)*(W3(x)-W2(x)) on the expelled-gas knee (same k0):
+    per-box onset steepness for the Astrid (steeper) vs Swift (shallower) k=0.36-1.1 split; vanishes at k->0 and k->inf.'
+  predicted_logZ_cross: 127470
+  predicted_chi2_mean: 7.4
+  submitted: '2026-11-11 16:59:02'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 127465.1
+  marginalized:
+  - k0
+  sigma_fold: 2505.2
+  ladder:
+  - R: []
+    logZ_cross: 93477.6
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 127465.1
+    promoted: true
+  - R:
+    - k0
+    - B
+    logZ_cross: 128896.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34420.7
+    SIMBA: 30247.4
+    Astrid: 29248.6
+    Swift-EAGLE: 33548.5
+  L_zero_shot: 92.572
+  L_zero_shot_per_fold:
+    IllustrisTNG: 80.943
+    SIMBA: 87.72
+    Astrid: 48.204
+    Swift-EAGLE: 153.419
+  L_map: 5.391
+  L_map_per_fold:
+    IllustrisTNG: 4.603
+    SIMBA: 9.479
+    Astrid: 4.689
+    Swift-EAGLE: 2.793
+  chi2_per_suite:
+    IllustrisTNG: 5.229
+    SIMBA: 1.141
+    Astrid: 17.625
+    Swift-EAGLE: 5.729
+  chi2_mean: 7.431
+  chi2_std: 6.149
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.344
+    SIMBA: 0.317
+    Astrid: 0.417
+    Swift-EAGLE: 0.294
+  fold_mu:
+    IllustrisTNG:
+      A: 3.3957
+      B: 0.2827
+      C: -1.1772
+      E: -0.6622
+      k0: -0.5494
+      k1: 0.3056
+    SIMBA:
+      A: 2.2558
+      B: -0.7878
+      C: -0.0968
+      E: -0.856
+      k0: -0.4424
+      k1: 0.5938
+    Astrid:
+      A: 1.8852
+      B: 0.3854
+      C: 0.2618
+      E: -0.9474
+      k0: -0.5505
+      k1: 0.5276
+    Swift-EAGLE:
+      A: 3.5
+      B: 2.0711
+      C: -1.2694
+      E: -0.595
+      k0: -0.7287
+      k1: 0.2925
+  residuals: Loop/residuals/T48.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 468
+- trial: T49
+  expr: -D*(A*(f_b/Omega_b_over_Omega_m)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2)) + B*(1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T47 with the retained-gas knee moved from the fixed sqrt(D)-scaled 0.68 knee onto the core scale y = k (D/0.05)^0.75/k1:
+    retained gas redistributes on the inner-halo scale, so per-box k1 marginalization moves the retained knee and the core
+    together (targets the TNG/Swift k >= 6 tail and the Astrid mid-k sign).'
+  predicted_logZ_cross: 130500
+  predicted_chi2_mean: 9.0
+  submitted: '2026-11-11 17:06:52'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 129977.7
+  marginalized:
+  - k0
+  sigma_fold: 1747.1
+  ladder:
+  - R: []
+    logZ_cross: 121880.4
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 129977.7
+    promoted: true
+  - R:
+    - k0
+    - B
+    logZ_cross: 130565.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 34090.0
+    SIMBA: 30334.5
+    Astrid: 31831.4
+    Swift-EAGLE: 33721.8
+  L_zero_shot: 74.135
+  L_zero_shot_per_fold:
+    IllustrisTNG: 27.635
+    SIMBA: 209.274
+    Astrid: 33.042
+    Swift-EAGLE: 26.589
+  L_map: 38.656
+  L_map_per_fold:
+    IllustrisTNG: 2.727
+    SIMBA: 138.686
+    Astrid: 7.193
+    Swift-EAGLE: 6.018
+  chi2_per_suite:
+    IllustrisTNG: 6.453
+    SIMBA: 3.411
+    Astrid: 33.898
+    Swift-EAGLE: 8.193
+  chi2_mean: 12.989
+  chi2_std: 12.192
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.127
+    SIMBA: 1.505
+    Astrid: 0.497
+    Swift-EAGLE: 0.301
+  fold_mu:
+    IllustrisTNG:
+      A: 4.1168
+      B: 2.274
+      C: -0.4006
+      E: -0.5372
+      k0: -0.45
+      k1: 0.852
+    SIMBA:
+      A: 3.7865
+      B: 2.1929
+      C: -0.4553
+      E: -0.8618
+      k0: -0.3182
+      k1: 0.8752
+    Astrid:
+      A: 3.2799
+      B: 1.8934
+      C: -0.0984
+      E: -0.6409
+      k0: -0.4222
+      k1: 0.7826
+    Swift-EAGLE:
+      A: 3.9115
+      B: 2.0624
+      C: -0.1998
+      E: -0.4818
+      k0: -0.4742
+      k1: 0.8289
+  residuals: Loop/residuals/T49.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 270
+- trial: T50
+  expr: -D*(A*(f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + B*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2)))
+    + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: 'T47 with the (1-q) weight dropped from the expelled-gas knee (-B*D*W2(k sqrt(D)/k0)): once B is a separate
+    per-box marginalized amplitude, the (1-q)=D/w feature weight may be redundant; tests whether the expelled-knee amplitude
+    needs the D^2/w scaling or just D.'
+  predicted_logZ_cross: 130500
+  predicted_chi2_mean: 9.0
+  submitted: '2026-11-11 17:11:25'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.984
+  logZ_cross: 124756.3
+  marginalized:
+  - k0
+  sigma_fold: 2445.0
+  ladder:
+  - R: []
+    logZ_cross: 77142.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 124756.3
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 126866.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33508.1
+    SIMBA: 29400.5
+    Astrid: 28777.2
+    Swift-EAGLE: 33070.6
+  L_zero_shot: 151.209
+  L_zero_shot_per_fold:
+    IllustrisTNG: 155.23
+    SIMBA: 218.112
+    Astrid: 62.637
+    Swift-EAGLE: 168.855
+  L_map: 35.947
+  L_map_per_fold:
+    IllustrisTNG: 3.178
+    SIMBA: 133.639
+    Astrid: 4.05
+    Swift-EAGLE: 2.921
+  chi2_per_suite:
+    IllustrisTNG: 6.05
+    SIMBA: 3.196
+    Astrid: 23.445
+    Swift-EAGLE: 5.395
+  chi2_mean: 9.522
+  chi2_std: 8.108
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.134
+    SIMBA: 1.34
+    Astrid: 0.312
+    Swift-EAGLE: 0.149
+  fold_mu:
+    IllustrisTNG:
+      A: -0.7008
+      B: 3.0235
+      C: -0.7316
+      E: -1.3314
+      k0: -0.4242
+      k1: 0.6676
+    SIMBA:
+      A: -2.1793
+      B: 2.217
+      C: 0.3392
+      E: -1.8804
+      k0: -0.2653
+      k1: 0.9328
+    Astrid:
+      A: 0.4282
+      B: 2.0948
+      C: 0.0616
+      E: -0.7734
+      k0: -0.4464
+      k1: 0.5539
+    Swift-EAGLE:
+      A: -0.0951
+      B: 2.4167
+      C: -0.1975
+      E: -1.0494
+      k0: -0.4741
+      k1: 0.6206
+  residuals: Loop/residuals/T50.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 371
+- trial: T51
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + G*Omega_m + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0))
+  lin:
+  - A
+  - B
+  - G
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X01, chi2-targeted; resubmitted to the main loop as T51 on 2026-11-14] T07
+    + Omega_m-dependent amplitude (Omega_m correlates with S at all k in every suite)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:00:24'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123319.3
+  marginalized:
+  - k0
+  - A
+  sigma_fold: 1696.5
+  ladder:
+  - R: []
+    logZ_cross: 107432.9
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120807.6
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 123319.3
+    promoted: true
+  - R:
+    - k0
+    - A
+    - G
+    logZ_cross: 123595.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32560.1
+    SIMBA: 29401.5
+    Astrid: 29345.7
+    Swift-EAGLE: 32012.0
+  L_zero_shot: 20.57
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.281
+    SIMBA: 39.676
+    Astrid: 11.296
+    Swift-EAGLE: 15.027
+  L_map: 2.389
+  L_map_per_fold:
+    IllustrisTNG: 1.086
+    SIMBA: 4.914
+    Astrid: 2.637
+    Swift-EAGLE: 0.919
+  chi2_per_suite:
+    IllustrisTNG: 2.756
+    SIMBA: 1.221
+    Astrid: 17.592
+    Swift-EAGLE: 4.254
+  chi2_mean: 6.456
+  chi2_std: 6.518
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.112
+    SIMBA: 0.332
+    Astrid: 0.236
+    Swift-EAGLE: 0.112
+  fold_mu:
+    IllustrisTNG:
+      A: 0.439
+      B: 2.2044
+      G: 0.8301
+      k0: -0.4715
+    SIMBA:
+      A: 1.6177
+      B: 1.4668
+      G: -0.0119
+      k0: -0.25
+    Astrid:
+      A: 1.3064
+      B: 1.7231
+      G: 0.0362
+      k0: -0.35
+    Swift-EAGLE:
+      A: 0.5319
+      B: 2.2739
+      G: 0.4103
+      k0: -0.4723
+  residuals: Loop/residuals/T51.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 131
+- trial: T52
+  expr: -D*((k*D**0.5*(0.3/Omega_m)**a/k0)**2/(1 + (k*D**0.5*(0.3/Omega_m)**a/k0)**2))*(A + G*Omega_m + B*(k*D**0.5*(0.3/Omega_m)**a/k0)/(1
+    + k*D**0.5*(0.3/Omega_m)**a/k0))
+  lin:
+  - A
+  - B
+  - G
+  nl:
+    k0:
+      lo: 0.003
+      hi: 30
+      spacing: log
+    a:
+      lo: 0.0
+      hi: 3.0
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X02, chi2-targeted; resubmitted to the main loop as T52 on 2026-11-14] Q01
+    + Omega_m amplitude (P04)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:02:37'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122778.8
+  marginalized:
+  - k0
+  sigma_fold: 1707.8
+  ladder:
+  - R: []
+    logZ_cross: 108319.7
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 122778.8
+    promoted: true
+  - R:
+    - k0
+    - a
+    logZ_cross: 123680.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32337.2
+    SIMBA: 29416.7
+    Astrid: 29037.3
+    Swift-EAGLE: 31987.6
+  L_zero_shot: 20.286
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.813
+    SIMBA: 39.939
+    Astrid: 11.256
+    Swift-EAGLE: 14.137
+  L_map: 5.382
+  L_map_per_fold:
+    IllustrisTNG: 4.042
+    SIMBA: 10.751
+    Astrid: 3.544
+    Swift-EAGLE: 3.189
+  chi2_per_suite:
+    IllustrisTNG: 3.854
+    SIMBA: 2.103
+    Astrid: 18.843
+    Swift-EAGLE: 4.576
+  chi2_mean: 7.344
+  chi2_std: 6.699
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.294
+    SIMBA: 0.681
+    Astrid: 0.321
+    Swift-EAGLE: 0.286
+  fold_mu:
+    IllustrisTNG:
+      A: 0.6605
+      B: 1.9486
+      G: 1.0865
+      k0: -0.4266
+      a: 0.0349
+    SIMBA:
+      A: 1.332
+      B: 1.6958
+      G: 0.37
+      k0: -0.2562
+      a: 0.0501
+    Astrid:
+      A: 1.014
+      B: 1.9486
+      G: 0.4679
+      k0: -0.3562
+      a: 0.0493
+    Swift-EAGLE:
+      A: 0.9175
+      B: 1.8871
+      G: 0.4893
+      k0: -0.4138
+      a: 0.0268
+  residuals: Loop/residuals/T52.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 187
+- trial: T53
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + G*(f_b/Omega_b_over_Omega_m) + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0))
+  lin:
+  - A
+  - B
+  - G
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X03, chi2-targeted; resubmitted to the main loop as T53 on 2026-11-14] T07
+    + retained-fraction amplitude'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:05:48'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 124552.4
+  marginalized:
+  - k0
+  - G
+  sigma_fold: 1708.0
+  ladder:
+  - R: []
+    logZ_cross: 107346.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120926.4
+    promoted: true
+  - R:
+    - k0
+    - G
+    logZ_cross: 124552.4
+    promoted: true
+  - R:
+    - k0
+    - G
+    - B
+    logZ_cross: 125292.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32938.0
+    SIMBA: 29259.5
+    Astrid: 30182.4
+    Swift-EAGLE: 32172.5
+  L_zero_shot: 22.877
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.553
+    SIMBA: 47.124
+    Astrid: 16.576
+    Swift-EAGLE: 12.254
+  L_map: 3.625
+  L_map_per_fold:
+    IllustrisTNG: 2.429
+    SIMBA: 7.831
+    Astrid: 3.369
+    Swift-EAGLE: 0.87
+  chi2_per_suite:
+    IllustrisTNG: 3.623
+    SIMBA: 1.384
+    Astrid: 19.157
+    Swift-EAGLE: 4.305
+  chi2_mean: 7.117
+  chi2_std: 7.034
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.211
+    SIMBA: 0.429
+    Astrid: 0.32
+    Swift-EAGLE: 0.11
+  fold_mu:
+    IllustrisTNG:
+      A: 0.8674
+      B: 1.63
+      G: 0.244
+      k0: -0.45
+    SIMBA:
+      A: 1.2956
+      B: 0.7223
+      G: 1.534
+      k0: -0.2348
+    Astrid:
+      A: 1.2775
+      B: 0.4408
+      G: 2.2941
+      k0: -0.2685
+    Swift-EAGLE:
+      A: 0.21
+      B: 2.1961
+      G: 0.6136
+      k0: -0.4752
+  residuals: Loop/residuals/T53.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 146
+- trial: T54
+  expr: -D*((k*D**0.5/k0)**n/(1 + (k*D**0.5/k0)**n))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    n:
+      lo: 2
+      hi: 5
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[orchestrator-proposed; Chi2Push X04, chi2-targeted; resubmitted to the main loop as T54 on 2026-11-14] T07
+    with free onset sharpness n (Astrid onset steeper than k^2)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:08:18'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123189.5
+  marginalized:
+  - k0
+  sigma_fold: 1764.3
+  ladder:
+  - R: []
+    logZ_cross: 108496.8
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 123189.5
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 123960.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32645.9
+    SIMBA: 29148.1
+    Astrid: 29436.6
+    Swift-EAGLE: 31959.0
+  L_zero_shot: 20.584
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.171
+    SIMBA: 41.221
+    Astrid: 11.469
+    Swift-EAGLE: 14.477
+  L_map: 5.568
+  L_map_per_fold:
+    IllustrisTNG: 3.637
+    SIMBA: 13.658
+    Astrid: 3.688
+    Swift-EAGLE: 1.288
+  chi2_per_suite:
+    IllustrisTNG: 3.624
+    SIMBA: 2.209
+    Astrid: 18.864
+    Swift-EAGLE: 4.234
+  chi2_mean: 7.233
+  chi2_std: 6.755
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.267
+    SIMBA: 0.725
+    Astrid: 0.314
+    Swift-EAGLE: 0.136
+  fold_mu:
+    IllustrisTNG:
+      A: 0.9704
+      B: 1.8566
+      k0: -0.4276
+      n: 2.0
+    SIMBA:
+      A: 1.9574
+      B: 1.1099
+      k0: -0.2139
+      n: 2.0
+    Astrid:
+      A: 1.4829
+      B: 1.5781
+      k0: -0.325
+      n: 2.0
+    Swift-EAGLE:
+      A: 0.9917
+      B: 1.9071
+      k0: -0.4276
+      n: 2.0
+  residuals: Loop/residuals/T54.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 128
+- trial: T55
+  expr: -D*((k*D**b/k0)**2/(1 + (k*D**b/k0)**2))*(A + B*(k*D**b/k0)/(1 + k*D**b/k0))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    b:
+      lo: 0.0
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[orchestrator-proposed; Chi2Push X05, chi2-targeted; resubmitted to the main loop as T55 on 2026-11-14] T07
+    with free deficit exponent on the knee'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:10:28'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123060.4
+  marginalized:
+  - k0
+  sigma_fold: 1953.8
+  ladder:
+  - R: []
+    logZ_cross: 108503.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 123060.4
+    promoted: true
+  - R:
+    - k0
+    - B
+    logZ_cross: 123606.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32703.3
+    SIMBA: 28929.8
+    Astrid: 29243.5
+    Swift-EAGLE: 32183.7
+  L_zero_shot: 20.706
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.517
+    SIMBA: 40.879
+    Astrid: 11.593
+    Swift-EAGLE: 14.835
+  L_map: 5.765
+  L_map_per_fold:
+    IllustrisTNG: 3.237
+    SIMBA: 12.975
+    Astrid: 3.668
+    Swift-EAGLE: 3.181
+  chi2_per_suite:
+    IllustrisTNG: 3.576
+    SIMBA: 2.053
+    Astrid: 17.593
+    Swift-EAGLE: 4.285
+  chi2_mean: 6.877
+  chi2_std: 6.239
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.244
+    SIMBA: 0.674
+    Astrid: 0.312
+    Swift-EAGLE: 0.261
+  fold_mu:
+    IllustrisTNG:
+      A: 0.9482
+      B: 1.8645
+      k0: -0.425
+      b: 0.4875
+    SIMBA:
+      A: 1.6682
+      B: 1.4113
+      k0: -0.3259
+      b: 0.6007
+    Astrid:
+      A: 1.461
+      B: 1.6074
+      k0: -0.2982
+      b: 0.4617
+    Swift-EAGLE:
+      A: 0.8034
+      B: 2.1129
+      k0: -0.4267
+      b: 0.4755
+  residuals: Loop/residuals/T55.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 114
+- trial: T56
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1-(f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**4/(1
+    + (k*D**0.5/k0)**4))) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X06, chi2-targeted; resubmitted to the main loop as T56 on 2026-11-14] T36
+    with sharp k^4 expelled-gas knee'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:12:24'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 128738.6
+  marginalized:
+  - k0
+  sigma_fold: 1881.3
+  ladder:
+  - R: []
+    logZ_cross: 120125.3
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 128738.6
+    promoted: true
+  - R:
+    - k0
+    - E
+    logZ_cross: 129032.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33999.1
+    SIMBA: 29933.7
+    Astrid: 31362.9
+    Swift-EAGLE: 33443.0
+  L_zero_shot: 18.846
+  L_zero_shot_per_fold:
+    IllustrisTNG: 10.257
+    SIMBA: 44.345
+    Astrid: 11.531
+    Swift-EAGLE: 9.251
+  L_map: 10.723
+  L_map_per_fold:
+    IllustrisTNG: 4.193
+    SIMBA: 30.89
+    Astrid: 4.505
+    Swift-EAGLE: 3.304
+  chi2_per_suite:
+    IllustrisTNG: 4.607
+    SIMBA: 3.051
+    Astrid: 26.216
+    Swift-EAGLE: 8.465
+  chi2_mean: 10.585
+  chi2_std: 9.238
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.32
+    SIMBA: 1.413
+    Astrid: 0.474
+    Swift-EAGLE: 0.331
+  fold_mu:
+    IllustrisTNG:
+      A: 1.216
+      C: 1.199
+      E: -0.6876
+      k0: -0.6258
+      k1: 0.805
+    SIMBA:
+      A: 0.7762
+      C: 1.581
+      E: -0.8148
+      k0: -0.605
+      k1: 0.8057
+    Astrid:
+      A: 0.9049
+      C: 1.3414
+      E: -0.8538
+      k0: -0.6254
+      k1: 0.7591
+    Swift-EAGLE:
+      A: 1.0763
+      C: 1.3485
+      E: -0.5854
+      k0: -0.676
+      k1: 0.7585
+  residuals: Loop/residuals/T56.md
+  n_coeff: 5
+  nl_nodes: 41
+  seconds: 177
+- trial: T57
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1
+    + (k*(D/0.05)**0.75/k1)**2))
+  lin:
+  - A
+  - B
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+    k1:
+      lo: 0.05
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - f_b
+  hypothesis: '[orchestrator-proposed; Chi2Push X07, chi2-targeted; resubmitted to the main loop as T57 on 2026-11-14] T07
+    + T36 redistribution core'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:15:24'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127399.8
+  marginalized:
+  - k0
+  - k1
+  sigma_fold: 1757.2
+  ladder:
+  - R: []
+    logZ_cross: 112579.2
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 124608.8
+    promoted: true
+  - R:
+    - k0
+    - k1
+    logZ_cross: 127399.8
+    promoted: true
+  - R:
+    - k0
+    - k1
+    - E
+    logZ_cross: 127991.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33862.5
+    SIMBA: 29968.3
+    Astrid: 30872.6
+    Swift-EAGLE: 32696.4
+  L_zero_shot: 19.452
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.727
+    SIMBA: 32.705
+    Astrid: 13.111
+    Swift-EAGLE: 17.264
+  L_map: 3.67
+  L_map_per_fold:
+    IllustrisTNG: 0.718
+    SIMBA: 8.884
+    Astrid: 4.277
+    Swift-EAGLE: 0.802
+  chi2_per_suite:
+    IllustrisTNG: 4.249
+    SIMBA: 1.842
+    Astrid: 39.562
+    Swift-EAGLE: 4.365
+  chi2_mean: 12.505
+  chi2_std: 15.654
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.1
+    SIMBA: 0.588
+    Astrid: 0.499
+    Swift-EAGLE: 0.133
+  fold_mu:
+    IllustrisTNG:
+      A: 1.2771
+      B: 0.2857
+      C: 0.8859
+      E: -0.5782
+      k0: -0.3856
+      k1: 0.638
+    SIMBA:
+      A: 0.6087
+      B: 0.9233
+      C: 0.8436
+      E: -0.7113
+      k0: -0.4031
+      k1: 0.5828
+    Astrid:
+      A: 0.7758
+      B: 0.3243
+      C: 1.1977
+      E: -0.913
+      k0: -0.5225
+      k1: 0.8197
+    Swift-EAGLE:
+      A: 0.5083
+      B: 1.0621
+      C: 0.9659
+      E: -0.4746
+      k0: -0.5475
+      k1: 0.5824
+  residuals: Loop/residuals/T57.md
+  n_coeff: 6
+  nl_nodes: 41
+  seconds: 368
+- trial: T58
+  expr: -D*((k*D**0.5*(0.3/Omega_m)**1.5/k0)**2/(1 + (k*D**0.5*(0.3/Omega_m)**1.5/k0)**2))*(A + B*(k*D**0.5*(0.3/Omega_m)**1.5/k0)/(1
+    + k*D**0.5*(0.3/Omega_m)**1.5/k0))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.003
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X08, chi2-targeted; resubmitted to the main loop as T58 on 2026-11-14] T07,
+    knee ~ Omega_m^1.5 fixed'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:21:34'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 91073.2
+  marginalized:
+  - k0
+  sigma_fold: 1699.2
+  ladder:
+  - R: []
+    logZ_cross: 86005.3
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 91073.2
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 91505.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 24245.3
+    SIMBA: 20662.2
+    Astrid: 22122.0
+    Swift-EAGLE: 24043.7
+  L_zero_shot: 42.592
+  L_zero_shot_per_fold:
+    IllustrisTNG: 22.752
+    SIMBA: 89.945
+    Astrid: 28.203
+    Swift-EAGLE: 29.468
+  L_map: 19.262
+  L_map_per_fold:
+    IllustrisTNG: 8.487
+    SIMBA: 55.175
+    Astrid: 7.327
+    Swift-EAGLE: 6.057
+  chi2_per_suite:
+    IllustrisTNG: 7.16
+    SIMBA: 2.437
+    Astrid: 37.859
+    Swift-EAGLE: 6.716
+  chi2_mean: 13.543
+  chi2_std: 14.159
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.268
+    SIMBA: 0.854
+    Astrid: 0.272
+    Swift-EAGLE: 0.223
+  fold_mu:
+    IllustrisTNG:
+      A: 0.6074
+      B: 1.9966
+      k0: -0.1858
+    SIMBA:
+      A: 1.6789
+      B: 1.1889
+      k0: 0.1254
+    Astrid:
+      A: 1.2238
+      B: 1.6917
+      k0: 0.01
+    Swift-EAGLE:
+      A: 0.6189
+      B: 2.1215
+      k0: -0.1869
+  residuals: Loop/residuals/T58.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 52
+- trial: T59
+  expr: -A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1-(f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1
+    + (k*D**0.5/k0)**2))) + (E*f_b - C*D)*((3*k*(D/0.05)**0.75*D**0.5/k0)**2/(1 + (3*k*(D/0.05)**0.75*D**0.5/k0)**2))
+  lin:
+  - A
+  - C
+  - E
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+  features:
+  - D
+  - f_b
+  - Omega_b_over_Omega_m
+  hypothesis: '[orchestrator-proposed; Chi2Push X09, chi2-targeted; resubmitted to the main loop as T59 on 2026-11-14] T36
+    with the core scale tied to the expelled knee (1 nl)'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:22:27'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.992
+  logZ_cross: 125910.7
+  marginalized:
+  - C
+  - k0
+  sigma_fold: 1530.4
+  ladder:
+  - R: []
+    logZ_cross: 107268.2
+    promoted: true
+  - R:
+    - C
+    logZ_cross: 119817.5
+    promoted: true
+  - R:
+    - C
+    - k0
+    logZ_cross: 125910.7
+    promoted: true
+  - R:
+    - C
+    - k0
+    - E
+    logZ_cross: 126649.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33209.7
+    SIMBA: 29722.0
+    Astrid: 30802.5
+    Swift-EAGLE: 32176.5
+  L_zero_shot: 24.724
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.684
+    SIMBA: 50.998
+    Astrid: 18.885
+    Swift-EAGLE: 12.33
+  L_map: 5.004
+  L_map_per_fold:
+    IllustrisTNG: 3.077
+    SIMBA: 9.825
+    Astrid: 3.829
+    Swift-EAGLE: 3.285
+  chi2_per_suite:
+    IllustrisTNG: 8.948
+    SIMBA: 1.398
+    Astrid: 29.924
+    Swift-EAGLE: 7.091
+  chi2_mean: 11.84
+  chi2_std: 10.805
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.234
+    SIMBA: 0.446
+    Astrid: 0.364
+    Swift-EAGLE: 0.289
+  fold_mu:
+    IllustrisTNG:
+      A: 2.4516
+      C: 0.347
+      E: -0.1852
+      k0: -0.0751
+    SIMBA:
+      A: 2.7564
+      C: 0.5072
+      E: -0.3626
+      k0: 0.375
+    Astrid:
+      A: 2.6627
+      C: 0.5262
+      E: -0.4606
+      k0: 0.325
+    Swift-EAGLE:
+      A: 2.6851
+      C: 0.1825
+      E: -0.1834
+      k0: -0.075
+  residuals: Loop/residuals/T59.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 155
+- trial: T60
+  expr: -D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(1 - exp(-k*D**0.5/k0))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0))
+  lin:
+  - A
+  - B
+  nl:
+    k0:
+      lo: 0.01
+      hi: 10
+      spacing: log
+  features:
+  - D
+  hypothesis: '[orchestrator-proposed; Chi2Push X10, chi2-targeted; resubmitted to the main loop as T60 on 2026-11-14] k^3
+    onset via exponential'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-14 00:25:04'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120664.4
+  marginalized:
+  - k0
+  sigma_fold: 1790.3
+  ladder:
+  - R: []
+    logZ_cross: 106019.5
+    promoted: true
+  - R:
+    - k0
+    logZ_cross: 120664.4
+    promoted: true
+  - R:
+    - k0
+    - A
+    logZ_cross: 121201.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31928.2
+    SIMBA: 28437.5
+    Astrid: 28822.3
+    Swift-EAGLE: 31476.3
+  L_zero_shot: 21.058
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.326
+    SIMBA: 42.612
+    Astrid: 11.789
+    Swift-EAGLE: 14.503
+  L_map: 6.488
+  L_map_per_fold:
+    IllustrisTNG: 4.235
+    SIMBA: 14.052
+    Astrid: 4.005
+    Swift-EAGLE: 3.659
+  chi2_per_suite:
+    IllustrisTNG: 3.445
+    SIMBA: 2.086
+    Astrid: 17.57
+    Swift-EAGLE: 7.64
+  chi2_mean: 7.685
+  chi2_std: 6.063
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.263
+    SIMBA: 0.673
+    Astrid: 0.293
+    Swift-EAGLE: 0.265
+  fold_mu:
+    IllustrisTNG:
+      A: 0.0945
+      B: 2.5767
+      k0: -0.625
+    SIMBA:
+      A: 0.9193
+      B: 1.9278
+      k0: -0.45
+    Astrid:
+      A: 0.5963
+      B: 2.2915
+      k0: -0.525
+    Swift-EAGLE:
+      A: 0.1108
+      B: 2.628
+      k0: -0.625
+  residuals: Loop/residuals/T60.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 58

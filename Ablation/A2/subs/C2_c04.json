@@ -1,0 +1,28 @@
+{
+ "expr": "-A0*k**2*exp(-2*(f_b/Omega_b_over_Omega_m))/(k**2*exp(-2*(f_b/Omega_b_over_Omega_m)) + 1) + Omega_m*k**2*exp(-2*b1)/(k**2*exp(-2*b1) + 1)",
+ "lin": [
+  "A0"
+ ],
+ "nl": {
+  "b1": {
+   "lo": 0.05693861,
+   "hi": 5.693861,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "amplitude",
+  "b1": "other"
+ },
+ "features": [
+  "Omega_m",
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "[ablation A2 C2_c04] PySR C2 hall of fame, complexity 4: a1 = -0.5299198; f1 = #2; a2 = #3; f2 = 0.5693861",
+ "pysr_values": {
+  "A0": 0.5299198,
+  "b1": 0.5693861
+ },
+ "frozen": {}
+}

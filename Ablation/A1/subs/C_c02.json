@@ -1,0 +1,23 @@
+{
+ "expr": "-A0*k**2*exp(-2*(f_b/Omega_b_over_Omega_m))/(k**2*exp(-2*(f_b/Omega_b_over_Omega_m)) + 1)",
+ "lin": [],
+ "nl": {
+  "A0": {
+   "lo": 0.023804328,
+   "hi": 2.3804328,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "other"
+ },
+ "features": [
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "[ablation A1 C_c02] PySR C hall of fame, complexity 2: f = #2; g = -0.23804328",
+ "pysr_values": {
+  "A0": 0.23804328
+ },
+ "frozen": {}
+}

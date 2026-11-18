@@ -1,0 +1,23 @@
+{
+ "expr": "-A0/(f_b/Omega_b_over_Omega_m)",
+ "lin": [],
+ "nl": {
+  "A0": {
+   "lo": 0.0009417567999999999,
+   "hi": 0.09417568,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "other"
+ },
+ "features": [
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "[ablation A1 U_c03] PySR U hall of fame, complexity 3: -0.009417568 / q",
+ "pysr_values": {
+  "A0": 0.009417568
+ },
+ "frozen": {}
+}

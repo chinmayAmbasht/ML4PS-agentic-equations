@@ -1,0 +1,23 @@
+{
+ "expr": "-D*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))*(1 - exp(-k*D**0.5/k0))*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0))",
+ "lin": [
+  "A",
+  "B"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "k0": "scale"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "[orchestrator-proposed; Chi2Push X10, chi2-targeted; resubmitted to the main loop as T60 on 2026-11-14] k^3 onset via exponential"
+}

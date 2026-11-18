@@ -1,0 +1,29 @@
+{
+ "expr": "-D*((k*D**b/k0)**2/(1 + (k*D**b/k0)**2))*(A + B*(k*D**b/k0)/(1 + k*D**b/k0))",
+ "lin": [
+  "A",
+  "B"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "b": {
+   "lo": 0.0,
+   "hi": 1.5,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "k0": "scale",
+  "b": "exponent"
+ },
+ "features": [
+  "D"
+ ],
+ "hypothesis": "[orchestrator-proposed; Chi2Push X05, chi2-targeted; resubmitted to the main loop as T55 on 2026-11-14] T07 with free deficit exponent on the knee"
+}

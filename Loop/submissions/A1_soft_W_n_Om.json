@@ -1,0 +1,7 @@
+{"expr": "-A*D*(k/(k0*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k0*(Omega_m/0.3)**(1/3)))**n)**(2/n)",
+ "lin": ["A"],
+ "nl": {"k0": {"lo": 0.1, "hi": 30, "spacing": "log"}, "n": {"lo": 0.4, "hi": 4, "spacing": "lin"}},
+ "roles": {"A": "amplitude", "k0": "scale", "n": "exponent"},
+ "features": ["D", "Omega_m"],
+ "hypothesis": "Rank-3 form with a free transition sharpness n: W_n(x)=x^2/(1+x^n)^(2/n); softer turnover should fix the mid-k positive / high-k negative residual pattern in TNG and Swift.",
+ "predicted_logZ_cross": 119500, "predicted_chi2_mean": 6.2}

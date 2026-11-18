@@ -1,0 +1,5958 @@
+budget: 1000
+n_used: 60
+trials:
+- trial: T01
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G262] prescreen rank 1: [ablation A3 grammar G262] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''fb'', ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:02:50'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 127541.4
+  marginalized:
+  - alpha
+  - k1
+  sigma_fold: 1498.2
+  ladder:
+  - R: []
+    logZ_cross: 115645.6
+    promoted: true
+  - R:
+    - alpha
+    logZ_cross: 123282.1
+    promoted: true
+  - R:
+    - alpha
+    - k1
+    logZ_cross: 127541.4
+    promoted: true
+  - R:
+    - alpha
+    - k1
+    - A1
+    logZ_cross: 127636.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33441.8
+    SIMBA: 30228.2
+    Astrid: 31052.6
+    Swift-EAGLE: 32818.8
+  L_zero_shot: 18.8
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.387
+    SIMBA: 39.236
+    Astrid: 10.708
+    Swift-EAGLE: 11.869
+  L_map: 9.293
+  L_map_per_fold:
+    IllustrisTNG: 4.145
+    SIMBA: 24.383
+    Astrid: 4.711
+    Swift-EAGLE: 3.935
+  chi2_per_suite:
+    IllustrisTNG: 6.882
+    SIMBA: 3.288
+    Astrid: 25.683
+    Swift-EAGLE: 6.575
+  chi2_mean: 10.607
+  chi2_std: 8.817
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.274
+    SIMBA: 1.285
+    Astrid: 0.407
+    Swift-EAGLE: 0.324
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.8421
+      A2: 8.5324
+      k1: 0.7053
+      alpha: 23.2912
+    SIMBA:
+      A1: 2.9921
+      A2: 8.6884
+      k1: 0.799
+      alpha: 20.9634
+    Astrid:
+      A1: 2.7451
+      A2: 9.3965
+      k1: 0.678
+      alpha: 18.9216
+    Swift-EAGLE:
+      A1: 2.6275
+      A2: 8.9711
+      k1: 0.6434
+      alpha: 20.6988
+  residuals: Loop/residuals/T01.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 147
+- trial: T02
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/(k1))**2/(1
+    + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G258] prescreen rank 2: [ablation A3 grammar G258] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''fb'', ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:05:19'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 126147.3
+  marginalized:
+  - k1
+  sigma_fold: 1579.7
+  ladder:
+  - R: []
+    logZ_cross: 114700.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 126147.3
+    promoted: true
+  - R:
+    - k1
+    - alpha
+    logZ_cross: 126451.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33180.3
+    SIMBA: 30047.5
+    Astrid: 30329.4
+    Swift-EAGLE: 32590.2
+  L_zero_shot: 18.936
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.227
+    SIMBA: 39.031
+    Astrid: 10.32
+    Swift-EAGLE: 12.167
+  L_map: 8.487
+  L_map_per_fold:
+    IllustrisTNG: 3.991
+    SIMBA: 21.624
+    Astrid: 4.331
+    Swift-EAGLE: 4.002
+  chi2_per_suite:
+    IllustrisTNG: 7.634
+    SIMBA: 3.138
+    Astrid: 23.609
+    Swift-EAGLE: 6.887
+  chi2_mean: 10.317
+  chi2_std: 7.861
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.264
+    SIMBA: 1.2
+    Astrid: 0.371
+    Swift-EAGLE: 0.314
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.9027
+      A2: 9.4651
+      k1: 0.699
+      alpha: 22.9981
+    SIMBA:
+      A1: 3.1356
+      A2: 9.8825
+      k1: 0.8405
+      alpha: 23.3408
+    Astrid:
+      A1: 2.8709
+      A2: 10.0325
+      k1: 0.6744
+      alpha: 18.9083
+    Swift-EAGLE:
+      A1: 2.7376
+      A2: 9.5942
+      k1: 0.6448
+      alpha: 20.4784
+  residuals: Loop/residuals/T02.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 138
+- trial: T03
+  expr: -D*(A1*Omega_b_over_Omega_m*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/((k1/(1
+    + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G209] prescreen rank 3: [ablation A3 grammar G209] M2 kernels=[(''wb'', ''Om'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:07:38'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 126300.8
+  marginalized:
+  - k1
+  - A1
+  sigma_fold: 1521.8
+  ladder:
+  - R: []
+    logZ_cross: 113991.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123610.0
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 126300.8
+    promoted: true
+  - R:
+    - k1
+    - A1
+    - A2
+    logZ_cross: 126470.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 33187.5
+    SIMBA: 30017.5
+    Astrid: 30567.9
+    Swift-EAGLE: 32527.9
+  L_zero_shot: 18.896
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.835
+    SIMBA: 39.154
+    Astrid: 10.522
+    Swift-EAGLE: 12.072
+  L_map: 8.605
+  L_map_per_fold:
+    IllustrisTNG: 4.904
+    SIMBA: 20.687
+    Astrid: 4.574
+    Swift-EAGLE: 4.254
+  chi2_per_suite:
+    IllustrisTNG: 6.927
+    SIMBA: 2.8
+    Astrid: 26.492
+    Swift-EAGLE: 7.421
+  chi2_mean: 10.91
+  chi2_std: 9.173
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.308
+    SIMBA: 1.051
+    Astrid: 0.372
+    Swift-EAGLE: 0.346
+  fold_mu:
+    IllustrisTNG:
+      A1: 3.7602
+      A2: 2.7944
+      k1: 0.7243
+      alpha: 25.8093
+    SIMBA:
+      A1: 4.2937
+      A2: 2.9666
+      k1: 0.8236
+      alpha: 23.177
+    Astrid:
+      A1: 4.508
+      A2: 2.7461
+      k1: 0.7022
+      alpha: 21.1351
+    Swift-EAGLE:
+      A1: 4.43
+      A2: 2.5151
+      k1: 0.6522
+      alpha: 22.6271
+  residuals: Loop/residuals/T03.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 138
+- trial: T04
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G098] prescreen rank 4: [ablation A3 grammar G098] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:09:57'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123331.6
+  marginalized:
+  - A2
+  sigma_fold: 2030.9
+  ladder:
+  - R: []
+    logZ_cross: 113463.3
+    promoted: true
+  - R:
+    - A2
+    logZ_cross: 123331.6
+    promoted: true
+  - R:
+    - A2
+    - alpha
+    logZ_cross: 123719.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32767.0
+    SIMBA: 28429.0
+    Astrid: 29896.7
+    Swift-EAGLE: 32239.0
+  L_zero_shot: 20.059
+  L_zero_shot_per_fold:
+    IllustrisTNG: 12.979
+    SIMBA: 42.346
+    Astrid: 11.352
+    Swift-EAGLE: 13.559
+  L_map: 10.653
+  L_map_per_fold:
+    IllustrisTNG: 3.836
+    SIMBA: 30.389
+    Astrid: 4.714
+    Swift-EAGLE: 3.673
+  chi2_per_suite:
+    IllustrisTNG: 6.473
+    SIMBA: 3.311
+    Astrid: 23.007
+    Swift-EAGLE: 5.535
+  chi2_mean: 9.582
+  chi2_std: 7.836
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.257
+    SIMBA: 1.291
+    Astrid: 0.373
+    Swift-EAGLE: 0.286
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1535
+      A2: 7.9936
+      k1: 0.6739
+      alpha: 20.5329
+    SIMBA:
+      A1: 2.318
+      A2: 8.0808
+      k1: 0.7968
+      alpha: 19.84
+    Astrid:
+      A1: 2.2287
+      A2: 8.0138
+      k1: 0.6745
+      alpha: 16.793
+    Swift-EAGLE:
+      A1: 2.1486
+      A2: 7.9059
+      k1: 0.649
+      alpha: 19.4434
+  residuals: Loop/residuals/T04.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 114
+- trial: T05
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + ((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[ablation A3 G083] prescreen rank 5: [ablation A3 grammar G083] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''1'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:11:52'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123921.7
+  marginalized:
+  - k1
+  sigma_fold: 1996.5
+  ladder:
+  - R: []
+    logZ_cross: 113173.8
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123921.7
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 124342.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32971.0
+    SIMBA: 28677.6
+    Astrid: 29986.8
+    Swift-EAGLE: 32286.4
+  L_zero_shot: 20.149
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.716
+    SIMBA: 42.42
+    Astrid: 11.32
+    Swift-EAGLE: 13.138
+  L_map: 10.926
+  L_map_per_fold:
+    IllustrisTNG: 4.588
+    SIMBA: 30.177
+    Astrid: 5.027
+    Swift-EAGLE: 3.912
+  chi2_per_suite:
+    IllustrisTNG: 8.041
+    SIMBA: 3.088
+    Astrid: 49.287
+    Swift-EAGLE: 8.079
+  chi2_mean: 17.124
+  chi2_std: 18.68
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.269
+    SIMBA: 1.253
+    Astrid: 0.385
+    Swift-EAGLE: 0.281
+  fold_mu:
+    IllustrisTNG:
+      A: 1.5779
+      k1: 0.624
+      alpha: 23.8655
+    SIMBA:
+      A: 1.7687
+      k1: 0.7741
+      alpha: 23.039
+    Astrid:
+      A: 1.6326
+      k1: 0.649
+      alpha: 20.4922
+    Swift-EAGLE:
+      A: 1.5971
+      k1: 0.624
+      alpha: 23.8813
+  residuals: Loop/residuals/T05.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 70
+- trial: T06
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 +
+    (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[ablation A3 G084] prescreen rank 6: [ablation A3 grammar G084] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''1'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:13:03'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123795.1
+  marginalized:
+  - k1
+  sigma_fold: 2025.5
+  ladder:
+  - R: []
+    logZ_cross: 112963.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123795.1
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 124186.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32904.7
+    SIMBA: 28513.3
+    Astrid: 30084.8
+    Swift-EAGLE: 32292.2
+  L_zero_shot: 19.967
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.358
+    SIMBA: 42.853
+    Astrid: 11.152
+    Swift-EAGLE: 12.505
+  L_map: 11.108
+  L_map_per_fold:
+    IllustrisTNG: 4.514
+    SIMBA: 31.151
+    Astrid: 4.827
+    Swift-EAGLE: 3.94
+  chi2_per_suite:
+    IllustrisTNG: 6.438
+    SIMBA: 3.317
+    Astrid: 35.357
+    Swift-EAGLE: 7.193
+  chi2_mean: 13.077
+  chi2_std: 12.946
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.285
+    SIMBA: 1.316
+    Astrid: 0.392
+    Swift-EAGLE: 0.308
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.8508
+      A2: 1.1902
+      k1: 0.6738
+      alpha: 23.9225
+    SIMBA:
+      A1: 1.9859
+      A2: 1.3447
+      k1: 0.7697
+      alpha: 20.1223
+    Astrid:
+      A1: 1.7994
+      A2: 1.4439
+      k1: 0.6708
+      alpha: 20.3884
+    Swift-EAGLE:
+      A1: 1.7272
+      A2: 1.37
+      k1: 0.649
+      alpha: 23.7124
+  residuals: Loop/residuals/T06.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 99
+- trial: T07
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G102] prescreen rank 7: [ablation A3 grammar G102] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:14:44'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122971.1
+  marginalized:
+  - k1
+  sigma_fold: 1808.7
+  ladder:
+  - R: []
+    logZ_cross: 112886.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122971.1
+    promoted: true
+  - R:
+    - k1
+    - alpha
+    logZ_cross: 123349.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32442.2
+    SIMBA: 28715.1
+    Astrid: 29731.8
+    Swift-EAGLE: 32082.0
+  L_zero_shot: 20.334
+  L_zero_shot_per_fold:
+    IllustrisTNG: 12.573
+    SIMBA: 43.64
+    Astrid: 11.658
+    Swift-EAGLE: 13.465
+  L_map: 10.543
+  L_map_per_fold:
+    IllustrisTNG: 4.107
+    SIMBA: 30.343
+    Astrid: 3.949
+    Swift-EAGLE: 3.773
+  chi2_per_suite:
+    IllustrisTNG: 5.967
+    SIMBA: 3.219
+    Astrid: 22.895
+    Swift-EAGLE: 5.336
+  chi2_mean: 9.354
+  chi2_std: 7.884
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.263
+    SIMBA: 1.252
+    Astrid: 0.32
+    Swift-EAGLE: 0.293
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1588
+      A2: 6.5953
+      k1: 0.699
+      alpha: 21.5637
+    SIMBA:
+      A1: 2.362
+      A2: 6.3583
+      k1: 0.8233
+      alpha: 20.6764
+    Astrid:
+      A1: 2.2247
+      A2: 7.1648
+      k1: 0.699
+      alpha: 17.7934
+    Swift-EAGLE:
+      A1: 2.1583
+      A2: 6.7152
+      k1: 0.674
+      alpha: 20.3976
+  residuals: Loop/residuals/T07.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 107
+- trial: T08
+  expr: -D*(A1*Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1
+    + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G157] prescreen rank 8: [ablation A3 grammar G157] M2 kernels=[(''wb'', ''none'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:16:32'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.998
+  logZ_cross: 124588.7
+  marginalized:
+  - k1
+  sigma_fold: 1741.4
+  ladder:
+  - R: []
+    logZ_cross: 112689.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124588.7
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 125239.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32867.5
+    SIMBA: 29266.3
+    Astrid: 30090.1
+    Swift-EAGLE: 32364.7
+  L_zero_shot: 19.306
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.555
+    SIMBA: 39.505
+    Astrid: 10.625
+    Swift-EAGLE: 12.54
+  L_map: 8.679
+  L_map_per_fold:
+    IllustrisTNG: 4.532
+    SIMBA: 21.495
+    Astrid: 4.553
+    Swift-EAGLE: 4.137
+  chi2_per_suite:
+    IllustrisTNG: 7.087
+    SIMBA: 3.026
+    Astrid: 25.927
+    Swift-EAGLE: 7.122
+  chi2_mean: 10.79
+  chi2_std: 8.897
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.285
+    SIMBA: 1.132
+    Astrid: 0.365
+    Swift-EAGLE: 0.329
+  fold_mu:
+    IllustrisTNG:
+      A1: 4.1536
+      A2: 2.8557
+      k1: 0.7252
+      alpha: 25.9535
+    SIMBA:
+      A1: 4.563
+      A2: 3.1319
+      k1: 0.8467
+      alpha: 23.9214
+    Astrid:
+      A1: 4.7512
+      A2: 2.8588
+      k1: 0.6897
+      alpha: 20.3178
+    Swift-EAGLE:
+      A1: 4.6171
+      A2: 2.6175
+      k1: 0.6411
+      alpha: 21.6577
+  residuals: Loop/residuals/T08.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 106
+- trial: T09
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G095] prescreen rank 9: [ablation A3 grammar G095] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''1-wb'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:18:20'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123595.9
+  marginalized:
+  - alpha
+  sigma_fold: 1864.2
+  ladder:
+  - R: []
+    logZ_cross: 112246.8
+    promoted: true
+  - R:
+    - alpha
+    logZ_cross: 123595.9
+    promoted: true
+  - R:
+    - alpha
+    - k1
+    logZ_cross: 123769.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32830.7
+    SIMBA: 28823.2
+    Astrid: 29881.1
+    Swift-EAGLE: 32060.9
+  L_zero_shot: 20.087
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.722
+    SIMBA: 42.331
+    Astrid: 10.969
+    Swift-EAGLE: 13.324
+  L_map: 9.99
+  L_map_per_fold:
+    IllustrisTNG: 4.704
+    SIMBA: 26.749
+    Astrid: 4.658
+    Swift-EAGLE: 3.848
+  chi2_per_suite:
+    IllustrisTNG: 6.36
+    SIMBA: 2.94
+    Astrid: 34.734
+    Swift-EAGLE: 6.275
+  chi2_mean: 12.577
+  chi2_std: 12.866
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.257
+    SIMBA: 1.159
+    Astrid: 0.338
+    Swift-EAGLE: 0.259
+  fold_mu:
+    IllustrisTNG:
+      A: 1.7973
+      k1: 0.6812
+      alpha: 24.8117
+    SIMBA:
+      A: 2.0367
+      k1: 0.8261
+      alpha: 23.9769
+    Astrid:
+      A: 1.8961
+      k1: 0.6988
+      alpha: 21.242
+    Swift-EAGLE:
+      A: 1.7992
+      k1: 0.6496
+      alpha: 23.1771
+  residuals: Loop/residuals/T09.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 76
+- trial: T10
+  expr: -D*(A1*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/((k1/(1
+    + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G124] prescreen rank 10: [ablation A3 grammar G124] M2 kernels=[(''1'', ''Om'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:19:38'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123966.6
+  marginalized:
+  - k1
+  - A1
+  sigma_fold: 1670.1
+  ladder:
+  - R: []
+    logZ_cross: 112238.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 117594.4
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 123966.6
+    promoted: true
+  - R:
+    - k1
+    - A1
+    - A2
+    logZ_cross: 124609.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32644.9
+    SIMBA: 29076.2
+    Astrid: 30140.1
+    Swift-EAGLE: 32105.4
+  L_zero_shot: 20.053
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.098
+    SIMBA: 40.802
+    Astrid: 10.897
+    Swift-EAGLE: 12.413
+  L_map: 7.922
+  L_map_per_fold:
+    IllustrisTNG: 4.644
+    SIMBA: 18.506
+    Astrid: 4.551
+    Swift-EAGLE: 3.987
+  chi2_per_suite:
+    IllustrisTNG: 6.626
+    SIMBA: 2.443
+    Astrid: 27.559
+    Swift-EAGLE: 8.941
+  chi2_mean: 11.392
+  chi2_std: 9.62
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.269
+    SIMBA: 0.918
+    Astrid: 0.349
+    Swift-EAGLE: 0.306
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.2409
+      A2: 2.4908
+      k1: 0.676
+      alpha: 25.8578
+    SIMBA:
+      A1: 1.5918
+      A2: 2.48
+      k1: 0.7991
+      alpha: 24.8027
+    Astrid:
+      A1: 1.7769
+      A2: 1.9808
+      k1: 0.6241
+      alpha: 22.3404
+    Swift-EAGLE:
+      A1: 1.6609
+      A2: 1.8266
+      k1: 0.5756
+      alpha: 23.7283
+  residuals: Loop/residuals/T10.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 215
+- trial: T11
+  expr: -A*D*(Omega_b_over_Omega_m*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)) + (1 - Omega_b_over_Omega_m)*((k/((k1/(1
+    + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G208] prescreen rank 11: [ablation A3 grammar G208] M2 kernels=[(''wb'', ''Om'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:23:14'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 124372.5
+  marginalized:
+  - k1
+  sigma_fold: 1745.0
+  ladder:
+  - R: []
+    logZ_cross: 112129.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 124372.5
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 124824.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32848.9
+    SIMBA: 29220.3
+    Astrid: 30025.2
+    Swift-EAGLE: 32278.1
+  L_zero_shot: 19.157
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.16
+    SIMBA: 39.116
+    Astrid: 10.563
+    Swift-EAGLE: 12.79
+  L_map: 8.816
+  L_map_per_fold:
+    IllustrisTNG: 4.81
+    SIMBA: 21.801
+    Astrid: 4.481
+    Swift-EAGLE: 4.174
+  chi2_per_suite:
+    IllustrisTNG: 5.706
+    SIMBA: 2.837
+    Astrid: 25.612
+    Swift-EAGLE: 5.293
+  chi2_mean: 9.862
+  chi2_std: 9.159
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.27
+    SIMBA: 1.051
+    Astrid: 0.329
+    Swift-EAGLE: 0.277
+  fold_mu:
+    IllustrisTNG:
+      A: 2.97
+      k1: 0.7241
+      alpha: 23.8978
+    SIMBA:
+      A: 3.2855
+      k1: 0.85
+      alpha: 23.1678
+    Astrid:
+      A: 3.151
+      k1: 0.7358
+      alpha: 20.4847
+    Swift-EAGLE:
+      A: 2.9566
+      k1: 0.6885
+      alpha: 21.8502
+  residuals: Loop/residuals/T11.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 86
+- trial: T12
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G072] prescreen rank 12: [ablation A3 grammar G072] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:24:42'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123674.0
+  marginalized:
+  - A2
+  sigma_fold: 1646.5
+  ladder:
+  - R: []
+    logZ_cross: 111613.0
+    promoted: true
+  - R:
+    - A2
+    logZ_cross: 123674.0
+    promoted: true
+  - R:
+    - A2
+    - A1
+    logZ_cross: 124176.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32517.1
+    SIMBA: 29374.1
+    Astrid: 29628.4
+    Swift-EAGLE: 32154.5
+  L_zero_shot: 19.804
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.721
+    SIMBA: 41.161
+    Astrid: 11.236
+    Swift-EAGLE: 12.098
+  L_map: 5.593
+  L_map_per_fold:
+    IllustrisTNG: 5.35
+    SIMBA: 9.127
+    Astrid: 4.195
+    Swift-EAGLE: 3.7
+  chi2_per_suite:
+    IllustrisTNG: 20.178
+    SIMBA: 1.722
+    Astrid: 36.413
+    Swift-EAGLE: 7.86
+  chi2_mean: 16.543
+  chi2_std: 13.258
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.344
+    SIMBA: 0.485
+    Astrid: 0.345
+    Swift-EAGLE: 0.282
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.2174
+      A2: 0.7037
+      k1: -0.301
+      beta: -0.7
+    SIMBA:
+      A1: 2.8023
+      A2: 0.3047
+      k1: -0.226
+      beta: -0.675
+    Astrid:
+      A1: 2.5459
+      A2: 0.6032
+      k1: -0.201
+      beta: -0.625
+    Swift-EAGLE:
+      A1: 2.3043
+      A2: 0.7051
+      k1: -0.2757
+      beta: -0.6731
+  residuals: Loop/residuals/T12.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 121
+- trial: T13
+  expr: -A*D*(((k/(k1))**2/(1 + (k/(k1))**2)) + ((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[ablation A3 G021] prescreen rank 13: [ablation A3 grammar G021] M2 kernels=[(''1'', ''none'', ''k1''), (''1'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:26:45'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.999
+  logZ_cross: 122996.2
+  marginalized:
+  - A
+  sigma_fold: 2134.2
+  ladder:
+  - R: []
+    logZ_cross: 111567.0
+    promoted: true
+  - R:
+    - A
+    logZ_cross: 122996.2
+    promoted: true
+  - R:
+    - A
+    - k1
+    logZ_cross: 123434.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32889.8
+    SIMBA: 28232.9
+    Astrid: 29779.1
+    Swift-EAGLE: 32094.3
+  L_zero_shot: 20.712
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.159
+    SIMBA: 42.378
+    Astrid: 11.211
+    Swift-EAGLE: 14.101
+  L_map: 10.582
+  L_map_per_fold:
+    IllustrisTNG: 3.879
+    SIMBA: 30.016
+    Astrid: 4.691
+    Swift-EAGLE: 3.742
+  chi2_per_suite:
+    IllustrisTNG: 7.862
+    SIMBA: 3.313
+    Astrid: 41.775
+    Swift-EAGLE: 6.398
+  chi2_mean: 14.837
+  chi2_std: 15.639
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.234
+    SIMBA: 1.338
+    Astrid: 0.352
+    Swift-EAGLE: 0.254
+  fold_mu:
+    IllustrisTNG:
+      A: 1.6563
+      k1: 0.6005
+      alpha: 21.9374
+    SIMBA:
+      A: 1.854
+      k1: 0.7742
+      alpha: 22.2517
+    Astrid:
+      A: 1.668
+      k1: 0.5989
+      alpha: 17.4738
+    Swift-EAGLE:
+      A: 1.6275
+      k1: 0.5744
+      alpha: 20.5771
+  residuals: Loop/residuals/T13.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 74
+- trial: T14
+  expr: -D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[ablation A3 G022] prescreen rank 14: [ablation A3 grammar G022] M2 kernels=[(''1'', ''none'', ''k1''), (''1'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:28:00'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123914.3
+  marginalized:
+  - k1
+  sigma_fold: 1880.7
+  ladder:
+  - R: []
+    logZ_cross: 111543.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123914.3
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 124193.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32844.1
+    SIMBA: 28936.2
+    Astrid: 29853.7
+    Swift-EAGLE: 32280.4
+  L_zero_shot: 20.392
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.591
+    SIMBA: 42.072
+    Astrid: 10.981
+    Swift-EAGLE: 13.922
+  L_map: 9.971
+  L_map_per_fold:
+    IllustrisTNG: 4.241
+    SIMBA: 28.26
+    Astrid: 3.616
+    Swift-EAGLE: 3.765
+  chi2_per_suite:
+    IllustrisTNG: 6.216
+    SIMBA: 3.371
+    Astrid: 30.585
+    Swift-EAGLE: 5.614
+  chi2_mean: 11.447
+  chi2_std: 11.1
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.27
+    SIMBA: 1.318
+    Astrid: 0.306
+    Swift-EAGLE: 0.282
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.247
+      A2: 1.8142
+      k1: 0.599
+      alpha: 19.755
+    SIMBA:
+      A1: 1.2076
+      A2: 2.2502
+      k1: 0.8083
+      alpha: 20.887
+    Astrid:
+      A1: 1.3847
+      A2: 1.8631
+      k1: 0.6078
+      alpha: 16.8653
+    Swift-EAGLE:
+      A1: 1.273
+      A2: 1.8374
+      k1: 0.5982
+      alpha: 19.9656
+  residuals: Loop/residuals/T14.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 130
+- trial: T15
+  expr: -D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[ablation A3 G020] prescreen rank 15: [ablation A3 grammar G020] M2 kernels=[(''1'', ''none'', ''k1''), (''1'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:30:12'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123789.9
+  marginalized:
+  - k1
+  sigma_fold: 1884.6
+  ladder:
+  - R: []
+    logZ_cross: 111492.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123789.9
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 124179.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32791.6
+    SIMBA: 29008.5
+    Astrid: 29673.9
+    Swift-EAGLE: 32315.9
+  L_zero_shot: 19.867
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.413
+    SIMBA: 40.836
+    Astrid: 11.82
+    Swift-EAGLE: 12.399
+  L_map: 7.341
+  L_map_per_fold:
+    IllustrisTNG: 4.703
+    SIMBA: 17.431
+    Astrid: 3.689
+    Swift-EAGLE: 3.54
+  chi2_per_suite:
+    IllustrisTNG: 17.155
+    SIMBA: 2.414
+    Astrid: 36.786
+    Swift-EAGLE: 7.813
+  chi2_mean: 16.042
+  chi2_std: 13.086
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.324
+    SIMBA: 0.82
+    Astrid: 0.317
+    Swift-EAGLE: 0.29
+  fold_mu:
+    IllustrisTNG:
+      A1: 0.6785
+      A2: 2.1007
+      k1: -0.2266
+      beta: -0.6505
+    SIMBA:
+      A1: 0.2182
+      A2: 2.7706
+      k1: -0.1965
+      beta: -0.6204
+    Astrid:
+      A1: 0.6242
+      A2: 2.4099
+      k1: -0.1512
+      beta: -0.6252
+    Swift-EAGLE:
+      A1: 0.6709
+      A2: 2.1854
+      k1: -0.226
+      beta: -0.65
+  residuals: Loop/residuals/T15.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 126
+- trial: T16
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G076] prescreen rank 16: [ablation A3 grammar G076] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:32:20'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123222.8
+  marginalized:
+  - k1
+  sigma_fold: 1711.6
+  ladder:
+  - R: []
+    logZ_cross: 111411.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123222.8
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 123869.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32368.0
+    SIMBA: 29078.8
+    Astrid: 29593.4
+    Swift-EAGLE: 32182.6
+  L_zero_shot: 19.798
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.922
+    SIMBA: 40.67
+    Astrid: 11.519
+    Swift-EAGLE: 12.08
+  L_map: 7.437
+  L_map_per_fold:
+    IllustrisTNG: 5.174
+    SIMBA: 17.135
+    Astrid: 3.746
+    Swift-EAGLE: 3.695
+  chi2_per_suite:
+    IllustrisTNG: 20.597
+    SIMBA: 2.42
+    Astrid: 50.553
+    Swift-EAGLE: 8.619
+  chi2_mean: 20.547
+  chi2_std: 18.515
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.343
+    SIMBA: 0.816
+    Astrid: 0.321
+    Swift-EAGLE: 0.29
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1834
+      A2: 0.7895
+      k1: -0.25
+      beta: -0.674
+    SIMBA:
+      A1: 2.811
+      A2: 0.2547
+      k1: -0.2011
+      beta: -0.625
+    Astrid:
+      A1: 2.4938
+      A2: 0.7268
+      k1: -0.1559
+      beta: -0.6296
+    Swift-EAGLE:
+      A1: 2.265
+      A2: 0.7971
+      k1: -0.2251
+      beta: -0.649
+  residuals: Loop/residuals/T16.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 145
+- trial: T17
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*Omega_b_over_Omega_m*((k/(k1))**2/(1 +
+    (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G086] prescreen rank 17: [ablation A3 grammar G086] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''wb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:34:47'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122546.2
+  marginalized:
+  - k1
+  sigma_fold: 1645.3
+  ladder:
+  - R: []
+    logZ_cross: 111297.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122546.2
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 122960.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32208.3
+    SIMBA: 28887.8
+    Astrid: 29590.1
+    Swift-EAGLE: 31860.1
+  L_zero_shot: 20.315
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.109
+    SIMBA: 42.571
+    Astrid: 11.741
+    Swift-EAGLE: 13.838
+  L_map: 10.39
+  L_map_per_fold:
+    IllustrisTNG: 2.645
+    SIMBA: 30.132
+    Astrid: 4.787
+    Swift-EAGLE: 3.995
+  chi2_per_suite:
+    IllustrisTNG: 5.203
+    SIMBA: 3.223
+    Astrid: 26.241
+    Swift-EAGLE: 5.683
+  chi2_mean: 10.087
+  chi2_std: 9.372
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.191
+    SIMBA: 1.246
+    Astrid: 0.362
+    Swift-EAGLE: 0.296
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1002
+      A2: 3.4216
+      k1: 0.6739
+      alpha: 21.4276
+    SIMBA:
+      A1: 2.3759
+      A2: 3.2384
+      k1: 0.7796
+      alpha: 18.2596
+    Astrid:
+      A1: 2.2483
+      A2: 3.4995
+      k1: 0.6743
+      alpha: 16.8973
+    Swift-EAGLE:
+      A1: 2.0873
+      A2: 3.6846
+      k1: 0.649
+      alpha: 20.4551
+  residuals: Loop/residuals/T17.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 129
+- trial: T18
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + Omega_b_over_Omega_m*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G089] prescreen rank 18: [ablation A3 grammar G089] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''wb'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:36:57'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122142.8
+  marginalized:
+  - k1
+  sigma_fold: 1756.9
+  ladder:
+  - R: []
+    logZ_cross: 111208.5
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122142.8
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122766.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32206.5
+    SIMBA: 28634.5
+    Astrid: 29461.9
+    Swift-EAGLE: 31840.0
+  L_zero_shot: 20.446
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.005
+    SIMBA: 42.87
+    Astrid: 12.054
+    Swift-EAGLE: 13.857
+  L_map: 10.611
+  L_map_per_fold:
+    IllustrisTNG: 4.89
+    SIMBA: 29.187
+    Astrid: 4.557
+    Swift-EAGLE: 3.809
+  chi2_per_suite:
+    IllustrisTNG: 5.013
+    SIMBA: 2.901
+    Astrid: 22.51
+    Swift-EAGLE: 4.628
+  chi2_mean: 8.763
+  chi2_std: 7.976
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.272
+    SIMBA: 1.096
+    Astrid: 0.322
+    Swift-EAGLE: 0.262
+  fold_mu:
+    IllustrisTNG:
+      A: 2.2276
+      k1: 0.6991
+      alpha: 21.1923
+    SIMBA:
+      A: 2.4625
+      k1: 0.8239
+      alpha: 20.3709
+    Astrid:
+      A: 2.3837
+      k1: 0.6779
+      alpha: 15.6416
+    Swift-EAGLE:
+      A: 2.2661
+      k1: 0.6752
+      alpha: 19.9238
+  residuals: Loop/residuals/T18.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 90
+- trial: T19
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G085] prescreen rank 19: [ablation A3 grammar G085] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''wb'',
+    ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:38:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122970.8
+  marginalized:
+  - k1
+  sigma_fold: 1754.5
+  ladder:
+  - R: []
+    logZ_cross: 110906.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122970.8
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 123427.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32456.6
+    SIMBA: 28947.1
+    Astrid: 29544.6
+    Swift-EAGLE: 32022.6
+  L_zero_shot: 20.495
+  L_zero_shot_per_fold:
+    IllustrisTNG: 13.649
+    SIMBA: 42.429
+    Astrid: 11.75
+    Swift-EAGLE: 14.152
+  L_map: 10.042
+  L_map_per_fold:
+    IllustrisTNG: 4.576
+    SIMBA: 27.393
+    Astrid: 4.462
+    Swift-EAGLE: 3.738
+  chi2_per_suite:
+    IllustrisTNG: 5.091
+    SIMBA: 2.806
+    Astrid: 21.957
+    Swift-EAGLE: 4.588
+  chi2_mean: 8.611
+  chi2_std: 7.752
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.264
+    SIMBA: 1.055
+    Astrid: 0.32
+    Swift-EAGLE: 0.258
+  fold_mu:
+    IllustrisTNG:
+      A: 2.2406
+      k1: 0.6237
+      alpha: 17.0261
+    SIMBA:
+      A: 2.5003
+      k1: 0.792
+      alpha: 18.1875
+    Astrid:
+      A: 2.4205
+      k1: 0.649
+      alpha: 14.5232
+    Swift-EAGLE:
+      A: 2.2821
+      k1: 0.5974
+      alpha: 15.6035
+  residuals: Loop/residuals/T19.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 85
+- trial: T20
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[ablation A3 G064] prescreen rank 20: [ablation A3 grammar G064] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:39:56'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122407.0
+  marginalized:
+  - k1
+  sigma_fold: 1684.9
+  ladder:
+  - R: []
+    logZ_cross: 110844.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122407.0
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 123460.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32147.0
+    SIMBA: 28842.0
+    Astrid: 29482.4
+    Swift-EAGLE: 31935.6
+  L_zero_shot: 20.253
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.674
+    SIMBA: 41.633
+    Astrid: 12.168
+    Swift-EAGLE: 12.535
+  L_map: 6.944
+  L_map_per_fold:
+    IllustrisTNG: 4.17
+    SIMBA: 16.294
+    Astrid: 4.059
+    Swift-EAGLE: 3.254
+  chi2_per_suite:
+    IllustrisTNG: 16.088
+    SIMBA: 2.404
+    Astrid: 37.296
+    Swift-EAGLE: 6.362
+  chi2_mean: 15.538
+  chi2_std: 13.513
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.289
+    SIMBA: 0.8
+    Astrid: 0.34
+    Swift-EAGLE: 0.262
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1068
+      A2: 0.6388
+      k1: -0.226
+      beta: -0.65
+    SIMBA:
+      A1: 2.7937
+      A2: 0.2005
+      k1: -0.176
+      beta: -0.6
+    Astrid:
+      A1: 2.3719
+      A2: 0.6721
+      k1: -0.1015
+      beta: -0.6005
+    Swift-EAGLE:
+      A1: 2.1739
+      A2: 0.6482
+      k1: -0.206
+      beta: -0.63
+  residuals: Loop/residuals/T20.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 128
+- trial: T21
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*Omega_b_over_Omega_m*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G090] prescreen rank 21: [ablation A3 grammar G090] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''wb'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:42:06'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121369.9
+  marginalized:
+  - k1
+  sigma_fold: 1731.1
+  ladder:
+  - R: []
+    logZ_cross: 110549.3
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121369.9
+    promoted: true
+  - R:
+    - k1
+    - alpha
+    logZ_cross: 121784.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31981.6
+    SIMBA: 28452.1
+    Astrid: 29306.6
+    Swift-EAGLE: 31629.6
+  L_zero_shot: 20.517
+  L_zero_shot_per_fold:
+    IllustrisTNG: 12.993
+    SIMBA: 43.123
+    Astrid: 12.087
+    Swift-EAGLE: 13.863
+  L_map: 9.203
+  L_map_per_fold:
+    IllustrisTNG: 4.831
+    SIMBA: 23.174
+    Astrid: 4.747
+    Swift-EAGLE: 4.06
+  chi2_per_suite:
+    IllustrisTNG: 5.823
+    SIMBA: 2.76
+    Astrid: 25.758
+    Swift-EAGLE: 5.525
+  chi2_mean: 9.967
+  chi2_std: 9.195
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.292
+    SIMBA: 1.005
+    Astrid: 0.352
+    Swift-EAGLE: 0.295
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.1278
+      A2: 2.7746
+      k1: 0.7001
+      alpha: 22.496
+    SIMBA:
+      A1: 2.4545
+      A2: 2.1299
+      k1: 0.7591
+      alpha: 16.3037
+    Astrid:
+      A1: 2.245
+      A2: 3.1472
+      k1: 0.6991
+      alpha: 18.1837
+    Swift-EAGLE:
+      A1: 2.1009
+      A2: 3.1447
+      k1: 0.6748
+      alpha: 21.4989
+  residuals: Loop/residuals/T21.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 129
+- trial: T22
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + f_b*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G079] prescreen rank 22: [ablation A3 grammar G079] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:44:17'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122843.5
+  marginalized:
+  - k1
+  sigma_fold: 2014.7
+  ladder:
+  - R: []
+    logZ_cross: 110196.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122843.5
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 123176.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32755.3
+    SIMBA: 28885.5
+    Astrid: 29077.9
+    Swift-EAGLE: 32124.7
+  L_zero_shot: 20.75
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.172
+    SIMBA: 42.876
+    Astrid: 12.002
+    Swift-EAGLE: 13.951
+  L_map: 7.339
+  L_map_per_fold:
+    IllustrisTNG: 4.587
+    SIMBA: 16.835
+    Astrid: 4.426
+    Swift-EAGLE: 3.507
+  chi2_per_suite:
+    IllustrisTNG: 3.928
+    SIMBA: 2.129
+    Astrid: 18.215
+    Swift-EAGLE: 3.834
+  chi2_mean: 7.026
+  chi2_std: 6.499
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.269
+    SIMBA: 0.712
+    Astrid: 0.344
+    Swift-EAGLE: 0.25
+  fold_mu:
+    IllustrisTNG:
+      A: 2.392
+      k1: -0.2641
+      beta: -0.4881
+    SIMBA:
+      A: 2.5466
+      k1: -0.201
+      beta: -0.55
+    Astrid:
+      A: 2.5358
+      k1: -0.176
+      beta: -0.45
+    Swift-EAGLE:
+      A: 2.4459
+      k1: -0.2592
+      beta: -0.4832
+  residuals: Loop/residuals/T22.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 112
+- trial: T23
+  expr: -A*D*(Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)) + (1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1
+    + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G156] prescreen rank 23: [ablation A3 grammar G156] M2 kernels=[(''wb'', ''none'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:46:11'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123098.0
+  marginalized:
+  - k1
+  sigma_fold: 1771.2
+  ladder:
+  - R: []
+    logZ_cross: 110152.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123098.0
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 123511.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32548.1
+    SIMBA: 28863.4
+    Astrid: 29702.2
+    Swift-EAGLE: 31984.4
+  L_zero_shot: 19.964
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.46
+    SIMBA: 39.59
+    Astrid: 10.854
+    Swift-EAGLE: 13.952
+  L_map: 8.931
+  L_map_per_fold:
+    IllustrisTNG: 4.407
+    SIMBA: 22.986
+    Astrid: 4.385
+    Swift-EAGLE: 3.945
+  chi2_per_suite:
+    IllustrisTNG: 5.727
+    SIMBA: 2.96
+    Astrid: 23.765
+    Swift-EAGLE: 4.952
+  chi2_mean: 9.351
+  chi2_std: 8.383
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.247
+    SIMBA: 1.093
+    Astrid: 0.315
+    Swift-EAGLE: 0.254
+  fold_mu:
+    IllustrisTNG:
+      A: 3.0218
+      k1: 0.6897
+      alpha: 22.1435
+    SIMBA:
+      A: 3.3937
+      k1: 0.8724
+      alpha: 24.2594
+    Astrid:
+      A: 3.1997
+      k1: 0.692
+      alpha: 18.4453
+    Swift-EAGLE:
+      A: 2.9971
+      k1: 0.6516
+      alpha: 20.0957
+  residuals: Loop/residuals/T23.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 126
+- trial: T24
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1))**2/(1
+    + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G092] prescreen rank 24: [ablation A3 grammar G092] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''1-wb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:48:19'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122717.6
+  marginalized:
+  - k1
+  sigma_fold: 1869.5
+  ladder:
+  - R: []
+    logZ_cross: 110004.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122717.6
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 123108.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32499.4
+    SIMBA: 28622.2
+    Astrid: 29591.3
+    Swift-EAGLE: 32004.7
+  L_zero_shot: 20.734
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.242
+    SIMBA: 42.274
+    Astrid: 10.961
+    Swift-EAGLE: 14.458
+  L_map: 10.112
+  L_map_per_fold:
+    IllustrisTNG: 4.728
+    SIMBA: 27.288
+    Astrid: 4.564
+    Swift-EAGLE: 3.869
+  chi2_per_suite:
+    IllustrisTNG: 5.834
+    SIMBA: 3.409
+    Astrid: 27.335
+    Swift-EAGLE: 5.066
+  chi2_mean: 10.411
+  chi2_std: 9.81
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.273
+    SIMBA: 1.327
+    Astrid: 0.346
+    Swift-EAGLE: 0.267
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.9293
+      A2: 1.4614
+      k1: 0.6041
+      alpha: 18.6608
+    SIMBA:
+      A1: 2.3543
+      A2: 1.4418
+      k1: 0.8233
+      alpha: 20.9807
+    Astrid:
+      A1: 2.147
+      A2: 1.4127
+      k1: 0.649
+      alpha: 16.5174
+    Swift-EAGLE:
+      A1: 1.9854
+      A2: 1.4066
+      k1: 0.5992
+      alpha: 18.4574
+  residuals: Loop/residuals/T24.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 151
+- trial: T25
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1))**2/(1
+    + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G091] prescreen rank 25: [ablation A3 grammar G091] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''1-wb'',
+    ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:50:52'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122000.1
+  marginalized:
+  - k1
+  sigma_fold: 2030.6
+  ladder:
+  - R: []
+    logZ_cross: 109815.5
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122000.1
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122752.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32437.4
+    SIMBA: 28132.9
+    Astrid: 29506.5
+    Swift-EAGLE: 31923.3
+  L_zero_shot: 21.081
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.866
+    SIMBA: 42.364
+    Astrid: 11.074
+    Swift-EAGLE: 15.02
+  L_map: 9.242
+  L_map_per_fold:
+    IllustrisTNG: 4.366
+    SIMBA: 24.593
+    Astrid: 4.414
+    Swift-EAGLE: 3.595
+  chi2_per_suite:
+    IllustrisTNG: 6.386
+    SIMBA: 2.963
+    Astrid: 28.903
+    Swift-EAGLE: 5.513
+  chi2_mean: 10.941
+  chi2_std: 10.446
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.236
+    SIMBA: 1.151
+    Astrid: 0.312
+    Swift-EAGLE: 0.233
+  fold_mu:
+    IllustrisTNG:
+      A: 1.8022
+      k1: 0.5993
+      alpha: 19.9687
+    SIMBA:
+      A: 2.1183
+      k1: 0.8355
+      alpha: 24.0509
+    Astrid:
+      A: 1.944
+      k1: 0.6642
+      alpha: 19.5045
+    Swift-EAGLE:
+      A: 1.8582
+      k1: 0.6234
+      alpha: 21.8075
+  residuals: Loop/residuals/T25.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 84
+- trial: T26
+  expr: -A*D*(((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)) + (1 - Omega_b_over_Omega_m)*((k/((k1/(1
+    + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G123] prescreen rank 26: [ablation A3 grammar G123] M2 kernels=[(''1'', ''Om'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:52:18'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119666.5
+  marginalized:
+  - alpha
+  sigma_fold: 2043.2
+  ladder:
+  - R: []
+    logZ_cross: 109779.2
+    promoted: true
+  - R:
+    - alpha
+    logZ_cross: 119666.5
+    promoted: true
+  - R:
+    - alpha
+    - A
+    logZ_cross: 121039.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31569.2
+    SIMBA: 27311.9
+    Astrid: 29262.3
+    Swift-EAGLE: 31523.0
+  L_zero_shot: 20.698
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.331
+    SIMBA: 41.527
+    Astrid: 11.271
+    Swift-EAGLE: 13.662
+  L_map: 11.337
+  L_map_per_fold:
+    IllustrisTNG: 5.648
+    SIMBA: 29.684
+    Astrid: 5.348
+    Swift-EAGLE: 4.667
+  chi2_per_suite:
+    IllustrisTNG: 9.412
+    SIMBA: 3.602
+    Astrid: 60.711
+    Swift-EAGLE: 11.162
+  chi2_mean: 21.222
+  chi2_std: 22.97
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.285
+    SIMBA: 1.448
+    Astrid: 0.391
+    Swift-EAGLE: 0.294
+  fold_mu:
+    IllustrisTNG:
+      A: 1.7929
+      k1: 0.549
+      alpha: 22.5225
+    SIMBA:
+      A: 2.067
+      k1: 0.724
+      alpha: 22.2174
+    Astrid:
+      A: 1.8362
+      k1: 0.5762
+      alpha: 19.3303
+    Swift-EAGLE:
+      A: 1.8386
+      k1: 0.5743
+      alpha: 24.1411
+  residuals: Loop/residuals/T26.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 76
+- trial: T27
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*f_b*((k/(k1*D**beta))**2/(1
+    + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G252] prescreen rank 27: [ablation A3 grammar G252] M2 kernels=[(''1-wb'', ''Dbeta'', ''k1''),
+    (''fb'', ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:53:35'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123845.1
+  marginalized:
+  - k1
+  - beta
+  sigma_fold: 2100.1
+  ladder:
+  - R: []
+    logZ_cross: 109535.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120873.9
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 123845.1
+    promoted: true
+  - R:
+    - k1
+    - beta
+    - A2
+    logZ_cross: 125159.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32996.8
+    SIMBA: 28470.6
+    Astrid: 30009.8
+    Swift-EAGLE: 32368.0
+  L_zero_shot: 21.212
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.737
+    SIMBA: 44.43
+    Astrid: 13.009
+    Swift-EAGLE: 12.671
+  L_map: 6.12
+  L_map_per_fold:
+    IllustrisTNG: 3.54
+    SIMBA: 13.53
+    Astrid: 4.461
+    Swift-EAGLE: 2.951
+  chi2_per_suite:
+    IllustrisTNG: 4.163
+    SIMBA: 2.279
+    Astrid: 20.817
+    Swift-EAGLE: 4.141
+  chi2_mean: 7.85
+  chi2_std: 7.525
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.247
+    SIMBA: 0.784
+    Astrid: 0.391
+    Swift-EAGLE: 0.243
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.9601
+      A2: 3.7608
+      k1: -0.351
+      beta: -0.575
+    SIMBA:
+      A1: 3.1311
+      A2: 4.2204
+      k1: -0.276
+      beta: -0.65
+    Astrid:
+      A1: 2.7878
+      A2: 6.4971
+      k1: -0.201
+      beta: -0.475
+    Swift-EAGLE:
+      A1: 2.8656
+      A2: 4.521
+      k1: -0.326
+      beta: -0.55
+  residuals: Loop/residuals/T27.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 165
+- trial: T28
+  expr: -D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G044] prescreen rank 28: [ablation A3 grammar G044] M2 kernels=[(''1'', ''none'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:56:22'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121999.0
+  marginalized:
+  - k1
+  - A2
+  sigma_fold: 2126.6
+  ladder:
+  - R: []
+    logZ_cross: 109507.3
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 119941.0
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 121999.0
+    promoted: true
+  - R:
+    - k1
+    - A2
+    - A1
+    logZ_cross: 123048.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32537.4
+    SIMBA: 27898.5
+    Astrid: 29665.6
+    Swift-EAGLE: 31897.5
+  L_zero_shot: 20.134
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.174
+    SIMBA: 40.211
+    Astrid: 11.141
+    Swift-EAGLE: 13.009
+  L_map: 7.073
+  L_map_per_fold:
+    IllustrisTNG: 4.805
+    SIMBA: 16.192
+    Astrid: 3.617
+    Swift-EAGLE: 3.68
+  chi2_per_suite:
+    IllustrisTNG: 22.382
+    SIMBA: 2.607
+    Astrid: 44.921
+    Swift-EAGLE: 8.72
+  chi2_mean: 19.657
+  chi2_std: 16.248
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.303
+    SIMBA: 0.888
+    Astrid: 0.295
+    Swift-EAGLE: 0.261
+  fold_mu:
+    IllustrisTNG:
+      A1: 0.6253
+      A2: 2.9445
+      k1: -0.326
+      beta: -0.775
+    SIMBA:
+      A1: 0.1389
+      A2: 3.8609
+      k1: -0.326
+      beta: -0.75
+    Astrid:
+      A1: 0.5927
+      A2: 3.3239
+      k1: -0.2313
+      beta: -0.725
+    Swift-EAGLE:
+      A1: 0.6411
+      A2: 2.9908
+      k1: -0.3011
+      beta: -0.75
+  residuals: Loop/residuals/T28.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 140
+- trial: T29
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + f_b*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G097] prescreen rank 29: [ablation A3 grammar G097] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 13:58:44'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123239.4
+  marginalized:
+  - k1
+  sigma_fold: 1914.6
+  ladder:
+  - R: []
+    logZ_cross: 109423.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123239.4
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 123620.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32674.3
+    SIMBA: 28796.8
+    Astrid: 29569.2
+    Swift-EAGLE: 32199.0
+  L_zero_shot: 21.189
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.953
+    SIMBA: 42.553
+    Astrid: 11.572
+    Swift-EAGLE: 15.676
+  L_map: 9.437
+  L_map_per_fold:
+    IllustrisTNG: 4.242
+    SIMBA: 25.709
+    Astrid: 4.39
+    Swift-EAGLE: 3.408
+  chi2_per_suite:
+    IllustrisTNG: 4.42
+    SIMBA: 2.746
+    Astrid: 18.33
+    Swift-EAGLE: 4.013
+  chi2_mean: 7.377
+  chi2_std: 6.353
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.252
+    SIMBA: 1.014
+    Astrid: 0.331
+    Swift-EAGLE: 0.236
+  fold_mu:
+    IllustrisTNG:
+      A: 2.4375
+      k1: 0.549
+      alpha: 12.5068
+    SIMBA:
+      A: 2.685
+      k1: 0.7486
+      alpha: 14.5287
+    Astrid:
+      A: 2.6445
+      k1: 0.5739
+      alpha: 10.1843
+    Swift-EAGLE:
+      A: 2.4949
+      k1: 0.549
+      alpha: 12.5506
+  residuals: Loop/residuals/T29.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 75
+- trial: T30
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G082] prescreen rank 30: [ablation A3 grammar G082] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:00:02'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122635.9
+  marginalized:
+  - k1
+  sigma_fold: 2186.7
+  ladder:
+  - R: []
+    logZ_cross: 109358.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122635.9
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 123804.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32816.0
+    SIMBA: 28704.6
+    Astrid: 28847.2
+    Swift-EAGLE: 32268.1
+  L_zero_shot: 20.607
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.209
+    SIMBA: 42.804
+    Astrid: 12.666
+    Swift-EAGLE: 12.75
+  L_map: 5.926
+  L_map_per_fold:
+    IllustrisTNG: 5.06
+    SIMBA: 10.582
+    Astrid: 4.308
+    Swift-EAGLE: 3.756
+  chi2_per_suite:
+    IllustrisTNG: 5.785
+    SIMBA: 1.846
+    Astrid: 21.068
+    Swift-EAGLE: 4.162
+  chi2_mean: 8.215
+  chi2_std: 7.552
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.306
+    SIMBA: 0.602
+    Astrid: 0.359
+    Swift-EAGLE: 0.282
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.6103
+      A2: -0.1348
+      k1: -0.2792
+      beta: -0.4987
+    SIMBA:
+      A1: 2.749
+      A2: 0.4148
+      k1: -0.1264
+      beta: -0.4754
+    Astrid:
+      A1: 2.7829
+      A2: 1.1923
+      k1: -0.1265
+      beta: -0.4505
+    Swift-EAGLE:
+      A1: 2.6246
+      A2: 0.2655
+      k1: -0.2288
+      beta: -0.4527
+  residuals: Loop/residuals/T30.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 148
+- trial: T31
+  expr: -D*(A1*Omega_b_over_Omega_m*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1
+    + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G178] prescreen rank 31: [ablation A3 grammar G178] M2 kernels=[(''wb'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:02:31'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121087.3
+  marginalized:
+  - k1
+  sigma_fold: 2498.8
+  ladder:
+  - R: []
+    logZ_cross: 109284.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121087.3
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 122692.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32619.4
+    SIMBA: 27264.0
+    Astrid: 29195.5
+    Swift-EAGLE: 32008.3
+  L_zero_shot: 20.571
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.797
+    SIMBA: 42.56
+    Astrid: 11.705
+    Swift-EAGLE: 13.222
+  L_map: 5.75
+  L_map_per_fold:
+    IllustrisTNG: 4.45
+    SIMBA: 12.41
+    Astrid: 4.336
+    Swift-EAGLE: 1.805
+  chi2_per_suite:
+    IllustrisTNG: 4.321
+    SIMBA: 2.182
+    Astrid: 20.185
+    Swift-EAGLE: 4.128
+  chi2_mean: 7.704
+  chi2_std: 7.254
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.279
+    SIMBA: 0.717
+    Astrid: 0.357
+    Swift-EAGLE: 0.162
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.8232
+      A2: 2.8707
+      k1: -0.3473
+      beta: -0.5712
+    SIMBA:
+      A1: 2.2168
+      A2: 3.1224
+      k1: -0.2634
+      beta: -0.6374
+    Astrid:
+      A1: 3.0955
+      A2: 2.7485
+      k1: -0.2063
+      beta: -0.4803
+    Swift-EAGLE:
+      A1: 2.4599
+      A2: 2.7456
+      k1: -0.3092
+      beta: -0.5332
+  residuals: Loop/residuals/T31.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 150
+- trial: T32
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*Omega_b_over_Omega_m*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G068] prescreen rank 32: [ablation A3 grammar G068] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''wb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:05:03'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120932.1
+  marginalized:
+  - k1
+  sigma_fold: 2557.3
+  ladder:
+  - R: []
+    logZ_cross: 109278.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120932.1
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 122710.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32619.2
+    SIMBA: 27115.8
+    Astrid: 29194.8
+    Swift-EAGLE: 32002.3
+  L_zero_shot: 20.559
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.793
+    SIMBA: 42.519
+    Astrid: 11.706
+    Swift-EAGLE: 13.218
+  L_map: 4.512
+  L_map_per_fold:
+    IllustrisTNG: 3.945
+    SIMBA: 8.384
+    Astrid: 4.205
+    Swift-EAGLE: 1.513
+  chi2_per_suite:
+    IllustrisTNG: 4.225
+    SIMBA: 1.73
+    Astrid: 20.198
+    Swift-EAGLE: 4.076
+  chi2_mean: 7.557
+  chi2_std: 7.365
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.26
+    SIMBA: 0.529
+    Astrid: 0.35
+    Swift-EAGLE: 0.145
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.8691
+      A2: -1.0415
+      k1: -0.3469
+      beta: -0.5709
+    SIMBA:
+      A1: 3.1331
+      A2: -0.9431
+      k1: -0.2642
+      beta: -0.6382
+    Astrid:
+      A1: 2.747
+      A2: 0.3524
+      k1: -0.2065
+      beta: -0.4805
+    Swift-EAGLE:
+      A1: 2.7437
+      A2: -0.2777
+      k1: -0.3084
+      beta: -0.5323
+  residuals: Loop/residuals/T32.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 158
+- trial: T33
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G074] prescreen rank 33: [ablation A3 grammar G074] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:07:43'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123408.9
+  marginalized:
+  - k1
+  - beta
+  sigma_fold: 1802.9
+  ladder:
+  - R: []
+    logZ_cross: 109250.7
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120638.2
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 123408.9
+    promoted: true
+  - R:
+    - k1
+    - beta
+    - A1
+    logZ_cross: 124260.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32616.8
+    SIMBA: 28989.1
+    Astrid: 29644.2
+    Swift-EAGLE: 32158.8
+  L_zero_shot: 20.575
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.804
+    SIMBA: 42.528
+    Astrid: 11.701
+    Swift-EAGLE: 13.267
+  L_map: 4.867
+  L_map_per_fold:
+    IllustrisTNG: 2.553
+    SIMBA: 11.227
+    Astrid: 3.863
+    Swift-EAGLE: 1.825
+  chi2_per_suite:
+    IllustrisTNG: 4.037
+    SIMBA: 1.65
+    Astrid: 20.292
+    Swift-EAGLE: 3.98
+  chi2_mean: 7.49
+  chi2_std: 7.454
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.204
+    SIMBA: 0.52
+    Astrid: 0.332
+    Swift-EAGLE: 0.18
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.8182
+      A2: 1.0546
+      k1: -0.3473
+      beta: -0.5713
+    SIMBA:
+      A1: 2.196
+      A2: 0.9338
+      k1: -0.2645
+      beta: -0.6385
+    Astrid:
+      A1: 3.0868
+      A2: -0.3349
+      k1: -0.2063
+      beta: -0.4803
+    Swift-EAGLE:
+      A1: 2.4181
+      A2: 0.3395
+      k1: -0.3178
+      beta: -0.5418
+  residuals: Loop/residuals/T33.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 175
+- trial: T34
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 +
+    (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G101] prescreen rank 34: [ablation A3 grammar G101] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:10:40'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 123055.1
+  marginalized:
+  - k1
+  sigma_fold: 1962.1
+  ladder:
+  - R: []
+    logZ_cross: 109133.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 123055.1
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 123439.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32653.8
+    SIMBA: 28657.7
+    Astrid: 29545.4
+    Swift-EAGLE: 32198.3
+  L_zero_shot: 21.413
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.029
+    SIMBA: 43.056
+    Astrid: 11.612
+    Swift-EAGLE: 15.955
+  L_map: 10.375
+  L_map_per_fold:
+    IllustrisTNG: 4.162
+    SIMBA: 29.567
+    Astrid: 4.352
+    Swift-EAGLE: 3.42
+  chi2_per_suite:
+    IllustrisTNG: 4.282
+    SIMBA: 3.077
+    Astrid: 18.23
+    Swift-EAGLE: 3.953
+  chi2_mean: 7.385
+  chi2_std: 6.276
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.247
+    SIMBA: 1.161
+    Astrid: 0.328
+    Swift-EAGLE: 0.236
+  fold_mu:
+    IllustrisTNG:
+      A: 2.4162
+      k1: 0.5551
+      alpha: 12.9063
+    SIMBA:
+      A: 2.6739
+      k1: 0.774
+      alpha: 15.7315
+    Astrid:
+      A: 2.6259
+      k1: 0.5922
+      alpha: 11.0811
+    Swift-EAGLE:
+      A: 2.472
+      k1: 0.5484
+      alpha: 12.5696
+  residuals: Loop/residuals/T34.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 89
+- trial: T35
+  expr: -A*D*((1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + f_b*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G251] prescreen rank 35: [ablation A3 grammar G251] M2 kernels=[(''1-wb'', ''Dbeta'', ''k1''),
+    (''fb'', ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:12:11'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120976.9
+  marginalized:
+  - A
+  sigma_fold: 2445.2
+  ladder:
+  - R: []
+    logZ_cross: 108988.6
+    promoted: true
+  - R:
+    - A
+    logZ_cross: 120976.9
+    promoted: true
+  - R:
+    - A
+    - beta
+    logZ_cross: 122568.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32634.0
+    SIMBA: 27573.7
+    Astrid: 28794.7
+    Swift-EAGLE: 31974.5
+  L_zero_shot: 20.4
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.318
+    SIMBA: 41.346
+    Astrid: 11.327
+    Swift-EAGLE: 13.608
+  L_map: 6.464
+  L_map_per_fold:
+    IllustrisTNG: 4.552
+    SIMBA: 13.648
+    Astrid: 4.221
+    Swift-EAGLE: 3.436
+  chi2_per_suite:
+    IllustrisTNG: 3.941
+    SIMBA: 2.259
+    Astrid: 18.56
+    Swift-EAGLE: 3.884
+  chi2_mean: 7.161
+  chi2_std: 6.616
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.249
+    SIMBA: 0.754
+    Astrid: 0.319
+    Swift-EAGLE: 0.227
+  fold_mu:
+    IllustrisTNG:
+      A: 3.1042
+      k1: -0.3541
+      beta: -0.5781
+    SIMBA:
+      A: 3.4024
+      k1: -0.3064
+      beta: -0.6804
+    Astrid:
+      A: 3.3075
+      k1: -0.2261
+      beta: -0.5001
+    Swift-EAGLE:
+      A: 3.1456
+      k1: -0.354
+      beta: -0.578
+  residuals: Loop/residuals/T35.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 92
+- trial: T36
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G073] prescreen rank 36: [ablation A3 grammar G073] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:13:44'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121045.2
+  marginalized:
+  - k1
+  sigma_fold: 1882.0
+  ladder:
+  - R: []
+    logZ_cross: 108948.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121045.2
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 121643.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32125.8
+    SIMBA: 28379.7
+    Astrid: 28926.5
+    Swift-EAGLE: 31613.2
+  L_zero_shot: 19.876
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.23
+    SIMBA: 39.558
+    Astrid: 11.27
+    Swift-EAGLE: 13.448
+  L_map: 7.216
+  L_map_per_fold:
+    IllustrisTNG: 5.603
+    SIMBA: 14.963
+    Astrid: 4.332
+    Swift-EAGLE: 3.967
+  chi2_per_suite:
+    IllustrisTNG: 4.055
+    SIMBA: 2.158
+    Astrid: 18.285
+    Swift-EAGLE: 3.884
+  chi2_mean: 7.096
+  chi2_std: 6.503
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.282
+    SIMBA: 0.715
+    Astrid: 0.308
+    Swift-EAGLE: 0.24
+  fold_mu:
+    IllustrisTNG:
+      A: 1.4993
+      k1: -0.326
+      beta: -0.55
+    SIMBA:
+      A: 1.6318
+      k1: -0.276
+      beta: -0.625
+    Astrid:
+      A: 1.6275
+      k1: -0.226
+      beta: -0.5
+    Swift-EAGLE:
+      A: 1.5329
+      k1: -0.326
+      beta: -0.55
+  residuals: Loop/residuals/T36.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 84
+- trial: T37
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*f_b*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G080] prescreen rank 37: [ablation A3 grammar G080] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:15:10'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121943.9
+  marginalized:
+  - k1
+  sigma_fold: 2289.6
+  ladder:
+  - R: []
+    logZ_cross: 108943.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121943.9
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 122988.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32723.8
+    SIMBA: 28109.7
+    Astrid: 28964.3
+    Swift-EAGLE: 32146.2
+  L_zero_shot: 21.092
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.784
+    SIMBA: 44.283
+    Astrid: 12.329
+    Swift-EAGLE: 12.974
+  L_map: 6.966
+  L_map_per_fold:
+    IllustrisTNG: 4.502
+    SIMBA: 15.225
+    Astrid: 4.584
+    Swift-EAGLE: 3.553
+  chi2_per_suite:
+    IllustrisTNG: 4.398
+    SIMBA: 2.247
+    Astrid: 19.906
+    Swift-EAGLE: 4.129
+  chi2_mean: 7.67
+  chi2_std: 7.113
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.298
+    SIMBA: 0.77
+    Astrid: 0.385
+    Swift-EAGLE: 0.28
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.4861
+      A2: 0.2956
+      k1: -0.276
+      beta: -0.475
+    SIMBA:
+      A1: 2.6357
+      A2: 0.9231
+      k1: -0.1765
+      beta: -0.5255
+    Astrid:
+      A1: 2.4599
+      A2: 3.0979
+      k1: -0.1627
+      beta: -0.4367
+    Swift-EAGLE:
+      A1: 2.4205
+      A2: 1.1964
+      k1: -0.2549
+      beta: -0.4539
+  residuals: Loop/residuals/T37.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 150
+- trial: T38
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*Omega_b_over_Omega_m*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G070] prescreen rank 38: [ablation A3 grammar G070] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''wb'',
+    ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:17:42'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122140.6
+  marginalized:
+  - k1
+  sigma_fold: 2278.8
+  ladder:
+  - R: []
+    logZ_cross: 108919.2
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122140.6
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 122702.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32796.0
+    SIMBA: 28288.4
+    Astrid: 28882.1
+    Swift-EAGLE: 32174.2
+  L_zero_shot: 20.8
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.574
+    SIMBA: 41.996
+    Astrid: 12.544
+    Swift-EAGLE: 14.085
+  L_map: 5.835
+  L_map_per_fold:
+    IllustrisTNG: 4.864
+    SIMBA: 10.489
+    Astrid: 4.275
+    Swift-EAGLE: 3.712
+  chi2_per_suite:
+    IllustrisTNG: 6.425
+    SIMBA: 1.869
+    Astrid: 22.097
+    Swift-EAGLE: 4.366
+  chi2_mean: 8.689
+  chi2_std: 7.907
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.297
+    SIMBA: 0.596
+    Astrid: 0.352
+    Swift-EAGLE: 0.274
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.575
+      A2: 0.1804
+      k1: -0.2692
+      beta: -0.4931
+    SIMBA:
+      A1: 2.7696
+      A2: 0.4953
+      k1: -0.1469
+      beta: -0.525
+    Astrid:
+      A1: 2.7494
+      A2: 0.7341
+      k1: -0.1106
+      beta: -0.4346
+    Swift-EAGLE:
+      A1: 2.5945
+      A2: 0.3764
+      k1: -0.2232
+      beta: -0.4472
+  residuals: Loop/residuals/T38.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 130
+- trial: T39
+  expr: -A*D*((1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G261] prescreen rank 39: [ablation A3 grammar G261] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''fb'', ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:19:54'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122156.4
+  marginalized:
+  - k1
+  sigma_fold: 1836.6
+  ladder:
+  - R: []
+    logZ_cross: 108720.3
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122156.4
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122414.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32319.0
+    SIMBA: 28537.7
+    Astrid: 29441.3
+    Swift-EAGLE: 31858.4
+  L_zero_shot: 20.409
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.97
+    SIMBA: 39.853
+    Astrid: 10.852
+    Swift-EAGLE: 14.961
+  L_map: 9.156
+  L_map_per_fold:
+    IllustrisTNG: 4.24
+    SIMBA: 24.474
+    Astrid: 4.263
+    Swift-EAGLE: 3.647
+  chi2_per_suite:
+    IllustrisTNG: 4.763
+    SIMBA: 3.158
+    Astrid: 18.898
+    Swift-EAGLE: 4.196
+  chi2_mean: 7.754
+  chi2_std: 6.459
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.228
+    SIMBA: 1.172
+    Astrid: 0.302
+    Swift-EAGLE: 0.222
+  fold_mu:
+    IllustrisTNG:
+      A: 3.3009
+      k1: 0.6867
+      alpha: 20.2349
+    SIMBA:
+      A: 3.6285
+      k1: 0.8748
+      alpha: 22.7493
+    Astrid:
+      A: 3.489
+      k1: 0.6616
+      alpha: 15.6839
+    Swift-EAGLE:
+      A: 3.3111
+      k1: 0.6541
+      alpha: 18.5212
+  residuals: Loop/residuals/T39.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 89
+- trial: T40
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[ablation A3 G002] prescreen rank 40: [ablation A3 grammar G002] M1 kernels=[(''1'', ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:21:24'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122321.5
+  marginalized:
+  - k1
+  sigma_fold: 1973.1
+  ladder:
+  - R: []
+    logZ_cross: 108600.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122321.5
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122637.6
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32544.5
+    SIMBA: 28709.9
+    Astrid: 29064.2
+    Swift-EAGLE: 32002.9
+  L_zero_shot: 20.495
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.047
+    SIMBA: 41.126
+    Astrid: 11.716
+    Swift-EAGLE: 14.092
+  L_map: 7.862
+  L_map_per_fold:
+    IllustrisTNG: 5.788
+    SIMBA: 17.297
+    Astrid: 4.351
+    Swift-EAGLE: 4.011
+  chi2_per_suite:
+    IllustrisTNG: 4.155
+    SIMBA: 2.249
+    Astrid: 18.252
+    Swift-EAGLE: 3.833
+  chi2_mean: 7.122
+  chi2_std: 6.466
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.31
+    SIMBA: 0.764
+    Astrid: 0.326
+    Swift-EAGLE: 0.262
+  fold_mu:
+    IllustrisTNG:
+      A: 2.5432
+      k1: -0.3019
+      beta: -0.5009
+    SIMBA:
+      A: 2.8413
+      k1: -0.2206
+      beta: -0.5695
+    Astrid:
+      A: 2.8482
+      k1: -0.1772
+      beta: -0.4512
+    Swift-EAGLE:
+      A: 2.6298
+      k1: -0.2762
+      beta: -0.4751
+  residuals: Loop/residuals/T40.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 66
+- trial: T41
+  expr: -A*D*(Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 +
+    (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G154] prescreen rank 41: [ablation A3 grammar G154] M2 kernels=[(''wb'', ''none'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:22:33'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122324.4
+  marginalized:
+  - k1
+  sigma_fold: 2067.3
+  ladder:
+  - R: []
+    logZ_cross: 108307.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122324.4
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122828.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32666.5
+    SIMBA: 28936.2
+    Astrid: 28677.2
+    Swift-EAGLE: 32044.5
+  L_zero_shot: 21.639
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.064
+    SIMBA: 44.493
+    Astrid: 13.139
+    Swift-EAGLE: 13.858
+  L_map: 7.521
+  L_map_per_fold:
+    IllustrisTNG: 5.226
+    SIMBA: 16.79
+    Astrid: 4.263
+    Swift-EAGLE: 3.806
+  chi2_per_suite:
+    IllustrisTNG: 8.354
+    SIMBA: 2.182
+    Astrid: 21.193
+    Swift-EAGLE: 4.789
+  chi2_mean: 9.129
+  chi2_std: 7.301
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.302
+    SIMBA: 0.725
+    Astrid: 0.32
+    Swift-EAGLE: 0.265
+  fold_mu:
+    IllustrisTNG:
+      A: 2.7544
+      k1: -0.103
+      beta: -0.4269
+    SIMBA:
+      A: 3.1095
+      k1: 0.024
+      beta: -0.4738
+    Astrid:
+      A: 3.028
+      k1: -0.001
+      beta: -0.4
+    Swift-EAGLE:
+      A: 2.807
+      k1: -0.101
+      beta: -0.425
+  residuals: Loop/residuals/T41.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 88
+- trial: T42
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G066] prescreen rank 42: [ablation A3 grammar G066] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''wb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:24:03'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121734.4
+  marginalized:
+  - k1
+  sigma_fold: 2331.7
+  ladder:
+  - R: []
+    logZ_cross: 108283.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121734.4
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 122575.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32757.3
+    SIMBA: 28143.2
+    Astrid: 28734.0
+    Swift-EAGLE: 32099.9
+  L_zero_shot: 21.206
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.717
+    SIMBA: 42.929
+    Astrid: 12.689
+    Swift-EAGLE: 14.488
+  L_map: 5.446
+  L_map_per_fold:
+    IllustrisTNG: 2.739
+    SIMBA: 12.177
+    Astrid: 4.315
+    Swift-EAGLE: 2.55
+  chi2_per_suite:
+    IllustrisTNG: 4.973
+    SIMBA: 2.016
+    Astrid: 20.989
+    Swift-EAGLE: 3.704
+  chi2_mean: 7.921
+  chi2_std: 7.618
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.197
+    SIMBA: 0.659
+    Astrid: 0.346
+    Swift-EAGLE: 0.199
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.5415
+      A2: 0.2984
+      k1: -0.276
+      beta: -0.5
+    SIMBA:
+      A1: 2.7677
+      A2: 0.6421
+      k1: -0.1759
+      beta: -0.5748
+    Astrid:
+      A1: 2.643
+      A2: 1.0981
+      k1: -0.101
+      beta: -0.425
+    Swift-EAGLE:
+      A1: 2.5427
+      A2: 0.5697
+      k1: -0.226
+      beta: -0.45
+  residuals: Loop/residuals/T42.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 132
+- trial: T43
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G256] prescreen rank 43: [ablation A3 grammar G256] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''1-wb'', ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:26:17'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120151.9
+  marginalized:
+  - k1
+  sigma_fold: 1665.0
+  ladder:
+  - R: []
+    logZ_cross: 108261.8
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120151.9
+    promoted: true
+  - R:
+    - k1
+    - A1
+    logZ_cross: 120535.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31514.6
+    SIMBA: 28183.9
+    Astrid: 29080.5
+    Swift-EAGLE: 31372.9
+  L_zero_shot: 20.804
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.774
+    SIMBA: 41.297
+    Astrid: 10.837
+    Swift-EAGLE: 14.307
+  L_map: 9.765
+  L_map_per_fold:
+    IllustrisTNG: 5.087
+    SIMBA: 24.338
+    Astrid: 4.886
+    Swift-EAGLE: 4.75
+  chi2_per_suite:
+    IllustrisTNG: 5.65
+    SIMBA: 3.353
+    Astrid: 27.846
+    Swift-EAGLE: 6.003
+  chi2_mean: 10.713
+  chi2_std: 9.944
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.254
+    SIMBA: 1.256
+    Astrid: 0.328
+    Swift-EAGLE: 0.284
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.7147
+      A2: 1.415
+      k1: 0.7241
+      alpha: 27.1606
+    SIMBA:
+      A1: 3.1584
+      A2: 1.6415
+      k1: 0.9148
+      alpha: 28.7564
+    Astrid:
+      A1: 2.7019
+      A2: 1.8432
+      k1: 0.7538
+      alpha: 26.0325
+    Swift-EAGLE:
+      A1: 2.5251
+      A2: 1.6835
+      k1: 0.699
+      alpha: 26.9956
+  residuals: Loop/residuals/T43.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 126
+- trial: T44
+  expr: -D*(A1*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*f_b*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G078] prescreen rank 44: [ablation A3 grammar G078] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''none'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:28:24'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122148.7
+  marginalized:
+  - k1
+  sigma_fold: 2300.2
+  ladder:
+  - R: []
+    logZ_cross: 108161.9
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 122148.7
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 123660.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32836.7
+    SIMBA: 28617.9
+    Astrid: 28499.3
+    Swift-EAGLE: 32194.9
+  L_zero_shot: 21.265
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.437
+    SIMBA: 44.389
+    Astrid: 13.081
+    Swift-EAGLE: 13.153
+  L_map: 6.127
+  L_map_per_fold:
+    IllustrisTNG: 4.574
+    SIMBA: 11.969
+    Astrid: 4.316
+    Swift-EAGLE: 3.647
+  chi2_per_suite:
+    IllustrisTNG: 5.618
+    SIMBA: 1.952
+    Astrid: 20.457
+    Swift-EAGLE: 4.028
+  chi2_mean: 8.014
+  chi2_std: 7.301
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.28
+    SIMBA: 0.656
+    Astrid: 0.358
+    Swift-EAGLE: 0.281
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.5682
+      A2: 0.3809
+      k1: -0.2513
+      beta: -0.4752
+    SIMBA:
+      A1: 2.7621
+      A2: 0.7062
+      k1: -0.151
+      beta: -0.5249
+    Astrid:
+      A1: 2.7006
+      A2: 1.9105
+      k1: -0.1015
+      beta: -0.4254
+    Swift-EAGLE:
+      A1: 2.5623
+      A2: 0.8249
+      k1: -0.2012
+      beta: -0.4251
+  residuals: Loop/residuals/T44.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 133
+- trial: T45
+  expr: -D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1
+    + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G046] prescreen rank 45: [ablation A3 grammar G046] M2 kernels=[(''1'', ''none'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:30:40'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121321.6
+  marginalized:
+  - k1
+  sigma_fold: 1682.3
+  ladder:
+  - R: []
+    logZ_cross: 108029.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121321.6
+    promoted: true
+  - R:
+    - k1
+    - alpha
+    logZ_cross: 121994.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31826.2
+    SIMBA: 28479.5
+    Astrid: 29332.4
+    Swift-EAGLE: 31683.5
+  L_zero_shot: 21.464
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.873
+    SIMBA: 41.307
+    Astrid: 11.181
+    Swift-EAGLE: 15.493
+  L_map: 9.037
+  L_map_per_fold:
+    IllustrisTNG: 3.932
+    SIMBA: 23.808
+    Astrid: 4.599
+    Swift-EAGLE: 3.81
+  chi2_per_suite:
+    IllustrisTNG: 5.715
+    SIMBA: 3.36
+    Astrid: 25.031
+    Swift-EAGLE: 4.891
+  chi2_mean: 9.749
+  chi2_std: 8.863
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.225
+    SIMBA: 1.263
+    Astrid: 0.324
+    Swift-EAGLE: 0.253
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.2498
+      A2: 2.5208
+      k1: 0.649
+      alpha: 24.6673
+    SIMBA:
+      A1: 1.2044
+      A2: 3.2824
+      k1: 0.9239
+      alpha: 28.7795
+    Astrid:
+      A1: 1.4263
+      A2: 2.6833
+      k1: 0.6989
+      alpha: 23.7898
+    Swift-EAGLE:
+      A1: 1.3595
+      A2: 2.4084
+      k1: 0.624
+      alpha: 23.8557
+  residuals: Loop/residuals/T45.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 122
+- trial: T46
+  expr: -A*D*((1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G255] prescreen rank 46: [ablation A3 grammar G255] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''1-wb'', ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:32:44'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119482.3
+  marginalized:
+  - alpha
+  sigma_fold: 1714.2
+  ladder:
+  - R: []
+    logZ_cross: 107981.9
+    promoted: true
+  - R:
+    - alpha
+    logZ_cross: 119482.3
+    promoted: true
+  - R:
+    - alpha
+    - k1
+    logZ_cross: 119795.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31554.7
+    SIMBA: 27981.6
+    Astrid: 28879.7
+    Swift-EAGLE: 31066.3
+  L_zero_shot: 21.178
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.13
+    SIMBA: 41.976
+    Astrid: 11.199
+    Swift-EAGLE: 14.407
+  L_map: 9.45
+  L_map_per_fold:
+    IllustrisTNG: 5.134
+    SIMBA: 22.409
+    Astrid: 5.209
+    Swift-EAGLE: 5.049
+  chi2_per_suite:
+    IllustrisTNG: 8.25
+    SIMBA: 2.996
+    Astrid: 43.418
+    Swift-EAGLE: 8.622
+  chi2_mean: 15.821
+  chi2_std: 16.087
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.242
+    SIMBA: 1.122
+    Astrid: 0.342
+    Swift-EAGLE: 0.277
+  fold_mu:
+    IllustrisTNG:
+      A: 2.2385
+      k1: 0.674
+      alpha: 27.6386
+    SIMBA:
+      A: 2.6287
+      k1: 0.8727
+      alpha: 29.6395
+    Astrid:
+      A: 2.351
+      k1: 0.7247
+      alpha: 26.3076
+    Swift-EAGLE:
+      A: 2.1817
+      k1: 0.6529
+      alpha: 26.5709
+  residuals: Loop/residuals/T46.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 79
+- trial: T47
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1
+    + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G228] prescreen rank 47: [ablation A3 grammar G228] M2 kernels=[(''1-wb'', ''none'', ''k1''),
+    (''1-wb'', ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:34:05'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119090.9
+  marginalized:
+  - A1
+  sigma_fold: 1753.0
+  ladder:
+  - R: []
+    logZ_cross: 107891.5
+    promoted: true
+  - R:
+    - A1
+    logZ_cross: 119090.9
+    promoted: true
+  - R:
+    - A1
+    - beta
+    logZ_cross: 119708.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31395.5
+    SIMBA: 27730.6
+    Astrid: 28903.5
+    Swift-EAGLE: 31061.3
+  L_zero_shot: 20.683
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.961
+    SIMBA: 41.143
+    Astrid: 11.239
+    Swift-EAGLE: 13.387
+  L_map: 7.97
+  L_map_per_fold:
+    IllustrisTNG: 4.928
+    SIMBA: 18.797
+    Astrid: 4.351
+    Swift-EAGLE: 3.805
+  chi2_per_suite:
+    IllustrisTNG: 21.032
+    SIMBA: 2.872
+    Astrid: 43.114
+    Swift-EAGLE: 8.631
+  chi2_mean: 18.912
+  chi2_std: 15.437
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.287
+    SIMBA: 0.968
+    Astrid: 0.313
+    Swift-EAGLE: 0.25
+  fold_mu:
+    IllustrisTNG:
+      A1: 0.7891
+      A2: 2.9942
+      k1: -0.326
+      beta: -0.7749
+    SIMBA:
+      A1: 0.1967
+      A2: 3.9373
+      k1: -0.3491
+      beta: -0.7981
+    Astrid:
+      A1: 0.7499
+      A2: 3.3732
+      k1: -0.251
+      beta: -0.75
+    Swift-EAGLE:
+      A1: 0.7861
+      A2: 3.0622
+      k1: -0.326
+      beta: -0.775
+  residuals: Loop/residuals/T47.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 120
+- trial: T48
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G065] prescreen rank 48: [ablation A3 grammar G065] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''wb'',
+    ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:36:07'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120555.2
+  marginalized:
+  - k1
+  sigma_fold: 1943.7
+  ladder:
+  - R: []
+    logZ_cross: 107695.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120555.2
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 120924.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32014.0
+    SIMBA: 28785.5
+    Astrid: 28167.6
+    Swift-EAGLE: 31588.0
+  L_zero_shot: 21.982
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.792
+    SIMBA: 44.804
+    Astrid: 13.662
+    Swift-EAGLE: 14.668
+  L_map: 8.837
+  L_map_per_fold:
+    IllustrisTNG: 6.302
+    SIMBA: 20.278
+    Astrid: 4.632
+    Swift-EAGLE: 4.137
+  chi2_per_suite:
+    IllustrisTNG: 8.598
+    SIMBA: 2.152
+    Astrid: 18.701
+    Swift-EAGLE: 4.259
+  chi2_mean: 8.428
+  chi2_std: 6.371
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.349
+    SIMBA: 0.722
+    Astrid: 0.327
+    Swift-EAGLE: 0.281
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0772
+      k1: -0.126
+      beta: -0.4
+    SIMBA:
+      A: 2.2977
+      k1: -0.001
+      beta: -0.425
+    Astrid:
+      A: 2.2696
+      k1: -0.0011
+      beta: -0.3251
+    Swift-EAGLE:
+      A: 2.1585
+      k1: -0.101
+      beta: -0.375
+  residuals: Loop/residuals/T48.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 89
+- trial: T49
+  expr: -A*D*(((k/(k1))**2/(1 + (k/(k1))**2)) + (1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 +
+    alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G045] prescreen rank 49: [ablation A3 grammar G045] M2 kernels=[(''1'', ''none'', ''k1''), (''1-wb'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:37:38'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 0.991
+  logZ_cross: 117565.1
+  marginalized:
+  - alpha
+  sigma_fold: 2183.9
+  ladder:
+  - R: []
+    logZ_cross: 107681.1
+    promoted: true
+  - R:
+    - alpha
+    logZ_cross: 117565.1
+    promoted: true
+  - R:
+    - alpha
+    - A
+    logZ_cross: 118527.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31459.6
+    SIMBA: 26756.1
+    Astrid: 28465.2
+    Swift-EAGLE: 30884.1
+  L_zero_shot: 21.825
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.962
+    SIMBA: 42.703
+    Astrid: 11.823
+    Swift-EAGLE: 14.813
+  L_map: 11.119
+  L_map_per_fold:
+    IllustrisTNG: 4.757
+    SIMBA: 30.128
+    Astrid: 4.883
+    Swift-EAGLE: 4.709
+  chi2_per_suite:
+    IllustrisTNG: 10.756
+    SIMBA: 3.754
+    Astrid: 42.782
+    Swift-EAGLE: 9.62
+  chi2_mean: 16.728
+  chi2_std: 15.275
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.241
+    SIMBA: 1.463
+    Astrid: 0.331
+    Swift-EAGLE: 0.266
+  fold_mu:
+    IllustrisTNG:
+      A: 2.006
+      k1: 0.5989
+      alpha: 24.416
+    SIMBA:
+      A: 2.2743
+      k1: 0.7948
+      alpha: 26.7716
+    Astrid:
+      A: 2.0042
+      k1: 0.6159
+      alpha: 21.8212
+    Swift-EAGLE:
+      A: 1.9455
+      k1: 0.576
+      alpha: 23.1053
+  residuals: Loop/residuals/T49.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 76
+- trial: T50
+  expr: -D*(A1*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G248] prescreen rank 50: [ablation A3 grammar G248] M2 kernels=[(''1-wb'', ''Dbeta'', ''k1''),
+    (''1-wb'', ''Om'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:38:56'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 118106.0
+  marginalized:
+  - A2
+  sigma_fold: 2221.0
+  ladder:
+  - R: []
+    logZ_cross: 107591.4
+    promoted: true
+  - R:
+    - A2
+    logZ_cross: 118106.0
+    promoted: true
+  - R:
+    - A2
+    - beta
+    logZ_cross: 119635.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31467.8
+    SIMBA: 26759.2
+    Astrid: 28708.4
+    Swift-EAGLE: 31170.5
+  L_zero_shot: 20.75
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.198
+    SIMBA: 40.796
+    Astrid: 11.48
+    Swift-EAGLE: 13.525
+  L_map: 7.183
+  L_map_per_fold:
+    IllustrisTNG: 4.311
+    SIMBA: 16.463
+    Astrid: 4.421
+    Swift-EAGLE: 3.538
+  chi2_per_suite:
+    IllustrisTNG: 18.021
+    SIMBA: 2.639
+    Astrid: 51.626
+    Swift-EAGLE: 7.506
+  chi2_mean: 19.948
+  chi2_std: 19.115
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.259
+    SIMBA: 0.893
+    Astrid: 0.324
+    Swift-EAGLE: 0.232
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.9689
+      A2: 0.8681
+      k1: -0.3008
+      beta: -0.7998
+    SIMBA:
+      A1: 3.9208
+      A2: 0.1472
+      k1: -0.3385
+      beta: -0.7625
+    Astrid:
+      A1: 3.3417
+      A2: 0.8297
+      k1: -0.2255
+      beta: -0.7744
+    Swift-EAGLE:
+      A1: 3.0347
+      A2: 0.8661
+      k1: -0.301
+      beta: -0.7999
+  residuals: Loop/residuals/T50.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 122
+- trial: T51
+  expr: -A*D*(((k/(k1))**2/(1 + (k/(k1))**2)) + ((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  hypothesis: '[ablation A3 G019] prescreen rank 51: [ablation A3 grammar G019] M2 kernels=[(''1'', ''none'', ''k1''), (''1'',
+    ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:41:00'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120652.9
+  marginalized:
+  - k1
+  sigma_fold: 1581.9
+  ladder:
+  - R: []
+    logZ_cross: 107509.1
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120652.9
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 121297.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31863.5
+    SIMBA: 29262.1
+    Astrid: 28443.6
+    Swift-EAGLE: 31083.7
+  L_zero_shot: 21.112
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.138
+    SIMBA: 40.391
+    Astrid: 13.162
+    Swift-EAGLE: 13.758
+  L_map: 7.048
+  L_map_per_fold:
+    IllustrisTNG: 7.501
+    SIMBA: 11.284
+    Astrid: 4.708
+    Swift-EAGLE: 4.698
+  chi2_per_suite:
+    IllustrisTNG: 11.205
+    SIMBA: 1.533
+    Astrid: 24.585
+    Swift-EAGLE: 5.567
+  chi2_mean: 10.723
+  chi2_std: 8.71
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.449
+    SIMBA: 0.441
+    Astrid: 0.342
+    Swift-EAGLE: 0.337
+  fold_mu:
+    IllustrisTNG:
+      A: 1.4046
+      k1: -0.051
+      beta: -0.5815
+    SIMBA:
+      A: 1.5306
+      k1: 0.124
+      beta: -0.475
+    Astrid:
+      A: 1.5271
+      k1: 0.074
+      beta: -0.4751
+    Swift-EAGLE:
+      A: 1.4482
+      k1: -0.026
+      beta: -0.5592
+  residuals: Loop/residuals/T51.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 74
+- trial: T52
+  expr: -D*(A1*Omega_b_over_Omega_m*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*(1 - Omega_b_over_Omega_m)*((k/(k1*D**beta))**2/(1
+    + (k/(k1*D**beta))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G155] prescreen rank 52: [ablation A3 grammar G155] M2 kernels=[(''wb'', ''none'', ''k1''), (''1-wb'',
+    ''Dbeta'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:42:17'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121218.7
+  marginalized:
+  - k1
+  sigma_fold: 2550.0
+  ladder:
+  - R: []
+    logZ_cross: 107505.3
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121218.7
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 122179.4
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32721.8
+    SIMBA: 27383.0
+    Astrid: 28975.5
+    Swift-EAGLE: 32138.4
+  L_zero_shot: 21.238
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.538
+    SIMBA: 40.673
+    Astrid: 12.32
+    Swift-EAGLE: 15.421
+  L_map: 5.827
+  L_map_per_fold:
+    IllustrisTNG: 4.585
+    SIMBA: 12.653
+    Astrid: 4.146
+    Swift-EAGLE: 1.925
+  chi2_per_suite:
+    IllustrisTNG: 10.512
+    SIMBA: 2.007
+    Astrid: 24.444
+    Swift-EAGLE: 3.954
+  chi2_mean: 10.229
+  chi2_std: 8.791
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.281
+    SIMBA: 0.661
+    Astrid: 0.339
+    Swift-EAGLE: 0.17
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.3446
+      A2: 3.1286
+      k1: -0.301
+      beta: -0.575
+    SIMBA:
+      A1: 1.279
+      A2: 3.6587
+      k1: -0.1929
+      beta: -0.6418
+    Astrid:
+      A1: 2.444
+      A2: 3.187
+      k1: -0.076
+      beta: -0.45
+    Swift-EAGLE:
+      A1: 2.0814
+      A2: 2.9923
+      k1: -0.226
+      beta: -0.525
+  residuals: Loop/residuals/T52.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 130
+- trial: T53
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + Omega_b_over_Omega_m*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: '[ablation A3 G067] prescreen rank 53: [ablation A3 grammar G067] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''wb'',
+    ''Dbeta'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:44:29'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120656.8
+  marginalized:
+  - k1
+  sigma_fold: 1902.0
+  ladder:
+  - R: []
+    logZ_cross: 107482.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120656.8
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 121045.9
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32030.9
+    SIMBA: 28496.6
+    Astrid: 28553.4
+    Swift-EAGLE: 31575.8
+  L_zero_shot: 21.786
+  L_zero_shot_per_fold:
+    IllustrisTNG: 14.347
+    SIMBA: 45.165
+    Astrid: 13.05
+    Swift-EAGLE: 14.58
+  L_map: 8.647
+  L_map_per_fold:
+    IllustrisTNG: 5.641
+    SIMBA: 20.354
+    Astrid: 4.583
+    Swift-EAGLE: 4.01
+  chi2_per_suite:
+    IllustrisTNG: 4.194
+    SIMBA: 2.239
+    Astrid: 18.047
+    Swift-EAGLE: 3.829
+  chi2_mean: 7.077
+  chi2_std: 6.376
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.301
+    SIMBA: 0.762
+    Astrid: 0.327
+    Swift-EAGLE: 0.264
+  fold_mu:
+    IllustrisTNG:
+      A: 2.0299
+      k1: -0.2261
+      beta: -0.4251
+    SIMBA:
+      A: 2.2462
+      k1: -0.151
+      beta: -0.5
+    Astrid:
+      A: 2.2425
+      k1: -0.126
+      beta: -0.4
+    Swift-EAGLE:
+      A: 2.1064
+      k1: -0.201
+      beta: -0.4
+  residuals: Loop/residuals/T53.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 79
+- trial: T54
+  expr: -D*(A1*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + A2*f_b*((k/((k1/(1 + alpha*D))))**2/(1 +
+    (k/((k1/(1 + alpha*D))))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G100] prescreen rank 54: [ablation A3 grammar G100] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''alphaD'', ''k1'')] shared_amp=False'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:45:52'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120789.3
+  marginalized:
+  - k1
+  sigma_fold: 2087.6
+  ladder:
+  - R: []
+    logZ_cross: 107341.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120789.3
+    promoted: true
+  - R:
+    - k1
+    - A2
+    logZ_cross: 122686.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32044.3
+    SIMBA: 27892.0
+    Astrid: 28970.0
+    Swift-EAGLE: 31883.0
+  L_zero_shot: 21.884
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.89
+    SIMBA: 44.605
+    Astrid: 12.267
+    Swift-EAGLE: 14.773
+  L_map: 7.82
+  L_map_per_fold:
+    IllustrisTNG: 4.132
+    SIMBA: 19.049
+    Astrid: 4.623
+    Swift-EAGLE: 3.475
+  chi2_per_suite:
+    IllustrisTNG: 4.23
+    SIMBA: 2.583
+    Astrid: 18.906
+    Swift-EAGLE: 4.093
+  chi2_mean: 7.453
+  chi2_std: 6.644
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.264
+    SIMBA: 0.923
+    Astrid: 0.371
+    Swift-EAGLE: 0.258
+  fold_mu:
+    IllustrisTNG:
+      A1: 2.508
+      A2: 0.236
+      k1: 0.474
+      alpha: 9.0115
+    SIMBA:
+      A1: 2.6615
+      A2: 0.7053
+      k1: 0.6691
+      alpha: 10.3292
+    Astrid:
+      A1: 2.4792
+      A2: 3.0696
+      k1: 0.524
+      alpha: 7.8239
+    Swift-EAGLE:
+      A1: 2.4432
+      A2: 1.2384
+      k1: 0.449
+      alpha: 7.8349
+  residuals: Loop/residuals/T54.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 140
+- trial: T55
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + f_b*((k/(k1))**2/(1 + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G077] prescreen rank 55: [ablation A3 grammar G077] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:48:14'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121519.6
+  marginalized:
+  - k1
+  sigma_fold: 2208.4
+  ladder:
+  - R: []
+    logZ_cross: 107290.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121519.6
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 121914.1
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32609.1
+    SIMBA: 28704.3
+    Astrid: 28272.7
+    Swift-EAGLE: 31933.5
+  L_zero_shot: 22.91
+  L_zero_shot_per_fold:
+    IllustrisTNG: 15.982
+    SIMBA: 46.796
+    Astrid: 13.657
+    Swift-EAGLE: 15.207
+  L_map: 7.374
+  L_map_per_fold:
+    IllustrisTNG: 4.926
+    SIMBA: 16.708
+    Astrid: 4.36
+    Swift-EAGLE: 3.502
+  chi2_per_suite:
+    IllustrisTNG: 9.23
+    SIMBA: 2.161
+    Astrid: 19.007
+    Swift-EAGLE: 4.095
+  chi2_mean: 8.623
+  chi2_std: 6.528
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.297
+    SIMBA: 0.683
+    Astrid: 0.336
+    Swift-EAGLE: 0.254
+  fold_mu:
+    IllustrisTNG:
+      A: 2.4112
+      k1: -0.2
+      beta: -0.4489
+    SIMBA:
+      A: 2.6624
+      k1: -0.101
+      beta: -0.525
+    Astrid:
+      A: 2.6105
+      k1: -0.076
+      beta: -0.4
+    Swift-EAGLE:
+      A: 2.4688
+      k1: -0.176
+      beta: -0.425
+  residuals: Loop/residuals/T55.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 69
+- trial: T56
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1
+    + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - Omega_m
+  hypothesis: '[ablation A3 G075] prescreen rank 56: [ablation A3 grammar G075] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1-wb'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:49:25'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 119364.7
+  marginalized:
+  - k1
+  sigma_fold: 1551.6
+  ladder:
+  - R: []
+    logZ_cross: 106847.5
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 119364.7
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 120070.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31470.8
+    SIMBA: 28801.4
+    Astrid: 28259.4
+    Swift-EAGLE: 30833.0
+  L_zero_shot: 21.317
+  L_zero_shot_per_fold:
+    IllustrisTNG: 18.183
+    SIMBA: 40.154
+    Astrid: 12.796
+    Swift-EAGLE: 14.135
+  L_map: 7.49
+  L_map_per_fold:
+    IllustrisTNG: 8.147
+    SIMBA: 11.911
+    Astrid: 4.856
+    Swift-EAGLE: 5.044
+  chi2_per_suite:
+    IllustrisTNG: 14.661
+    SIMBA: 1.733
+    Astrid: 30.329
+    Swift-EAGLE: 7.198
+  chi2_mean: 13.48
+  chi2_std: 10.756
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.455
+    SIMBA: 0.498
+    Astrid: 0.333
+    Swift-EAGLE: 0.334
+  fold_mu:
+    IllustrisTNG:
+      A: 1.6399
+      k1: -0.0511
+      beta: -0.5746
+    SIMBA:
+      A: 1.7828
+      k1: 0.124
+      beta: -0.475
+    Astrid:
+      A: 1.7644
+      k1: 0.074
+      beta: -0.475
+    Swift-EAGLE:
+      A: 1.677
+      k1: -0.026
+      beta: -0.5488
+  residuals: Loop/residuals/T56.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 79
+- trial: T57
+  expr: -A*D*(((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + f_b*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1
+    + alpha*D))))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - f_b
+  hypothesis: '[ablation A3 G099] prescreen rank 57: [ablation A3 grammar G099] M2 kernels=[(''1'', ''alphaD'', ''k1''), (''fb'',
+    ''alphaD'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:50:46'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121828.3
+  marginalized:
+  - k1
+  sigma_fold: 2024.1
+  ladder:
+  - R: []
+    logZ_cross: 106828.3
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121828.3
+    promoted: true
+  - R:
+    - k1
+    - alpha
+    logZ_cross: 122187.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32403.4
+    SIMBA: 28384.2
+    Astrid: 29071.5
+    Swift-EAGLE: 31969.1
+  L_zero_shot: 22.64
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.227
+    SIMBA: 44.619
+    Astrid: 12.048
+    Swift-EAGLE: 17.666
+  L_map: 9.969
+  L_map_per_fold:
+    IllustrisTNG: 4.441
+    SIMBA: 27.485
+    Astrid: 4.468
+    Swift-EAGLE: 3.482
+  chi2_per_suite:
+    IllustrisTNG: 3.963
+    SIMBA: 2.825
+    Astrid: 17.46
+    Swift-EAGLE: 3.824
+  chi2_mean: 7.018
+  chi2_std: 6.045
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.257
+    SIMBA: 1.032
+    Astrid: 0.333
+    Swift-EAGLE: 0.236
+  fold_mu:
+    IllustrisTNG:
+      A: 2.3569
+      k1: 0.4987
+      alpha: 9.8618
+    SIMBA:
+      A: 2.5641
+      k1: 0.7466
+      alpha: 13.5432
+    Astrid:
+      A: 2.5487
+      k1: 0.5482
+      alpha: 8.9212
+    Swift-EAGLE:
+      A: 2.4213
+      k1: 0.4987
+      alpha: 9.8601
+  residuals: Loop/residuals/T57.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 79
+- trial: T58
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + ((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  hypothesis: '[ablation A3 G063] prescreen rank 58: [ablation A3 grammar G063] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''1'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:52:07'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121462.5
+  marginalized:
+  - k1
+  sigma_fold: 1750.9
+  ladder:
+  - R: []
+    logZ_cross: 106800.4
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121462.5
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 122104.5
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32203.0
+    SIMBA: 29220.3
+    Astrid: 28558.4
+    Swift-EAGLE: 31480.8
+  L_zero_shot: 22.118
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.938
+    SIMBA: 43.868
+    Astrid: 13.432
+    Swift-EAGLE: 14.232
+  L_map: 6.795
+  L_map_per_fold:
+    IllustrisTNG: 6.303
+    SIMBA: 12.287
+    Astrid: 4.54
+    Swift-EAGLE: 4.049
+  chi2_per_suite:
+    IllustrisTNG: 9.66
+    SIMBA: 1.758
+    Astrid: 30.019
+    Swift-EAGLE: 6.058
+  chi2_mean: 11.874
+  chi2_std: 10.843
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.376
+    SIMBA: 0.531
+    Astrid: 0.333
+    Swift-EAGLE: 0.298
+  fold_mu:
+    IllustrisTNG:
+      A: 1.4329
+      k1: -0.001
+      beta: -0.5498
+    SIMBA:
+      A: 1.59
+      k1: 0.199
+      beta: -0.4239
+    Astrid:
+      A: 1.5547
+      k1: 0.124
+      beta: -0.454
+    Swift-EAGLE:
+      A: 1.4995
+      k1: 0.024
+      beta: -0.5471
+  residuals: Loop/residuals/T58.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 108
+- trial: T59
+  expr: -A*D*(((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + f_b*((k/(k1*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k1*(Omega_m/0.3)**(1/3)))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G081] prescreen rank 59: [ablation A3 grammar G081] M2 kernels=[(''1'', ''Dbeta'', ''k1''), (''fb'',
+    ''Om'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:53:58'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 120834.9
+  marginalized:
+  - k1
+  sigma_fold: 2277.4
+  ladder:
+  - R: []
+    logZ_cross: 106700.0
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 120834.9
+    promoted: true
+  - R:
+    - k1
+    - beta
+    logZ_cross: 121499.7
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32540.4
+    SIMBA: 28590.5
+    Astrid: 27948.1
+    Swift-EAGLE: 31756.0
+  L_zero_shot: 23.38
+  L_zero_shot_per_fold:
+    IllustrisTNG: 16.364
+    SIMBA: 47.485
+    Astrid: 14.441
+    Swift-EAGLE: 15.231
+  L_map: 6.527
+  L_map_per_fold:
+    IllustrisTNG: 4.714
+    SIMBA: 13.465
+    Astrid: 4.472
+    Swift-EAGLE: 3.458
+  chi2_per_suite:
+    IllustrisTNG: 9.882
+    SIMBA: 2.0
+    Astrid: 19.683
+    Swift-EAGLE: 4.584
+  chi2_mean: 9.038
+  chi2_std: 6.771
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.29
+    SIMBA: 0.59
+    Astrid: 0.344
+    Swift-EAGLE: 0.252
+  fold_mu:
+    IllustrisTNG:
+      A: 2.4207
+      k1: -0.1509
+      beta: -0.3999
+    SIMBA:
+      A: 2.6677
+      k1: -0.051
+      beta: -0.475
+    Astrid:
+      A: 2.6254
+      k1: -0.001
+      beta: -0.325
+    Swift-EAGLE:
+      A: 2.47
+      k1: -0.126
+      beta: -0.375
+  residuals: Loop/residuals/T59.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 116
+- trial: T60
+  expr: -A*D*((1 - Omega_b_over_Omega_m)*((k/((k1/(1 + alpha*D))))**2/(1 + (k/((k1/(1 + alpha*D))))**2)) + f_b*((k/(k1))**2/(1
+    + (k/(k1))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.05
+      hi: 50.0
+      spacing: log
+    alpha:
+      lo: -5.0
+      hi: 30.0
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  - f_b
+  hypothesis: '[ablation A3 G257] prescreen rank 60: [ablation A3 grammar G257] M2 kernels=[(''1-wb'', ''alphaD'', ''k1''),
+    (''fb'', ''none'', ''k1'')] shared_amp=True'
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-17 14:55:56'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121096.9
+  marginalized:
+  - k1
+  sigma_fold: 1806.4
+  ladder:
+  - R: []
+    logZ_cross: 106670.6
+    promoted: true
+  - R:
+    - k1
+    logZ_cross: 121096.9
+    promoted: true
+  - R:
+    - k1
+    - A
+    logZ_cross: 121409.8
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32021.6
+    SIMBA: 28266.3
+    Astrid: 29249.0
+    Swift-EAGLE: 31560.0
+  L_zero_shot: 21.384
+  L_zero_shot_per_fold:
+    IllustrisTNG: 17.767
+    SIMBA: 40.148
+    Astrid: 11.202
+    Swift-EAGLE: 16.42
+  L_map: 9.215
+  L_map_per_fold:
+    IllustrisTNG: 4.038
+    SIMBA: 24.815
+    Astrid: 4.289
+    Swift-EAGLE: 3.719
+  chi2_per_suite:
+    IllustrisTNG: 4.752
+    SIMBA: 3.202
+    Astrid: 18.727
+    Swift-EAGLE: 4.182
+  chi2_mean: 7.716
+  chi2_std: 6.382
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.215
+    SIMBA: 1.178
+    Astrid: 0.296
+    Swift-EAGLE: 0.218
+  fold_mu:
+    IllustrisTNG:
+      A: 3.3241
+      k1: 0.64
+      alpha: 18.3468
+    SIMBA:
+      A: 3.6723
+      k1: 0.8681
+      alpha: 22.1577
+    Astrid:
+      A: 3.5369
+      k1: 0.6451
+      alpha: 14.9348
+    Swift-EAGLE:
+      A: 3.3063
+      k1: 0.6085
+      alpha: 16.7834
+  residuals: Loop/residuals/T60.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 89

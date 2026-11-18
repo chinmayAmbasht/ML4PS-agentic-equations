@@ -1,0 +1,7 @@
+{"expr": "-A*D*((k*(D/0.05)**b/k0)**2/(1 + (k*(D/0.05)**b/k0)**2))",
+ "lin": ["A"],
+ "nl": {"k0": {"lo": 0.05, "hi": 30, "spacing": "log"}, "b": {"lo": -0.5, "hi": 1.5, "spacing": "lin"}},
+ "roles": {"A": "amplitude", "k0": "scale", "b": "exponent"},
+ "features": ["D"],
+ "hypothesis": "Single W2 knee with scale k0*(D/0.05)^-b, b free: the low-k slope of S vs D is suite dependent (~2 TNG/SIMBA, ~1 Astrid/Swift), so a marginalized exponent lets each suite pick its own low-k D^(1+2b) scaling while high-k S ~ D.",
+ "predicted_logZ_cross": 122000, "predicted_chi2_mean": 6.5}

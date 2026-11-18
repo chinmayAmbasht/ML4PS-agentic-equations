@@ -1,0 +1,418 @@
+budget: 50
+n_used: 5
+trials:
+- trial: T01
+  expr: -A*D*((k/(k00*(Omega_m/0.3)**(1/3)))**2/(1 + (k/(k00*(Omega_m/0.3)**(1/3)))**2))
+  lin:
+  - A
+  nl:
+    k00:
+      lo: 0.1
+      hi: 30
+      spacing: log
+  features:
+  - D
+  - Omega_m
+  hypothesis: ML4PS paper Table 1 rank 3.
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-11 07:10:54'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 117232.0
+  marginalized:
+  - k00
+  sigma_fold: 2047.6
+  ladder:
+  - R: []
+    logZ_cross: 102246.7
+    promoted: true
+  - R:
+    - k00
+    logZ_cross: 117232.0
+    promoted: true
+  - R:
+    - k00
+    - A
+    logZ_cross: 117702.2
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31392.0
+    SIMBA: 28059.0
+    Astrid: 27112.0
+    Swift-EAGLE: 30669.0
+  L_zero_shot: 98.617
+  L_zero_shot_per_fold:
+    IllustrisTNG: 50.715
+    SIMBA: 244.108
+    Astrid: 58.596
+    Swift-EAGLE: 41.048
+  L_map: 18.384
+  L_map_per_fold:
+    IllustrisTNG: 11.526
+    SIMBA: 48.422
+    Astrid: 7.074
+    Swift-EAGLE: 6.513
+  chi2_per_suite:
+    IllustrisTNG: 4.198
+    SIMBA: 1.642
+    Astrid: 17.001
+    Swift-EAGLE: 3.456
+  chi2_mean: 6.574
+  chi2_std: 6.091
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.312
+    SIMBA: 0.452
+    Astrid: 0.31
+    Swift-EAGLE: 0.242
+  fold_mu:
+    IllustrisTNG:
+      A: 2.5952
+      k00: 0.1973
+    SIMBA:
+      A: 2.8553
+      k00: 0.3418
+    Astrid:
+      A: 2.8765
+      k00: 0.3005
+    Swift-EAGLE:
+      A: 2.6966
+      k00: 0.2179
+  residuals: Loop/residuals/T01.md
+  n_coeff: 2
+  nl_nodes: 41
+  seconds: 25
+- trial: T02
+  expr: -A*D*((k/(k00/(1 + alpha*D)))**2/(1 + (k/(k00/(1 + alpha*D)))**2))
+  lin:
+  - A
+  nl:
+    k00:
+      lo: 0.1
+      hi: 30
+      spacing: log
+    alpha:
+      lo: -5
+      hi: 30
+      spacing: lin
+  features:
+  - D
+  hypothesis: ML4PS paper Table 1 rank 2.
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-11 07:11:20'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 121195.5
+  marginalized:
+  - k00
+  sigma_fold: 1939.8
+  ladder:
+  - R: []
+    logZ_cross: 106445.0
+    promoted: true
+  - R:
+    - k00
+    logZ_cross: 121195.5
+    promoted: true
+  - R:
+    - k00
+    - A
+    logZ_cross: 121866.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32151.1
+    SIMBA: 28339.4
+    Astrid: 28936.1
+    Swift-EAGLE: 31768.9
+  L_zero_shot: 86.271
+  L_zero_shot_per_fold:
+    IllustrisTNG: 43.112
+    SIMBA: 216.977
+    Astrid: 36.828
+    Swift-EAGLE: 48.168
+  L_map: 32.856
+  L_map_per_fold:
+    IllustrisTNG: 7.798
+    SIMBA: 112.002
+    Astrid: 6.343
+    Swift-EAGLE: 5.281
+  chi2_per_suite:
+    IllustrisTNG: 4.103
+    SIMBA: 2.662
+    Astrid: 17.444
+    Swift-EAGLE: 3.837
+  chi2_mean: 7.011
+  chi2_std: 6.048
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.274
+    SIMBA: 0.952
+    Astrid: 0.317
+    Swift-EAGLE: 0.236
+  fold_mu:
+    IllustrisTNG:
+      A: 2.5697
+      k00: 0.4868
+      alpha: 9.6021
+    SIMBA:
+      A: 2.8632
+      k00: 0.7283
+      alpha: 12.8434
+    Astrid:
+      A: 2.8489
+      k00: 0.5295
+      alpha: 8.78
+    Swift-EAGLE:
+      A: 2.6645
+      k00: 0.4864
+      alpha: 9.3639
+  residuals: Loop/residuals/T02.md
+  n_coeff: 3
+  nl_nodes: 41
+  seconds: 53
+- trial: T03
+  expr: -D*(A1*((k/(k1))**2/(1 + (k/(k1))**2)) + A2*((k/(k1*exp(dl)))**2/(1 + (k/(k1*exp(dl)))**2)))
+  lin:
+  - A1
+  - A2
+  nl:
+    k1:
+      lo: 0.1
+      hi: 10
+      spacing: log
+    dl:
+      lo: 0.1
+      hi: 5
+      spacing: lin
+  features:
+  - D
+  hypothesis: ML4PS paper Table 1 rank 12.
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-11 07:12:14'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 117058.1
+  marginalized:
+  - A2
+  sigma_fold: 1698.9
+  ladder:
+  - R: []
+    logZ_cross: 104354.8
+    promoted: true
+  - R:
+    - A2
+    logZ_cross: 117058.1
+    promoted: true
+  - R:
+    - A2
+    - k1
+    logZ_cross: 117351.0
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 31169.9
+    SIMBA: 28321.6
+    Astrid: 27427.5
+    Swift-EAGLE: 30139.0
+  L_zero_shot: 95.052
+  L_zero_shot_per_fold:
+    IllustrisTNG: 59.531
+    SIMBA: 222.848
+    Astrid: 53.89
+    Swift-EAGLE: 43.939
+  L_map: 25.206
+  L_map_per_fold:
+    IllustrisTNG: 22.415
+    SIMBA: 63.683
+    Astrid: 9.254
+    Swift-EAGLE: 5.47
+  chi2_per_suite:
+    IllustrisTNG: 16.343
+    SIMBA: 2.001
+    Astrid: 33.498
+    Swift-EAGLE: 5.759
+  chi2_mean: 14.401
+  chi2_std: 12.216
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.518
+    SIMBA: 0.635
+    Astrid: 0.406
+    Swift-EAGLE: 0.229
+  fold_mu:
+    IllustrisTNG:
+      A1: 1.6113
+      A2: 1.4884
+      k1: -0.0312
+      dl: 1.5225
+    SIMBA:
+      A1: 1.5822
+      A2: 1.8226
+      k1: 0.1198
+      dl: 1.3451
+    Astrid:
+      A1: 1.5306
+      A2: 1.7303
+      k1: 0.0552
+      dl: 1.336
+    Swift-EAGLE:
+      A1: 1.6511
+      A2: 1.5293
+      k1: -0.0081
+      dl: 1.5122
+  residuals: Loop/residuals/T03.md
+  n_coeff: 4
+  nl_nodes: 41
+  seconds: 86
+- trial: T04
+  expr: -A*k**a*(2**a + 2**b*(C*(1 - D/Omega_b_over_Omega_m))**(b - a))/(1 + (C*(1 - D/Omega_b_over_Omega_m))**(b - a)*k**(a
+    - b))*exp(d*(1 - D/Omega_b_over_Omega_m))
+  lin:
+  - A
+  nl:
+    a:
+      lo: 0.5
+      hi: 3
+      spacing: lin
+    b:
+      lo: 0.5
+      hi: 3
+      spacing: lin
+    C:
+      lo: 0.3
+      hi: 10
+      spacing: log
+    d:
+      lo: -5
+      hi: 5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: ML4PS paper Table 1 rank 32 (van Daalen 2020 rewritten).
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-11 07:13:41'
+  status: gate0_fail
+  gate0:
+    G0_1: true
+    G0_2: false
+    G0_3: false
+  seconds: 0
+- trial: T05
+  expr: -A*D*(Omega_b_over_Omega_m*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k2*D**beta))**2/(1
+    + (k/(k2*D**beta))**2)))
+  lin:
+  - A
+  nl:
+    k1:
+      lo: 0.1
+      hi: 10
+      spacing: log
+    k2:
+      lo: 0.5
+      hi: 50
+      spacing: log
+    beta:
+      lo: -1.5
+      hi: 1.5
+      spacing: lin
+  features:
+  - D
+  - Omega_b_over_Omega_m
+  hypothesis: ML4PS paper Table 1 rank 1 (two observable-weighted redistribution scales).
+  predicted_logZ_cross: null
+  predicted_chi2_mean: null
+  submitted: '2026-11-11 07:13:42'
+  status: scored
+  gate0:
+    G0_1: true
+    G0_2: true
+    G0_3: true
+    G0_U: true
+    G0_U_min_frac_pass: 1.0
+  logZ_cross: 122536.2
+  marginalized:
+  - k2
+  sigma_fold: 1714.8
+  ladder:
+  - R: []
+    logZ_cross: 106453.9
+    promoted: true
+  - R:
+    - k2
+    logZ_cross: 122536.2
+    promoted: true
+  - R:
+    - k2
+    - beta
+    logZ_cross: 124016.3
+    promoted: false
+  logZ_pred_per_fold:
+    IllustrisTNG: 32274.4
+    SIMBA: 29637.3
+    Astrid: 28742.2
+    Swift-EAGLE: 31882.4
+  L_zero_shot: 90.291
+  L_zero_shot_per_fold:
+    IllustrisTNG: 43.055
+    SIMBA: 240.63
+    Astrid: 44.17
+    Swift-EAGLE: 33.31
+  L_map: 13.18
+  L_map_per_fold:
+    IllustrisTNG: 10.413
+    SIMBA: 31.462
+    Astrid: 4.99
+    Swift-EAGLE: 5.855
+  chi2_per_suite:
+    IllustrisTNG: 5.401
+    SIMBA: 1.634
+    Astrid: 21.409
+    Swift-EAGLE: 4.133
+  chi2_mean: 8.144
+  chi2_std: 7.777
+  chi2_Cfv_Cdisc_per_suite:
+    IllustrisTNG: 0.339
+    SIMBA: 0.499
+    Astrid: 0.282
+    Swift-EAGLE: 0.274
+  fold_mu:
+    IllustrisTNG:
+      A: 2.7865
+      k1: 0.1667
+      k2: -0.2678
+      beta: -0.4001
+    SIMBA:
+      A: 3.1232
+      k1: 0.013
+      k2: -0.1083
+      beta: -0.4805
+    Astrid:
+      A: 3.0317
+      k1: 0.0492
+      k2: -0.1027
+      beta: -0.3762
+    Swift-EAGLE:
+      A: 2.8856
+      k1: 0.0986
+      k2: -0.1705
+      beta: -0.3521
+  residuals: Loop/residuals/T05.md
+  n_coeff: 4
+  nl_nodes: 21
+  seconds: 177

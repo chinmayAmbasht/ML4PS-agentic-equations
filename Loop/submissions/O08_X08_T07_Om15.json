@@ -1,0 +1,24 @@
+{
+ "expr": "-D*((k*D**0.5*(0.3/Omega_m)**1.5/k0)**2/(1 + (k*D**0.5*(0.3/Omega_m)**1.5/k0)**2))*(A + B*(k*D**0.5*(0.3/Omega_m)**1.5/k0)/(1 + k*D**0.5*(0.3/Omega_m)**1.5/k0))",
+ "lin": [
+  "A",
+  "B"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.003,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "B": "amplitude",
+  "k0": "scale"
+ },
+ "features": [
+  "D",
+  "Omega_m"
+ ],
+ "hypothesis": "[orchestrator-proposed; Chi2Push X08, chi2-targeted; resubmitted to the main loop as T58 on 2026-11-14] T07, knee ~ Omega_m^1.5 fixed"
+}

@@ -1,0 +1,7 @@
+{"expr": "-D*((k*D**0.5/k0)**3/(1 + (k*D**0.5/k0)**2)**1.5)*(A + B*(k*D**0.5/k0)/(1 + k*D**0.5/k0)) + (E*f_b - C*D)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "lin": ["A", "B", "C", "E"],
+ "nl": {"k0": {"lo": 0.01, "hi": 10, "spacing": "log"}, "k1": {"lo": 0.05, "hi": 30, "spacing": "log"}},
+ "roles": {"A": "amplitude", "B": "amplitude", "C": "amplitude", "E": "amplitude", "k0": "scale", "k1": "scale"},
+ "features": ["D", "f_b"],
+ "hypothesis": "Combine B9's k^3 sqrt(D) knee (T27, chi2 9.9, best L_zero) with A8's shared positive soft tail B x/(1+x) (T26, best evidence): the k^3 knee fixes the k=0.36 over-suppression, the soft tail fixes the TNG/Swift mid-k positive / high-k negative pattern, on T23's D^0.75-scaled f_b/D core.",
+ "predicted_logZ_cross": 127176, "predicted_chi2_mean": 9.86}

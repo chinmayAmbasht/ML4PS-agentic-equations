@@ -1,0 +1,35 @@
+{
+ "lin": [
+  "A",
+  "C",
+  "E"
+ ],
+ "nl": {
+  "k0": {
+   "lo": 0.01,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k1": {
+   "lo": 0.05,
+   "hi": 30,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "C": "amplitude",
+  "E": "amplitude",
+  "k0": "scale",
+  "k1": "scale"
+ },
+ "features": [
+  "D",
+  "f_b",
+  "Omega_b_over_Omega_m"
+ ],
+ "expr": "-A*D*((f_b/Omega_b_over_Omega_m)*((k*D**0.5/0.68)**2/(1 + (k*D**0.5/0.68)**2)) + (1 - (f_b/Omega_b_over_Omega_m))*((k*D**0.5/k0)**2/(1 + (k*D**0.5/k0)**2))) + (E*f_b - C*D/Omega_b_over_Omega_m)*((k*(D/0.05)**0.75/k1)**2/(1 + (k*(D/0.05)**0.75/k1)**2))",
+ "hypothesis": "T36 with the core's D lever on the expelled fraction D/w instead of D: (E*f_b - C*D/w)*W2(k (D/0.05)^0.75/k1). Retained gas (f_b) and expelled fraction (D/w) set the small-scale core, matching T36's q = f_b/w knee split; dry run gives a universal-sign C (0.11-0.16 in all folds, T36's C flips) and 1-DOF evidence 130,381 (T36 124,719).",
+ "predicted_logZ_cross": 130380,
+ "predicted_chi2_mean": 14.4
+}

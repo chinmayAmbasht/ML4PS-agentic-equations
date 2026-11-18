@@ -1,0 +1,34 @@
+{
+ "expr": "-A*D*(Omega_b_over_Omega_m*((k/(k1*D**beta))**2/(1 + (k/(k1*D**beta))**2)) + (1 - Omega_b_over_Omega_m)*((k/(k2*D**beta))**2/(1 + (k/(k2*D**beta))**2)))",
+ "lin": [
+  "A"
+ ],
+ "nl": {
+  "k1": {
+   "lo": 0.1,
+   "hi": 10,
+   "spacing": "log"
+  },
+  "k2": {
+   "lo": 0.5,
+   "hi": 50,
+   "spacing": "log"
+  },
+  "beta": {
+   "lo": -1.5,
+   "hi": 1.5,
+   "spacing": "lin"
+  }
+ },
+ "roles": {
+  "A": "amplitude",
+  "k1": "scale",
+  "k2": "scale",
+  "beta": "exponent"
+ },
+ "features": [
+  "D",
+  "Omega_b_over_Omega_m"
+ ],
+ "hypothesis": "ML4PS paper Table 1 rank 1 (two observable-weighted redistribution scales)."
+}

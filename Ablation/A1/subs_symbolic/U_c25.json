@@ -1,0 +1,38 @@
+{
+ "expr": "-A0*D*(Omega_b_over_Omega_m**2*(f_b/Omega_b_over_Omega_m)*b2 + (k - 0.029515253/sigma_8**2)/((f_b/Omega_b_over_Omega_m)*b1 + k))**4",
+ "lin": [
+  "A0"
+ ],
+ "nl": {
+  "b1": {
+   "lo": 0.11602338999999999,
+   "hi": 11.602338999999999,
+   "spacing": "log"
+  },
+  "b2": {
+   "lo": 0.11977357,
+   "hi": 11.977357,
+   "spacing": "log"
+  }
+ },
+ "roles": {
+  "A0": "amplitude",
+  "b1": "other",
+  "b2": "other"
+ },
+ "features": [
+  "D",
+  "Omega_b_over_Omega_m",
+  "f_b",
+  "sigma_8"
+ ],
+ "hypothesis": "[ablation A1 U_c25] PySR U hall of fame, complexity 25: (Dx * -3.0277832) * square(square(((k - (0.029515253 / square(s8))) / (k + (q * 1.1602339))) + ((square(wb) * q) * 1.1977357)))",
+ "pysr_values": {
+  "b1": 1.1602339,
+  "A0": 3.0277832,
+  "b2": 1.1977357
+ },
+ "frozen": {
+  "c1": 0.029515253
+ }
+}
