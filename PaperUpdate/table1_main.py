@@ -9,8 +9,6 @@ from pathlib import Path
 from PaperUpdate.make_tex import DST, EQ, M, NBOX, msym
 
 RANKS = [1, 2, 3, 10, 49]
-ORIGIN = {"Loop": "lane agent", "Loop (orchestrator)": "orchestrator agent"}
-ORIGIN_KEY = {"T51": "lane agent"}   # T51 was proposed in a lane (author correction, 2026-11-18)
 
 
 def num(x):
@@ -25,7 +23,7 @@ def main():
     rows = []
     for r in sorted((r for r in R if r["rank"] in RANKS), key=lambda r: r["rank"]):
         b = B[r["key"]]
-        rows.append(f"{r['rank']} & $\\mathcal{{S}} = {EQ[r['key']]}$\\newline {{\\scriptsize {ORIGIN_KEY.get(r['key'], ORIGIN[r['source']])}, $p={r['p']}$}} & "
+        rows.append(f"{r['rank']} & $\\mathcal{{S}} = {EQ[r['key']]}$ & "   # agent rows carry no source line (paper, 2026-11-21)
                     f"{len(r['marginalized'])} & {msym(r['marginalized'])} & ${r['dlogZ_box']:+.2f}$ & {r['sigma_fold_box']:.2f} & "
                     f"{num(b['transfer_zero_shot']['mean'])} & {num(b['transfer_map']['mean'])} \\\\")
     # PySR (unconstrained): pooled search equation through the same harness; rank = where it would place among the 64
