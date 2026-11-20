@@ -1,6 +1,7 @@
 """Ablation summary (Plans/05_ablation.md): table + best-so-far figure. Reads Loop/, Base/, PySR/, Ablation/<arm>/harness only.
 Outputs: Ablation/ablation.json, Ablation/RESULT_table.md, PaperUpdate/figs/out/ablation_v4.{pdf,png}, Ablation/ablation_table.tex.
-Usage: python -m Ablation.analyze
+Usage: python -m Ablation.analyze        (all)
+       python -m Ablation.analyze fig    (figure only, from ablation.json)
 """
 import json
 import sys
@@ -110,43 +111,61 @@ def main():
 
 def tex(R):
     f = lambda x, d=2: "--" if x is None else f"{x:.{d}f}"
-    short = ["Agent loop (T01--T60)", "PySR U, MSE selection", "PySR C, MSE selection", "A1-U: PySR U, $\\log Z$ selection",
-             "A1-C: PySR C, $\\log Z$ selection", "A2: PySR two-kernel, $\\log Z$ sel.", "A3: seed grammar, enumeration",
-             "Seed form (paper rank 1)"]
-    L = [r"\begin{tabular}{lrrrrr}", r"\toprule",
-         r"Search & evals & $\log Z_\mathrm{cross}$/box & $\Delta$ vs T47 & $\chi^2_\nu$ & $L_\mathrm{MAP}$ \\", r"\midrule"]
+    short = ["Agent loop", "Unconstrained symbolic regression, MSE selection", "Constrained symbolic regression, MSE selection",
+             "Unconstrained symbolic regression, $\\log Z$ selection", "Constrained symbolic regression, $\\log Z$ selection",
+             "A2 (not shown)", "Seed-grammar enumeration", "Best seed form"]
+    L = [r"\setlength{\tabcolsep}{4pt}", r"\begin{tabular}{lrrrrr}", r"\toprule",
+         r"Search & Equations & $\log Z_\mathrm{cross}$/box & $\Delta$ vs rank 1 & $\chi^2_\nu$ & $L_\mathrm{MAP}$ \\", r"\midrule"]
     for s, r in zip(short, R):
+        if r["arm"].startswith("A2"):  # A2 dropped from the paper table and figure (owner 2026-11-19); kept in ablation.json
+            continue
         L.append(f"{s} & {r['n_eval']} & {f(r['logZ_box'])} & {f(r['d_logZ_box'])} & {f(r['chi2_nu'], 1)} & {f(r['L_map_fvh'], 1)} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
+    p = M / "Ablation" / "ablation_table.tex"
+    p.write_text("\n".join(L) + "\n")
     (M / "Ablation" / "ablation_table.tex").write_text("\n".join(L) + "\n")
 
 
-def figure(A, ref, sf, p1, pysr):
+def figure(A=None, ref=None, sf=None, p1=None, pysr=None):
+    """ML4PS figure: best log Z_cross so far vs full evaluations. A2 left out (owner 2026-11-19); it stays in the table.
+    Reads the curves and reference lines from Ablation/ablation.json, so `python -m Ablation.analyze fig` redraws without
+    touching the table."""
     import matplotlib.pyplot as plt
     from Scripts.figures import panelspec as PS
+    J = json.loads((M / "Ablation" / "ablation.json").read_text())
+    ref, sf = J["ref_T47_logZ_box"], J["sigma_fold_box"]
+    rows = {r["arm"].split(":")[0].split(" (")[0]: r for r in J["rows"]}
+    p1, mse_c = rows["Best seed form"]["logZ_box"], rows["PySR C, MSE 'best'"]["logZ_box"]
     PS.style()
-    fig, ax = plt.subplots(figsize=(5.0, 3.6))
-    sty = {"agent": ("Agent loop", "#0072B2", "-"), "A3": ("A3: seed-grammar enumeration", "#009E73", "-"),
-           "A2": ("A2: PySR two-kernel template", "#882255", "-"), "A1-C": ("A1-C: PySR C hall of fame", "#CC79A7", "--"),
-           "A1-U": ("A1-U: PySR U hall of fame", "#E69F00", "--")}
-    for a, (lab, c, ls) in sty.items():
-        y = curve(A[a])
-        if len(y) == 0:
-            continue
-        x = np.arange(1, len(y) + 1)
-        ok = np.isfinite(y)
-        ax.step(x[ok], y[ok], where="post", color=c, ls=ls, lw=1.4, label=f"{lab} ({len(y)})")
-    ax.axhspan(ref - sf, ref + sf, color="#0072B2", alpha=0.12, lw=0)
-    ax.axhline(ref, color="#0072B2", lw=0.6, ls=":")
-    ax.axhline(p1, color="0.4", lw=0.8, ls="-.", label="seed form, paper rank 1")
-    ax.axhline(pysr["C"]["logZ_box"], color="#CC79A7", lw=0.8, ls=":", label="PySR C, MSE selection")
-    ax.set_xlabel("full $\\log Z_\\mathrm{cross}$ evaluations"); ax.set_ylabel("best $\\log Z_\\mathrm{cross}$ so far [nats/box]")
-    ax.set_xlim(1, 62); ax.set_ylim(29.8, ref + 0.6)
-    ax.grid(color="0.9", lw=0.5); ax.set_axisbelow(True)
-    ax.legend(fontsize=PS.FS - 2, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
+    plt.rcParams.update({"font.size": 10, "axes.labelsize": 10, "xtick.labelsize": 9, "ytick.labelsize": 9, "legend.fontsize": 8.5})
+    fig, ax = plt.subplots(figsize=(4.6, 3.1))
+    blue = "#0072B2"
+    ax.axhspan(ref - sf, ref + sf, color=blue, alpha=0.13, lw=0, zorder=0)
+    ax.text(1.8, ref + sf - 0.06, r"Best agent form $\pm\,\sigma_\mathrm{fold}$", color=blue, fontsize=8, va="top")
+    ax.axhline(p1, color="0.45", lw=0.9, ls="-.", zorder=1)
+    ax.text(60.5, p1 + 0.07, "Best seed form", color="0.35", fontsize=8, ha="right", va="bottom")
+    ax.axhline(mse_c, color="#CC79A7", lw=0.9, ls=":", zorder=1)
+    ax.text(60.5, mse_c - 0.08, "Constrained symbolic regression, MSE selection", color="#B0578F", fontsize=8, ha="right", va="top")
+    sty = [("agent", "Agent loop", blue, "-", 2.0, (59.5, ref + 0.1, "right", "bottom")),
+           ("A3", "Seed-grammar enumeration", "#009E73", "-", 1.5, (59.5, 34.23 - 0.1, "right", "top")),
+           ("A1-C", "Constrained symbolic regression,\n" r"$\log Z$ selection", "#B0578F", "--", 1.5, (19.0, 34.33 + 0.12, "center", "bottom")),
+           ("A1-U", r"Unconstrained symbolic regression, $\log Z$ selection", "#E69F00", "--", 1.5, (9.0, 30.19 + 0.12, "left", "bottom"))]
+    for a, lab, c, ls, lw, (tx, ty, ha, va) in sty:
+        y = np.array(J["curves"][a], float)
+        x = np.arange(1, len(y) + 1); ok = np.isfinite(y)
+        ax.step(x[ok], y[ok], where="post", color=c, ls=ls, lw=lw, zorder=3)
+        ax.plot(x[ok][-1], y[ok][-1], "o", ms=3.5, color=c, zorder=4)
+        ax.text(tx, ty, lab, color=c, fontsize=8.5, ha=ha, va=va, zorder=5, multialignment="center", linespacing=1.0)
+    ax.set_xlabel(r"full $\log Z_\mathrm{cross}$ evaluations")
+    ax.set_ylabel(r"best $\log Z_\mathrm{cross}$ [nats/box]")
+    ax.set_xlim(0, 61.5); ax.set_ylim(28.6, ref + sf + 0.15)
+    ax.grid(color="0.92", lw=0.5); ax.set_axisbelow(True)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.tick_params(top=False, right=False)
     fig.tight_layout()
     PS.save(fig, M / "PaperUpdate" / "figs" / "out" / "ablation_v4")
 
 
 if __name__ == "__main__":
-    main()
+    figure() if sys.argv[1:] == ["fig"] else main()

@@ -34,12 +34,13 @@ A submission is a small JSON file; see the docstring of `score_form.py` and any 
 | Paper item | Command | Output | Time |
 |---|---|---|---|
 | Table 1 (main text) | `python -m PaperUpdate.table1_main` | `outputs/tables/table1_rows.tex` | s |
-| Table 2 (all 64 forms) | `python -m PaperUpdate.make_tex` | `outputs/tables/pool_table.tex` | s |
+| Table 2 (all 64 forms) | `python -m PaperUpdate.make_tex && python -m PaperUpdate.pool_table_fvh` | `outputs/tables/pool_table.tex` | s |
 | Ranking of all 64 forms | `python -m PaperUpdate.rank_all` | `PaperUpdate/ranking.{json,csv}`, `RANKING.md` | s |
 | Fig. 1 (data) | `python -m PaperUpdate.figs.fig1_oldstyle` | `PaperUpdate/figs/out/pk_suppression_cv`, `fb_contours_k1p1` | min |
 | Fig. 2 (pipeline) | TikZ source | `PaperUpdate/figs/agentic_loop_fig.tex` | – |
+| van Daalen table (App. E.2, $k\le1$ rows) | `python -m PaperUpdate.Benchmark.vd_k1` | `PaperUpdate/Benchmark/vd_k1.json` | min |
 | Fig. 3 (benchmark) | `python -m PaperUpdate.figs.fig3_benchmark T47 T36 T43 T39 T51` | `PaperUpdate/figs/out/pooled_comparison_v4` | s |
-| Held-out fits (appendix) | `python -m PaperUpdate.figs.fig_fits_appendix T47 T36 T43 T39 T51` | `.../fit_overlay_v4` | tens of min |
+| Held-out fits (appendix) | `python -m PaperUpdate.figs.fig_fits_appendix T47 T36 T43 T39 T51` | `.../fit_overlay_v4` (needs the per-box MAP predictions in `PaperUpdate/preds_sens/`, written by `PaperUpdate.map_sensitivity loop` in `./reproduce.sh full`) | tens of min |
 | Finite-volume covariance (appendix) | `python -m PaperUpdate.figs.fig_cfv_appendix` | `.../cfv_matrices_v4` | s |
 | Non-agentic ablation (appendix figure and table) | `python -m Ablation.analyze` | `PaperUpdate/figs/out/ablation_v4`, `Ablation/ablation_table.tex` | s |
 | Ablation overview (extra, not in the paper) | `python -m Ablation.summary_fig` | `Ablation/figs/ablation_summary` | s |
@@ -63,7 +64,7 @@ Loop/               the agent search (60 trials)
 Base/               the four seed forms (the previous version of the paper) and van Daalen+20, scored by the same harness
 PaperUpdate/        ranking, benchmark (random forest, van Daalen, PySR), losses, paper figures and tables
 PySR/               symbolic-regression baseline: search settings, hall-of-fame equations, conversion to harness forms
-Ablation/           controlled non-agentic searches (PySR selected by log Z, a two-kernel PySR template, seed-grammar enumeration)
+Ablation/           controlled non-agentic searches (PySR selected by log Z, seed-grammar enumeration; a two-kernel PySR template arm, A2, is kept in ablation.json but not shown in the paper)
 Evidence/           evidence re-pass of the leading forms: full-grid ladder, Σ_suite scaled ×0.5 and ×2, coarse-grid check
 Artifacts/data/     processed CAMELS data (about 25 MB, see below)
 score_form.py       score any candidate equation
@@ -88,7 +89,7 @@ The expected directory layout is given by `SUITE_DIRS`, `PROFILE_DIR` and `FB_Z_
 
 ## The agent search
 
-Each of the 60 trials was a fresh Claude Opus 5.5 agent. It had default sampling settings and no memory of earlier trials other than the files on disk. Up to three trials ran in parallel (lanes A, B and C).
+Each of the 60 trials was a fresh Claude Opus 5 agent. It had default sampling settings and no memory of earlier trials other than the files on disk. Up to three trials ran in parallel (lanes A, B and C).
 
 What each agent did:
 - read `Loop/brief.md`, the lab notebook, `trial_state.yaml` and the residual tables;
@@ -106,7 +107,7 @@ The loop design borrows the stateless-agent, shared-notebook and fixed-budget st
 
 Paths in the records have been replaced by `<repo>` (the repository root) and `<scratch>` (a temporary directory). The brief refers to a copy of the earlier paper draft under `Paper/`, which agents could read. That draft is not included here.
 
-**Disclosure.** The leading forms contain a few fixed constants (0.68, 0.05, 0.75 and the $\sqrt{D}$ scalings) that the agents chose while seeing scores on all four suites. The same four suites rank the forms and select the varying coefficients, so the winner's $\log Z_\mathrm{cross}$ is optimistically biased, as for any best-of-many selection.
+**Disclosure.** The leading forms contain a few fixed constants (0.68, 0.05, 0.75 and the $\sqrt{D}$ scalings) that the agents chose while seeing scores on all four suites. The same four suites rank the forms and select the varying coefficients. Ranks 2–7 lie within $1\,\sigma_\mathrm{fold}$ of rank 1, so their ordering is not decisive.
 
 ## Notes on the code
 

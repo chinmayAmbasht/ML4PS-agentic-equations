@@ -46,9 +46,12 @@ def table1(R, keys):
 def pool(R):
     L = [r"\begingroup\scriptsize\setlength{\tabcolsep}{3pt}",
          r"\begin{longtable}{r l r p{0.46\textwidth} r l r r r r}",
-         r"\caption{\NoteV{caption to be written. All " + str(len(R)) + r" forms scored on the 16-bin $k\le9.92$ grid, ranked by "
-         r"$\log Z_\mathrm{cross}$ per box; $\Delta$ in nats/box from rank 1; $\chi^2_{13}=\chi^2_\nu(16-p)/13$; $L$ correlated, "
-         r"$\Delta\mathcal{S}^\top(C_{\mathrm{fv},j}/h)^{-1}\Delta\mathcal{S}$, zero-shot / adapted. " + NOTATION + r".}\label{tab:pool_full}}\\",
+         r"\caption{\textbf{All " + str(len(R)) + r" candidate equations,} ranked by $\log Z_\mathrm{cross}$ per held-out box. "
+         r"T01--T60 are the 60 equations of the agentic loop (the orchestrator proposes T51--T60), and P1, P2, P3 and P12 are the four seed forms from the previous study. "
+         r"$p$ is the number of coefficients, and we marginalize the $M$ coefficients listed under Marginalized. "
+         r"$\Delta\log Z$ is in nats per held-out box relative to rank~1. "
+         r"$\chi^2_{13}=\chi^2_\nu(16-p)/13$ places every form on a common 13 degrees of freedom. "
+         r"$L_0$ and $L_\mathrm{MAP}$ are the zero-shot and adapted losses $L$ of Section~\ref{sec:discussion_results}. " + NOTATION + r".\label{tab:pool_full}}\\",
          r"\toprule Rank & id & $p$ & Functional form $\mathcal{S}$ & $M$ & Marginalized & $\Delta\log Z$ & $\chi^2_{13}$ & $L_0$ & $L_\mathrm{MAP}$ \\ \midrule\endfirsthead",
          r"\toprule Rank & id & $p$ & Functional form $\mathcal{S}$ & $M$ & Marginalized & $\Delta\log Z$ & $\chi^2_{13}$ & $L_0$ & $L_\mathrm{MAP}$ \\ \midrule\endhead",
          r"\bottomrule\endlastfoot"]

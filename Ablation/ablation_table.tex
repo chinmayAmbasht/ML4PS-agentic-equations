@@ -1,14 +1,14 @@
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrrr}
 \toprule
-Search & evals & $\log Z_\mathrm{cross}$/box & $\Delta$ vs T47 & $\chi^2_\nu$ & $L_\mathrm{MAP}$ \\
+Search & Equations & $\log Z_\mathrm{cross}$/box & $\Delta$ vs rank 1 & $\chi^2_\nu$ & $L_\mathrm{MAP}$ \\
 \midrule
-Agent loop (T01--T60) & 60 & 35.35 & 0.00 & 9.0 & 17.9 \\
-PySR U, MSE selection & 1 & 30.19 & -5.15 & 21.4 & 41.4 \\
-PySR C, MSE selection & 1 & 32.23 & -3.12 & 7.0 & 24.4 \\
-A1-U: PySR U, $\log Z$ selection & 23 & 30.19 & -5.15 & 21.4 & 41.4 \\
-A1-C: PySR C, $\log Z$ selection & 19 & 34.33 & -1.01 & 6.6 & 23.3 \\
-A2: PySR two-kernel, $\log Z$ sel. & 18 & 32.08 & -3.27 & 15.9 & 36.0 \\
-A3: seed grammar, enumeration & 60 & 34.23 & -1.12 & 10.6 & 24.8 \\
-Seed form (paper rank 1) & 1 & 32.89 & -2.46 & 8.1 & -- \\
+Agent loop & 60 & 35.35 & 0.00 & 9.0 & 17.9 \\
+Unconstrained symbolic regression, MSE selection & 1 & 30.19 & -5.15 & 21.4 & 41.4 \\
+Constrained symbolic regression, MSE selection & 1 & 32.23 & -3.12 & 7.0 & 24.4 \\
+Unconstrained symbolic regression, $\log Z$ selection & 23 & 30.19 & -5.15 & 21.4 & 41.4 \\
+Constrained symbolic regression, $\log Z$ selection & 19 & 34.33 & -1.01 & 6.6 & 23.3 \\
+Seed-grammar enumeration & 60 & 34.23 & -1.12 & 10.6 & 24.8 \\
+Best seed form & 1 & 32.89 & -2.46 & 8.1 & -- \\
 \bottomrule
 \end{tabular}

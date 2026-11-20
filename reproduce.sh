@@ -15,6 +15,7 @@ quick() {
   python -m PaperUpdate.rank_all
   python -m PaperUpdate.table1_main > /dev/null
   python -m PaperUpdate.make_tex
+  python -m PaperUpdate.pool_table_fvh          # L_MAP column in the Fig. 3 MAP setting
   python -m PaperUpdate.figs.fig3_benchmark $FORMS
 }
 figures() {
@@ -34,6 +35,8 @@ full() {
   python -m PySR.pipeline U C                    # PySR pooled equations through the harness
   for g in loop pysr vd; do python -m PaperUpdate.map_sensitivity "$g"; done
   python -m PaperUpdate.apply_map_setting        # Fig. 3 adapted bars: unwidened prior, C_fv/h likelihood
+  python -m PaperUpdate.map_fvh_all              # the same MAP for all 64 forms (pool table L_MAP column)
+  python -m PaperUpdate.Benchmark.vd_k1          # van Daalen comparison restricted to k <= 1 (App. E.2)
 }
 
 case "$mode" in
